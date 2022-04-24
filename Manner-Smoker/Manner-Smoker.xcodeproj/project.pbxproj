@@ -1,0 +1,1079 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85AE45D800D02172599CA3F2 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6508F18321D988D0C50C6639 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */; };
+		9F2DCE4F27F996630082D89E /* SearchLoactionWithAddressResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2DCE4E27F996630082D89E /* SearchLoactionWithAddressResponseModel.swift */; };
+		9F84728727EB123E007461FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84728627EB123E007461FA /* AppDelegate.swift */; };
+		9F84728927EB123E007461FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84728827EB123E007461FA /* SceneDelegate.swift */; };
+		9F84728B27EB123E007461FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84728A27EB123E007461FA /* ViewController.swift */; };
+		9F84728E27EB123E007461FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F84728C27EB123E007461FA /* Main.storyboard */; };
+		9F84729027EB123F007461FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F84728F27EB123F007461FA /* Assets.xcassets */; };
+		9F84729327EB123F007461FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F84729127EB123F007461FA /* LaunchScreen.storyboard */; };
+		9F84729E27EB123F007461FA /* Manner_SmokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84729D27EB123F007461FA /* Manner_SmokerTests.swift */; };
+		9F8472A827EB123F007461FA /* Manner_SmokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8472A727EB123F007461FA /* Manner_SmokerUITests.swift */; };
+		9F8472AA27EB123F007461FA /* Manner_SmokerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8472A927EB123F007461FA /* Manner_SmokerUITestsLaunchTests.swift */; };
+		9F8472BF27EB1F42007461FA /* HeaderMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8472BE27EB1F42007461FA /* HeaderMap.storyboard */; };
+		9F8472C127EB20D1007461FA /* HeaderHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8472C027EB20D1007461FA /* HeaderHome.storyboard */; };
+		9F8472C327EB2135007461FA /* HeaderLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8472C227EB2135007461FA /* HeaderLogin.storyboard */; };
+		9F8472C527EB213E007461FA /* HeaderNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8472C427EB213E007461FA /* HeaderNews.storyboard */; };
+		9F8472C727EB2154007461FA /* HeaderMyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8472C627EB2154007461FA /* HeaderMyPage.storyboard */; };
+		9F8472C927EB25E8007461FA /* HeaderCommunity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8472C827EB25E8007461FA /* HeaderCommunity.storyboard */; };
+		9F8472CB27EB3125007461FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8472CA27EB3125007461FA /* LoginViewController.swift */; };
+		9F84730927EB43E7007461FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84730827EB43E7007461FA /* TabBarController.swift */; };
+		9F8478A427F30077007461FA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8478A327F30077007461FA /* SystemConfiguration.framework */; };
+		9F8478A627F30086007461FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8478A527F30086007461FA /* CoreLocation.framework */; };
+		9F8478A827F30091007461FA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8478A727F30091007461FA /* QuartzCore.framework */; };
+		9F84798627F31505007461FA /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F84798527F31505007461FA /* Metal.framework */; };
+		9F84798727F31511007461FA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8478A927F300A3007461FA /* libc++.tbd */; };
+		9F84798827F3151C007461FA /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8478AA27F300AD007461FA /* libxml2.tbd */; };
+		9F84798927F31522007461FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8478AB27F300B6007461FA /* libsqlite3.tbd */; };
+		9F84798B27F3159F007461FA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84798A27F3159F007461FA /* MapViewController.swift */; };
+		9F847A3927F5E616007461FA /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8479EA27F472AE007461FA /* DaumMap.framework */; };
+		9F847AC627F98B17007461FA /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F847AC527F98B17007461FA /* MapManager.swift */; };
+		9F847AC827F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F847AC727F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift */; };
+		9F847ACD27F9944A007461FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F847ACC27F9944A007461FA /* Constants.swift */; };
+		9FC560F527FC19EF00592B47 /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DA27FC19EF00592B47 /* map_pinup_custom@3x.png */; };
+		9FC560F627FC19EF00592B47 /* map_pin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DB27FC19EF00592B47 /* map_pin_custom.png */; };
+		9FC560F727FC19EF00592B47 /* shadow_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DC27FC19EF00592B47 /* shadow_balloon.png */; };
+		9FC560F827FC19EF00592B47 /* map_pinup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DD27FC19EF00592B47 /* map_pinup.png */; };
+		9FC560F927FC19EF00592B47 /* detail_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DE27FC19EF00592B47 /* detail_button.png */; };
+		9FC560FA27FC19EF00592B47 /* map_pin_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DF27FC19EF00592B47 /* map_pin_custom@3x.png */; };
+		9FC560FB27FC19EF00592B47 /* map_pinup@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E027FC19EF00592B47 /* map_pinup@3x.png */; };
+		9FC560FC27FC19EF00592B47 /* map_pin_shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E127FC19EF00592B47 /* map_pin_shadow@3x.png */; };
+		9FC560FD27FC19EF00592B47 /* copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E227FC19EF00592B47 /* copyright.png */; };
+		9FC560FE27FC19EF00592B47 /* th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E327FC19EF00592B47 /* th_line.png */; };
+		9FC560FF27FC19EF00592B47 /* map_pin_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E427FC19EF00592B47 /* map_pin_red@3x.png */; };
+		9FC5610027FC19EF00592B47 /* daum_copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E527FC19EF00592B47 /* daum_copyright.png */; };
+		9FC5610127FC19EF00592B47 /* map_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E627FC19EF00592B47 /* map_pin@3x.png */; };
+		9FC5610227FC19EF00592B47 /* map_present_tracking.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E727FC19EF00592B47 /* map_present_tracking.png */; };
+		9FC5610327FC19EF00592B47 /* map_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E827FC19EF00592B47 /* map_pin_red.png */; };
+		9FC5610427FC19EF00592B47 /* info_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560E927FC19EF00592B47 /* info_box.png */; };
+		9FC5610527FC19EF00592B47 /* point_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560EA27FC19EF00592B47 /* point_sprite.png */; };
+		9FC5610627FC19EF00592B47 /* map_pinup_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560EB27FC19EF00592B47 /* map_pinup_custom.png */; };
+		9FC5610727FC19EF00592B47 /* info_box_tail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560EC27FC19EF00592B47 /* info_box_tail.png */; };
+		9FC5610827FC19EF00592B47 /* noimage256.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560ED27FC19EF00592B47 /* noimage256.png */; };
+		9FC5610927FC19EF00592B47 /* map_present_direction.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560EE27FC19EF00592B47 /* map_present_direction.png */; };
+		9FC5610A27FC19EF00592B47 /* map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560EF27FC19EF00592B47 /* map_pin.png */; };
+		9FC5610B27FC19EF00592B47 /* map_present.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F027FC19EF00592B47 /* map_present.png */; };
+		9FC5610C27FC19EF00592B47 /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F127FC19EF00592B47 /* noimage.png */; };
+		9FC5610D27FC19EF00592B47 /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F227FC19EF00592B47 /* map_present_background_update.png */; };
+		9FC5610E27FC19EF00592B47 /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F327FC19EF00592B47 /* daum_th_line.png */; };
+		9FC5610F27FC19EF00592B47 /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F427FC19EF00592B47 /* map_pin_shadow.png */; };
+		AE6E0242D0E59A19BDA032A4 /* Pods_Manner_Smoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399664EAF2D564B201AB1CA8 /* Pods_Manner_Smoker.framework */; };
+		C103A7C605A8DC730B749E4B /* Pods_Manner_SmokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553EA48C2A54A65F730276ED /* Pods_Manner_SmokerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F84729A27EB123F007461FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F84727B27EB123E007461FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F84728227EB123E007461FA;
+			remoteInfo = "Manner-Smoker";
+		};
+		9F8472A427EB123F007461FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F84727B27EB123E007461FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F84728227EB123E007461FA;
+			remoteInfo = "Manner-Smoker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C32A07109F520C0A42BF78B /* Pods-Manner-Smoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker.debug.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker.debug.xcconfig"; sourceTree = "<group>"; };
+		203B4729AF96C01DBC87CFBC /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		228E6CEEF15E7D6BE4EB4369 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		399664EAF2D564B201AB1CA8 /* Pods_Manner_Smoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_Smoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		553EA48C2A54A65F730276ED /* Pods_Manner_SmokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_SmokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6508F18321D988D0C50C6639 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_Smoker_Manner_SmokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94968924596F1E77782879E7 /* Pods-Manner-SmokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.release.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F2DCE4E27F996630082D89E /* SearchLoactionWithAddressResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoactionWithAddressResponseModel.swift; sourceTree = "<group>"; };
+		9F84728327EB123E007461FA /* Manner-Smoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Manner-Smoker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F84728627EB123E007461FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F84728827EB123E007461FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9F84728A27EB123E007461FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F84728D27EB123E007461FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F84728F27EB123F007461FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F84729227EB123F007461FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F84729427EB123F007461FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F84729927EB123F007461FA /* Manner-SmokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Manner-SmokerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F84729D27EB123F007461FA /* Manner_SmokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manner_SmokerTests.swift; sourceTree = "<group>"; };
+		9F8472A327EB123F007461FA /* Manner-SmokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Manner-SmokerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8472A727EB123F007461FA /* Manner_SmokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manner_SmokerUITests.swift; sourceTree = "<group>"; };
+		9F8472A927EB123F007461FA /* Manner_SmokerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manner_SmokerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F8472BE27EB1F42007461FA /* HeaderMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeaderMap.storyboard; sourceTree = "<group>"; };
+		9F8472C027EB20D1007461FA /* HeaderHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeaderHome.storyboard; sourceTree = "<group>"; };
+		9F8472C227EB2135007461FA /* HeaderLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeaderLogin.storyboard; sourceTree = "<group>"; };
+		9F8472C427EB213E007461FA /* HeaderNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeaderNews.storyboard; sourceTree = "<group>"; };
+		9F8472C627EB2154007461FA /* HeaderMyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeaderMyPage.storyboard; sourceTree = "<group>"; };
+		9F8472C827EB25E8007461FA /* HeaderCommunity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeaderCommunity.storyboard; sourceTree = "<group>"; };
+		9F8472CA27EB3125007461FA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9F84730827EB43E7007461FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9F8478A327F30077007461FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9F8478A527F30086007461FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9F8478A727F30091007461FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9F8478A927F300A3007461FA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9F8478AA27F300AD007461FA /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		9F8478AB27F300B6007461FA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9F84798527F31505007461FA /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		9F84798A27F3159F007461FA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9F8479D227F31E3B007461FA /* Kakao-Map-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kakao-Map-Bridge-Header.h"; sourceTree = "<group>"; };
+		9F8479EA27F472AE007461FA /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		9F847AC527F98B17007461FA /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		9F847AC727F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoactionWithAddressRequestModel.swift; sourceTree = "<group>"; };
+		9F847ACC27F9944A007461FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9FC560DA27FC19EF00592B47 /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
+		9FC560DB27FC19EF00592B47 /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
+		9FC560DC27FC19EF00592B47 /* shadow_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_balloon.png; sourceTree = "<group>"; };
+		9FC560DD27FC19EF00592B47 /* map_pinup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup.png; sourceTree = "<group>"; };
+		9FC560DE27FC19EF00592B47 /* detail_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_button.png; sourceTree = "<group>"; };
+		9FC560DF27FC19EF00592B47 /* map_pin_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_custom@3x.png"; sourceTree = "<group>"; };
+		9FC560E027FC19EF00592B47 /* map_pinup@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup@3x.png"; sourceTree = "<group>"; };
+		9FC560E127FC19EF00592B47 /* map_pin_shadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_shadow@3x.png"; sourceTree = "<group>"; };
+		9FC560E227FC19EF00592B47 /* copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copyright.png; sourceTree = "<group>"; };
+		9FC560E327FC19EF00592B47 /* th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = th_line.png; sourceTree = "<group>"; };
+		9FC560E427FC19EF00592B47 /* map_pin_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_red@3x.png"; sourceTree = "<group>"; };
+		9FC560E527FC19EF00592B47 /* daum_copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_copyright.png; sourceTree = "<group>"; };
+		9FC560E627FC19EF00592B47 /* map_pin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin@3x.png"; sourceTree = "<group>"; };
+		9FC560E727FC19EF00592B47 /* map_present_tracking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_tracking.png; sourceTree = "<group>"; };
+		9FC560E827FC19EF00592B47 /* map_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_red.png; sourceTree = "<group>"; };
+		9FC560E927FC19EF00592B47 /* info_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box.png; sourceTree = "<group>"; };
+		9FC560EA27FC19EF00592B47 /* point_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point_sprite.png; sourceTree = "<group>"; };
+		9FC560EB27FC19EF00592B47 /* map_pinup_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup_custom.png; sourceTree = "<group>"; };
+		9FC560EC27FC19EF00592B47 /* info_box_tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box_tail.png; sourceTree = "<group>"; };
+		9FC560ED27FC19EF00592B47 /* noimage256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage256.png; sourceTree = "<group>"; };
+		9FC560EE27FC19EF00592B47 /* map_present_direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_direction.png; sourceTree = "<group>"; };
+		9FC560EF27FC19EF00592B47 /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
+		9FC560F027FC19EF00592B47 /* map_present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present.png; sourceTree = "<group>"; };
+		9FC560F127FC19EF00592B47 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		9FC560F227FC19EF00592B47 /* map_present_background_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_background_update.png; sourceTree = "<group>"; };
+		9FC560F327FC19EF00592B47 /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
+		9FC560F427FC19EF00592B47 /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
+		A365AE8B0BB7500BF2F7AA85 /* Pods-Manner-Smoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker.release.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker.release.xcconfig"; sourceTree = "<group>"; };
+		CCB1F77B90E508ED142A1F89 /* Pods-Manner-SmokerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.debug.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F84728027EB123E007461FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F84798727F31511007461FA /* libc++.tbd in Frameworks */,
+				9F8478A627F30086007461FA /* CoreLocation.framework in Frameworks */,
+				9F847A3927F5E616007461FA /* DaumMap.framework in Frameworks */,
+				9F84798927F31522007461FA /* libsqlite3.tbd in Frameworks */,
+				9F8478A827F30091007461FA /* QuartzCore.framework in Frameworks */,
+				9F84798827F3151C007461FA /* libxml2.tbd in Frameworks */,
+				9F84798627F31505007461FA /* Metal.framework in Frameworks */,
+				9F8478A427F30077007461FA /* SystemConfiguration.framework in Frameworks */,
+				AE6E0242D0E59A19BDA032A4 /* Pods_Manner_Smoker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F84729627EB123F007461FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C103A7C605A8DC730B749E4B /* Pods_Manner_SmokerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8472A027EB123F007461FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85AE45D800D02172599CA3F2 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1026568FC129A877B6DC7975 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C32A07109F520C0A42BF78B /* Pods-Manner-Smoker.debug.xcconfig */,
+				A365AE8B0BB7500BF2F7AA85 /* Pods-Manner-Smoker.release.xcconfig */,
+				228E6CEEF15E7D6BE4EB4369 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */,
+				203B4729AF96C01DBC87CFBC /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */,
+				CCB1F77B90E508ED142A1F89 /* Pods-Manner-SmokerTests.debug.xcconfig */,
+				94968924596F1E77782879E7 /* Pods-Manner-SmokerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F84727A27EB123E007461FA = {
+			isa = PBXGroup;
+			children = (
+				9F84728527EB123E007461FA /* Manner-Smoker */,
+				9F84729C27EB123F007461FA /* Manner-SmokerTests */,
+				9F8472A627EB123F007461FA /* Manner-SmokerUITests */,
+				9F84728427EB123E007461FA /* Products */,
+				9F8478A027F30036007461FA /* Frameworks */,
+				9FC560D927FC19EF00592B47 /* resource */,
+				1026568FC129A877B6DC7975 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		9F84728427EB123E007461FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F84728327EB123E007461FA /* Manner-Smoker.app */,
+				9F84729927EB123F007461FA /* Manner-SmokerTests.xctest */,
+				9F8472A327EB123F007461FA /* Manner-SmokerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F84728527EB123E007461FA /* Manner-Smoker */ = {
+			isa = PBXGroup;
+			children = (
+				9F84728C27EB123E007461FA /* Main.storyboard */,
+				9F84730827EB43E7007461FA /* TabBarController.swift */,
+				9F84728F27EB123F007461FA /* Assets.xcassets */,
+				9F8472BC27EB16F9007461FA /* Model */,
+				9F8472BD27EB16FE007461FA /* View Model */,
+				9F8472B627EB1390007461FA /* login */,
+				9F8472BB27EB13D6007461FA /* Home */,
+				9F8472B727EB13B6007461FA /* Map */,
+				9F8472BA27EB13CD007461FA /* News */,
+				9F8472B927EB13C8007461FA /* MyPage */,
+				9F8472B827EB13C0007461FA /* Community */,
+				9F847ACC27F9944A007461FA /* Constants.swift */,
+				9F84728627EB123E007461FA /* AppDelegate.swift */,
+				9F84728827EB123E007461FA /* SceneDelegate.swift */,
+				9F84728A27EB123E007461FA /* ViewController.swift */,
+				9F84729127EB123F007461FA /* LaunchScreen.storyboard */,
+				9F84729427EB123F007461FA /* Info.plist */,
+				9F8479D227F31E3B007461FA /* Kakao-Map-Bridge-Header.h */,
+			);
+			path = "Manner-Smoker";
+			sourceTree = "<group>";
+		};
+		9F84729C27EB123F007461FA /* Manner-SmokerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F84729D27EB123F007461FA /* Manner_SmokerTests.swift */,
+			);
+			path = "Manner-SmokerTests";
+			sourceTree = "<group>";
+		};
+		9F8472A627EB123F007461FA /* Manner-SmokerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F8472A727EB123F007461FA /* Manner_SmokerUITests.swift */,
+				9F8472A927EB123F007461FA /* Manner_SmokerUITestsLaunchTests.swift */,
+			);
+			path = "Manner-SmokerUITests";
+			sourceTree = "<group>";
+		};
+		9F8472B627EB1390007461FA /* login */ = {
+			isa = PBXGroup;
+			children = (
+				9F8472C227EB2135007461FA /* HeaderLogin.storyboard */,
+				9F8472CA27EB3125007461FA /* LoginViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		9F8472B727EB13B6007461FA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9F847AC227F98693007461FA /* Network */,
+				9F8472BE27EB1F42007461FA /* HeaderMap.storyboard */,
+				9F84798A27F3159F007461FA /* MapViewController.swift */,
+				9F847AC527F98B17007461FA /* MapManager.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		9F8472B827EB13C0007461FA /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				9F8472C827EB25E8007461FA /* HeaderCommunity.storyboard */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		9F8472B927EB13C8007461FA /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				9F8472C627EB2154007461FA /* HeaderMyPage.storyboard */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		9F8472BA27EB13CD007461FA /* News */ = {
+			isa = PBXGroup;
+			children = (
+				9F8472C427EB213E007461FA /* HeaderNews.storyboard */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		9F8472BB27EB13D6007461FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9F8472C027EB20D1007461FA /* HeaderHome.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9F8472BC27EB16F9007461FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F8472BD27EB16FE007461FA /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		9F8478A027F30036007461FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F8479EA27F472AE007461FA /* DaumMap.framework */,
+				9F8478AB27F300B6007461FA /* libsqlite3.tbd */,
+				9F8478AA27F300AD007461FA /* libxml2.tbd */,
+				9F8478A927F300A3007461FA /* libc++.tbd */,
+				9F84798527F31505007461FA /* Metal.framework */,
+				9F8478A727F30091007461FA /* QuartzCore.framework */,
+				9F8478A527F30086007461FA /* CoreLocation.framework */,
+				9F8478A327F30077007461FA /* SystemConfiguration.framework */,
+				399664EAF2D564B201AB1CA8 /* Pods_Manner_Smoker.framework */,
+				6508F18321D988D0C50C6639 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */,
+				553EA48C2A54A65F730276ED /* Pods_Manner_SmokerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F847AC027F9854E007461FA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				9F847AC727F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		9F847AC127F9855A007461FA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				9F2DCE4E27F996630082D89E /* SearchLoactionWithAddressResponseModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		9F847AC227F98693007461FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9F847AC027F9854E007461FA /* Request */,
+				9F847AC127F9855A007461FA /* Response */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9FC560D927FC19EF00592B47 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				9FC560DA27FC19EF00592B47 /* map_pinup_custom@3x.png */,
+				9FC560DB27FC19EF00592B47 /* map_pin_custom.png */,
+				9FC560DC27FC19EF00592B47 /* shadow_balloon.png */,
+				9FC560DD27FC19EF00592B47 /* map_pinup.png */,
+				9FC560DE27FC19EF00592B47 /* detail_button.png */,
+				9FC560DF27FC19EF00592B47 /* map_pin_custom@3x.png */,
+				9FC560E027FC19EF00592B47 /* map_pinup@3x.png */,
+				9FC560E127FC19EF00592B47 /* map_pin_shadow@3x.png */,
+				9FC560E227FC19EF00592B47 /* copyright.png */,
+				9FC560E327FC19EF00592B47 /* th_line.png */,
+				9FC560E427FC19EF00592B47 /* map_pin_red@3x.png */,
+				9FC560E527FC19EF00592B47 /* daum_copyright.png */,
+				9FC560E627FC19EF00592B47 /* map_pin@3x.png */,
+				9FC560E727FC19EF00592B47 /* map_present_tracking.png */,
+				9FC560E827FC19EF00592B47 /* map_pin_red.png */,
+				9FC560E927FC19EF00592B47 /* info_box.png */,
+				9FC560EA27FC19EF00592B47 /* point_sprite.png */,
+				9FC560EB27FC19EF00592B47 /* map_pinup_custom.png */,
+				9FC560EC27FC19EF00592B47 /* info_box_tail.png */,
+				9FC560ED27FC19EF00592B47 /* noimage256.png */,
+				9FC560EE27FC19EF00592B47 /* map_present_direction.png */,
+				9FC560EF27FC19EF00592B47 /* map_pin.png */,
+				9FC560F027FC19EF00592B47 /* map_present.png */,
+				9FC560F127FC19EF00592B47 /* noimage.png */,
+				9FC560F227FC19EF00592B47 /* map_present_background_update.png */,
+				9FC560F327FC19EF00592B47 /* daum_th_line.png */,
+				9FC560F427FC19EF00592B47 /* map_pin_shadow.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F84728227EB123E007461FA /* Manner-Smoker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F8472AD27EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-Smoker" */;
+			buildPhases = (
+				31FE4E64B80E21A50074E057 /* [CP] Check Pods Manifest.lock */,
+				9F84727F27EB123E007461FA /* Sources */,
+				9F84728027EB123E007461FA /* Frameworks */,
+				9F84728127EB123E007461FA /* Resources */,
+				ACC9C747B1AE118EC000741D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Manner-Smoker";
+			productName = "Manner-Smoker";
+			productReference = 9F84728327EB123E007461FA /* Manner-Smoker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F84729827EB123F007461FA /* Manner-SmokerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F8472B027EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-SmokerTests" */;
+			buildPhases = (
+				3A380A0274EEB3DFCC5584AB /* [CP] Check Pods Manifest.lock */,
+				9F84729527EB123F007461FA /* Sources */,
+				9F84729627EB123F007461FA /* Frameworks */,
+				9F84729727EB123F007461FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F84729B27EB123F007461FA /* PBXTargetDependency */,
+			);
+			name = "Manner-SmokerTests";
+			productName = "Manner-SmokerTests";
+			productReference = 9F84729927EB123F007461FA /* Manner-SmokerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F8472A227EB123F007461FA /* Manner-SmokerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F8472B327EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-SmokerUITests" */;
+			buildPhases = (
+				F0F6D137359E7CF35A48753C /* [CP] Check Pods Manifest.lock */,
+				9F84729F27EB123F007461FA /* Sources */,
+				9F8472A027EB123F007461FA /* Frameworks */,
+				9F8472A127EB123F007461FA /* Resources */,
+				9133E35F3E568884A52828E6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F8472A527EB123F007461FA /* PBXTargetDependency */,
+			);
+			name = "Manner-SmokerUITests";
+			productName = "Manner-SmokerUITests";
+			productReference = 9F8472A327EB123F007461FA /* Manner-SmokerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F84727B27EB123E007461FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					9F84728227EB123E007461FA = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					9F84729827EB123F007461FA = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 9F84728227EB123E007461FA;
+					};
+					9F8472A227EB123F007461FA = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 9F84728227EB123E007461FA;
+					};
+				};
+			};
+			buildConfigurationList = 9F84727E27EB123E007461FA /* Build configuration list for PBXProject "Manner-Smoker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F84727A27EB123E007461FA;
+			productRefGroup = 9F84728427EB123E007461FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F84728227EB123E007461FA /* Manner-Smoker */,
+				9F84729827EB123F007461FA /* Manner-SmokerTests */,
+				9F8472A227EB123F007461FA /* Manner-SmokerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F84728127EB123E007461FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC560F527FC19EF00592B47 /* map_pinup_custom@3x.png in Resources */,
+				9FC5610227FC19EF00592B47 /* map_present_tracking.png in Resources */,
+				9FC560FB27FC19EF00592B47 /* map_pinup@3x.png in Resources */,
+				9FC5610F27FC19EF00592B47 /* map_pin_shadow.png in Resources */,
+				9FC5610D27FC19EF00592B47 /* map_present_background_update.png in Resources */,
+				9FC5610927FC19EF00592B47 /* map_present_direction.png in Resources */,
+				9FC5610427FC19EF00592B47 /* info_box.png in Resources */,
+				9FC5610627FC19EF00592B47 /* map_pinup_custom.png in Resources */,
+				9FC560FF27FC19EF00592B47 /* map_pin_red@3x.png in Resources */,
+				9FC560FC27FC19EF00592B47 /* map_pin_shadow@3x.png in Resources */,
+				9FC560FE27FC19EF00592B47 /* th_line.png in Resources */,
+				9FC560FD27FC19EF00592B47 /* copyright.png in Resources */,
+				9FC5610B27FC19EF00592B47 /* map_present.png in Resources */,
+				9FC560F927FC19EF00592B47 /* detail_button.png in Resources */,
+				9FC5610827FC19EF00592B47 /* noimage256.png in Resources */,
+				9FC5610027FC19EF00592B47 /* daum_copyright.png in Resources */,
+				9FC560F827FC19EF00592B47 /* map_pinup.png in Resources */,
+				9FC5610527FC19EF00592B47 /* point_sprite.png in Resources */,
+				9FC5610727FC19EF00592B47 /* info_box_tail.png in Resources */,
+				9FC5610E27FC19EF00592B47 /* daum_th_line.png in Resources */,
+				9FC560F627FC19EF00592B47 /* map_pin_custom.png in Resources */,
+				9FC5610A27FC19EF00592B47 /* map_pin.png in Resources */,
+				9FC5610127FC19EF00592B47 /* map_pin@3x.png in Resources */,
+				9FC5610327FC19EF00592B47 /* map_pin_red.png in Resources */,
+				9FC560F727FC19EF00592B47 /* shadow_balloon.png in Resources */,
+				9F8472C927EB25E8007461FA /* HeaderCommunity.storyboard in Resources */,
+				9FC5610C27FC19EF00592B47 /* noimage.png in Resources */,
+				9F84729327EB123F007461FA /* LaunchScreen.storyboard in Resources */,
+				9F8472C527EB213E007461FA /* HeaderNews.storyboard in Resources */,
+				9FC560FA27FC19EF00592B47 /* map_pin_custom@3x.png in Resources */,
+				9F8472C727EB2154007461FA /* HeaderMyPage.storyboard in Resources */,
+				9F84729027EB123F007461FA /* Assets.xcassets in Resources */,
+				9F8472C127EB20D1007461FA /* HeaderHome.storyboard in Resources */,
+				9F8472C327EB2135007461FA /* HeaderLogin.storyboard in Resources */,
+				9F8472BF27EB1F42007461FA /* HeaderMap.storyboard in Resources */,
+				9F84728E27EB123E007461FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F84729727EB123F007461FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8472A127EB123F007461FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31FE4E64B80E21A50074E057 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Manner-Smoker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A380A0274EEB3DFCC5584AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Manner-SmokerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9133E35F3E568884A52828E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACC9C747B1AE118EC000741D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0F6D137359E7CF35A48753C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Manner-Smoker-Manner-SmokerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F84727F27EB123E007461FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F2DCE4F27F996630082D89E /* SearchLoactionWithAddressResponseModel.swift in Sources */,
+				9F8472CB27EB3125007461FA /* LoginViewController.swift in Sources */,
+				9F84798B27F3159F007461FA /* MapViewController.swift in Sources */,
+				9F847ACD27F9944A007461FA /* Constants.swift in Sources */,
+				9F84728B27EB123E007461FA /* ViewController.swift in Sources */,
+				9F847AC827F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift in Sources */,
+				9F84728727EB123E007461FA /* AppDelegate.swift in Sources */,
+				9F847AC627F98B17007461FA /* MapManager.swift in Sources */,
+				9F84730927EB43E7007461FA /* TabBarController.swift in Sources */,
+				9F84728927EB123E007461FA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F84729527EB123F007461FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F84729E27EB123F007461FA /* Manner_SmokerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F84729F27EB123F007461FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8472AA27EB123F007461FA /* Manner_SmokerUITestsLaunchTests.swift in Sources */,
+				9F8472A827EB123F007461FA /* Manner_SmokerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F84729B27EB123F007461FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F84728227EB123E007461FA /* Manner-Smoker */;
+			targetProxy = 9F84729A27EB123F007461FA /* PBXContainerItemProxy */;
+		};
+		9F8472A527EB123F007461FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F84728227EB123E007461FA /* Manner-Smoker */;
+			targetProxy = 9F8472A427EB123F007461FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F84728C27EB123E007461FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F84728D27EB123E007461FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F84729127EB123F007461FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F84729227EB123F007461FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F8472AB27EB123F007461FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F8472AC27EB123F007461FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F8472AE27EB123F007461FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C32A07109F520C0A42BF78B /* Pods-Manner-Smoker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932AKUPJM7;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Manner-SmokerUITests/IOS_DaumMap_SDK_1.4.0/lib/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/Manner-Smoker/IOS_DaumMap_SDK_1.4.0/lib/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/Manner-Smoker/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/Manner-Smoker",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Manner-Smoker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Manner-Smoker";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 알고 싶어요!";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = HeaderLogin;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryuhyeonjin.Manner-Smoker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F8472AF27EB123F007461FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A365AE8B0BB7500BF2F7AA85 /* Pods-Manner-Smoker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932AKUPJM7;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Manner-SmokerUITests/IOS_DaumMap_SDK_1.4.0/lib/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/Manner-Smoker/IOS_DaumMap_SDK_1.4.0/lib/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/Manner-Smoker/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)/Manner-Smoker",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Manner-Smoker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Manner-Smoker";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 알고 싶어요!";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = HeaderLogin;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryuhyeonjin.Manner-Smoker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F8472B127EB123F007461FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB1F77B90E508ED142A1F89 /* Pods-Manner-SmokerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932AKUPJM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ryuhyeonjin.Manner-SmokerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manner-Smoker.app/Manner-Smoker";
+			};
+			name = Debug;
+		};
+		9F8472B227EB123F007461FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94968924596F1E77782879E7 /* Pods-Manner-SmokerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932AKUPJM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ryuhyeonjin.Manner-SmokerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manner-Smoker.app/Manner-Smoker";
+			};
+			name = Release;
+		};
+		9F8472B427EB123F007461FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228E6CEEF15E7D6BE4EB4369 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932AKUPJM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ryuhyeonjin.Manner-SmokerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Manner-Smoker";
+			};
+			name = Debug;
+		};
+		9F8472B527EB123F007461FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 203B4729AF96C01DBC87CFBC /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932AKUPJM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ryuhyeonjin.Manner-SmokerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Manner-Smoker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F84727E27EB123E007461FA /* Build configuration list for PBXProject "Manner-Smoker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8472AB27EB123F007461FA /* Debug */,
+				9F8472AC27EB123F007461FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F8472AD27EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-Smoker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8472AE27EB123F007461FA /* Debug */,
+				9F8472AF27EB123F007461FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F8472B027EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-SmokerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8472B127EB123F007461FA /* Debug */,
+				9F8472B227EB123F007461FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F8472B327EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-SmokerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8472B427EB123F007461FA /* Debug */,
+				9F8472B527EB123F007461FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F84727B27EB123E007461FA /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_Manner_SmokerTests {
+  umbrella header "Pods-Manner-SmokerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HeaderMap" id="Y6W-OH-hqX" customClass="MapViewController" customModule="Manner_Smoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4H-sW-AbT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-T9-Dh4">
+                                <rect key="frame" x="339" y="427" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gkD-T9-Dh4" secondAttribute="height" multiplier="1:1" id="DYe-je-vJa"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="scope" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="setCurrentPoint:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GL2-u8-8z3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="찾고자 하는 지역을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kve-VC-YAv">
+                                <rect key="frame" x="61" y="74" width="292" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="didEditingThenMoveMap:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="ecL-fL-ssI"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kve-VC-YAv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="98N-yL-PI4"/>
+                            <constraint firstItem="gkD-T9-Dh4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="339" id="GyV-ar-hdI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kve-VC-YAv" secondAttribute="trailing" constant="61" id="LIE-qP-qPU"/>
+                            <constraint firstItem="Kve-VC-YAv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="61" id="LTW-u7-Y53"/>
+                            <constraint firstAttribute="trailing" secondItem="U4H-sW-AbT" secondAttribute="trailing" id="LwD-nA-XbH"/>
+                            <constraint firstItem="U4H-sW-AbT" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PAJ-ZT-zAg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gkD-T9-Dh4" secondAttribute="bottom" constant="341" id="SGZ-Jv-hjf"/>
+                            <constraint firstItem="U4H-sW-AbT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="X1v-P5-wGC"/>
+                            <constraint firstItem="gkD-T9-Dh4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="383" id="iRr-fu-14L"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gkD-T9-Dh4" secondAttribute="trailing" constant="30" id="m0S-cc-p3i"/>
+                            <constraint firstAttribute="bottom" secondItem="U4H-sW-AbT" secondAttribute="bottom" id="s1x-Gq-Jrk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="6T1-Ms-16S"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="Kve-VC-YAv" id="X6p-M5-DNl"/>
+                        <outlet property="subView" destination="U4H-sW-AbT" id="02o-Mu-ZYe"/>
+                        <outlet property="tabbar" destination="6T1-Ms-16S" id="WN9-7w-167"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="scope" catalog="system" width="128" height="122"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
