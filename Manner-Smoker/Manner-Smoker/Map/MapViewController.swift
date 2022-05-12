@@ -64,7 +64,12 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         self.mtMapView.bottomAnchor.constraint(equalTo: self.subView.bottomAnchor).isActive = true
     }
     
-    
+    @IBAction func zoomIn(){
+        mtMapView.zoomIn(animated: true)
+    }
+    @IBAction func zoomOut(){
+        mtMapView.zoomOut(animated: true)
+    }
 
 }
 extension MapViewController: CLLocationManagerDelegate{
@@ -114,8 +119,7 @@ extension MapViewController: UITextFieldDelegate{
         self.searchTextField.delegate = self
     }
     
-    
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.searchTextField{
             

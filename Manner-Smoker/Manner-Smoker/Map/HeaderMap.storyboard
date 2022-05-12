@@ -20,16 +20,46 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-T9-Dh4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKm-PK-u4S" userLabel="zoom in">
+                                <rect key="frame" x="339" y="550" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="d79-cP-vdj"/>
+                                    <constraint firstAttribute="width" secondItem="MKm-PK-u4S" secondAttribute="height" multiplier="1:1" id="v79-vk-vZl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="zoomIn" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5ZK-Sz-Sbh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67g-pl-S0s" userLabel="zoom out">
+                                <rect key="frame" x="339" y="625" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="hdN-1W-Ccd"/>
+                                    <constraint firstAttribute="width" secondItem="67g-pl-S0s" secondAttribute="height" multiplier="1:1" id="vOQ-bh-CW2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system">
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="zoomOut" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Y66-mP-OoA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-T9-Dh4" userLabel="current location">
                                 <rect key="frame" x="339" y="427" width="45" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gkD-T9-Dh4" secondAttribute="height" multiplier="1:1" id="DYe-je-vJa"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="scope" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
+                                </state>
                                 <buttonConfiguration key="configuration" style="plain" image="scope" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="light"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="setCurrentPoint:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GL2-u8-8z3"/>
@@ -52,11 +82,17 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kve-VC-YAv" secondAttribute="trailing" constant="61" id="LIE-qP-qPU"/>
                             <constraint firstItem="Kve-VC-YAv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="61" id="LTW-u7-Y53"/>
                             <constraint firstAttribute="trailing" secondItem="U4H-sW-AbT" secondAttribute="trailing" id="LwD-nA-XbH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="67g-pl-S0s" secondAttribute="trailing" constant="30" id="Os5-a1-fVy"/>
                             <constraint firstItem="U4H-sW-AbT" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PAJ-ZT-zAg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gkD-T9-Dh4" secondAttribute="bottom" constant="341" id="SGZ-Jv-hjf"/>
                             <constraint firstItem="U4H-sW-AbT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="X1v-P5-wGC"/>
+                            <constraint firstItem="MKm-PK-u4S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="339" id="XUS-4G-Ckq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MKm-PK-u4S" secondAttribute="trailing" constant="30" id="fis-7f-KzF"/>
                             <constraint firstItem="gkD-T9-Dh4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="383" id="iRr-fu-14L"/>
+                            <constraint firstItem="67g-pl-S0s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="339" id="l6E-lv-ThB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gkD-T9-Dh4" secondAttribute="trailing" constant="30" id="m0S-cc-p3i"/>
+                            <constraint firstItem="MKm-PK-u4S" firstAttribute="top" secondItem="gkD-T9-Dh4" secondAttribute="bottom" constant="78" id="nSM-ej-7gx"/>
+                            <constraint firstItem="67g-pl-S0s" firstAttribute="top" secondItem="MKm-PK-u4S" secondAttribute="bottom" constant="30" id="rfr-Ch-Xk7"/>
                             <constraint firstAttribute="bottom" secondItem="U4H-sW-AbT" secondAttribute="bottom" id="s1x-Gq-Jrk"/>
                         </constraints>
                     </view>
@@ -75,9 +111,14 @@
     </scenes>
     <resources>
         <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="scope" catalog="system" width="128" height="122"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
