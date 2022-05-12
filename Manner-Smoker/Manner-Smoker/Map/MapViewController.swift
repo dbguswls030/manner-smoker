@@ -12,11 +12,15 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     
     var locationManager = CLLocationManager()
     
-    @IBOutlet var subView: UIView!
+    @IBOutlet var kakaoMapView: UIView!
     @IBOutlet var tabbar: UITabBarItem!
     @IBOutlet var searchTextField: UITextField!
-    
+    @IBOutlet var currentButton: UIButton!
+    @IBOutlet var zoomInButton: UIButton!
+    @IBOutlet var zoomOutButton: UIButton!
     var mtMapView: MTMapView!
+    
+    var tapped = false
     
     @IBAction func setCurrentPoint(_ sender: Any) {
         setCurrentMapPoint()
@@ -37,31 +41,31 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         initTextField()
         setLoactionData()
         hideKeyboard()
-        
+//        self.navigationController?.hidesBarsOnSwipe = true
+        self.tabBarController?.hidesBottomBarWhenPushed = true
     }
     
     func initMapView(){
-        self.mtMapView = MTMapView(frame: self.subView.frame)
+        self.mtMapView = MTMapView(frame: self.kakaoMapView.frame)
 
         mtMapView.delegate = self
         mtMapView.baseMapType = .standard
 
 //        mtMapView.showCurrentLocationMarker = true
 //        mtMapView.currentLocationTrackingMode = .onWithoutHeading
-        
         self.mtMapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.566640, longitude: 126.977458)), animated: true) // 서울시청으로 좌표 초기화
-       
-        self.subView.addSubview(mtMapView)
+        
+        self.kakaoMapView.addSubview(mtMapView)
         
         initMapPoint()
         setMapViewConstraint()
     }
     
     func setMapViewConstraint(){
-        self.mtMapView.leadingAnchor.constraint(equalTo: self.subView.leadingAnchor).isActive = true
-        self.mtMapView.trailingAnchor.constraint(equalTo: self.subView.trailingAnchor).isActive = true
-        self.mtMapView.topAnchor.constraint(equalTo: self.subView.topAnchor).isActive = true
-        self.mtMapView.bottomAnchor.constraint(equalTo: self.subView.bottomAnchor).isActive = true
+        self.mtMapView.leadingAnchor.constraint(equalTo: self.kakaoMapView.leadingAnchor).isActive = true
+        self.mtMapView.trailingAnchor.constraint(equalTo: self.kakaoMapView.trailingAnchor).isActive = true
+        self.mtMapView.topAnchor.constraint(equalTo: self.kakaoMapView.topAnchor).isActive = true
+        self.mtMapView.bottomAnchor.constraint(equalTo: self.kakaoMapView.bottomAnchor).isActive = true
     }
     
     @IBAction func zoomIn(){
@@ -70,7 +74,35 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     @IBAction func zoomOut(){
         mtMapView.zoomOut(animated: true)
     }
-
+    
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
+        if tapped == false{
+            hideUI()
+            tapped = true
+        }else{
+            displayUI()
+            tapped = false
+        }
+    }
+    func hideUI(){
+        UIView.animate(withDuration: 0.5){
+            self.searchTextField.alpha = 0
+            self.zoomInButton.alpha = 0
+            self.zoomOutButton.alpha = 0
+            self.currentButton.alpha = 0
+            self.tabBarController?.tabBar.frame.origin = CGPoint(x: 0, y: UIScreen.main.bounds.maxY)
+        }
+    }
+    func displayUI(){
+        UIView.animate(withDuration: 0.5){
+            self.searchTextField.alpha = 1
+            self.zoomInButton.alpha = 1
+            self.zoomOutButton.alpha = 1
+            self.currentButton.alpha = 1
+            let heigh = self.tabBarController?.tabBar.frame.height ?? 0
+            self.tabBarController?.tabBar.frame.origin = CGPoint(x: 0, y: UIScreen.main.bounds.maxY - heigh)
+        }
+    }
 }
 extension MapViewController: CLLocationManagerDelegate{
     
@@ -128,7 +160,6 @@ extension MapViewController: UITextFieldDelegate{
                 print("두 글자 이상 입력해주세요..")
                 return true
             }
-            
             self.searchTextField.placeholder = self.searchTextField.text
             self.view.endEditing(true)
             let model = SearchLoactionWithAddressRequestModel(query: searchKeyword)
@@ -145,16 +176,11 @@ extension MapViewController: UITextFieldDelegate{
                     print("검색 결과를 찾을 수 없습니다.")
                 }
             }
-            
-            
-            
         }
         return true
     }
     @IBAction func didEditingThenMoveMap(_ sender: Any) {
-        
         self.searchTextField.text = ""
         self.view.endEditing(true)
-        
     }
 }

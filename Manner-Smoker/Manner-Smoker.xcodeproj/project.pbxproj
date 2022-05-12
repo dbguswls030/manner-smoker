@@ -905,7 +905,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryuhyeonjin.Manner-Smoker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -948,7 +948,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryuhyeonjin.Manner-Smoker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
