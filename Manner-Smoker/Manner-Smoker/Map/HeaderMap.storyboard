@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4H-sW-AbT">
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4H-sW-AbT" userLabel="KaKao Map View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="p0O-bo-l7f" appends="YES" id="geK-tV-TKg"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKm-PK-u4S" userLabel="zoom in">
                                 <rect key="frame" x="339" y="550" width="45" height="45"/>
@@ -76,6 +79,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kve-VC-YAv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="98N-yL-PI4"/>
                             <constraint firstItem="gkD-T9-Dh4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="339" id="GyV-ar-hdI"/>
@@ -99,12 +103,21 @@
                     <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="6T1-Ms-16S"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="currentButton" destination="gkD-T9-Dh4" id="brM-Du-5pD"/>
+                        <outlet property="kakaoMapView" destination="U4H-sW-AbT" id="02o-Mu-ZYe"/>
                         <outlet property="searchTextField" destination="Kve-VC-YAv" id="X6p-M5-DNl"/>
-                        <outlet property="subView" destination="U4H-sW-AbT" id="02o-Mu-ZYe"/>
-                        <outlet property="tabbar" destination="6T1-Ms-16S" id="WN9-7w-167"/>
+                        <outlet property="tabbar" destination="6T1-Ms-16S" id="PFm-Wa-wGX"/>
+                        <outlet property="zoomInButton" destination="MKm-PK-u4S" id="PPb-qn-Flb"/>
+                        <outlet property="zoomOutButton" destination="67g-pl-S0s" id="bfw-QY-Q4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="p0O-bo-l7f">
+                    <connections>
+                        <action selector="didTap:" destination="Y6W-OH-hqX" id="5dI-zk-JeR"/>
+                        <outlet property="delegate" destination="Y6W-OH-hqX" id="8wC-6H-fve"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="80.357142857142847"/>
         </scene>
