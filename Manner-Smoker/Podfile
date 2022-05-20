@@ -4,8 +4,11 @@
 target 'Manner-Smoker' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-	pod 'Alamofire'
+
   # Pods for Manner-Smoker
+  pod 'Alamofire'
+  pod 'FSCalendar'
+  pod 'KakaoSDK'
 
   target 'Manner-SmokerTests' do
     inherit! :search_paths
