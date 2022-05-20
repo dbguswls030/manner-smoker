@@ -24,7 +24,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKm-PK-u4S" userLabel="zoom in">
-                                <rect key="frame" x="339" y="550" width="45" height="45"/>
+                                <rect key="frame" x="354" y="550" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="d79-cP-vdj"/>
                                     <constraint firstAttribute="width" secondItem="MKm-PK-u4S" secondAttribute="height" multiplier="1:1" id="v79-vk-vZl"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67g-pl-S0s" userLabel="zoom out">
-                                <rect key="frame" x="339" y="625" width="45" height="45"/>
+                                <rect key="frame" x="354" y="625" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="hdN-1W-Ccd"/>
                                     <constraint firstAttribute="width" secondItem="67g-pl-S0s" secondAttribute="height" multiplier="1:1" id="vOQ-bh-CW2"/>
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-T9-Dh4" userLabel="current location">
-                                <rect key="frame" x="339" y="427" width="45" height="45"/>
+                                <rect key="frame" x="354" y="427" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gkD-T9-Dh4" secondAttribute="height" multiplier="1:1" id="DYe-je-vJa"/>
                                 </constraints>
@@ -68,8 +68,26 @@
                                     <action selector="setCurrentPoint:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GL2-u8-8z3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0D-Eh-4fW" userLabel="show map List">
+                                <rect key="frame" x="15" y="618" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d0D-Eh-4fW" secondAttribute="height" multiplier="1:1" id="9CJ-c2-T9y"/>
+                                    <constraint firstAttribute="width" constant="45" id="tdC-sw-p29"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="list.dash" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="26"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showMapList:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ML1-ao-rNh"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="찾고자 하는 지역을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kve-VC-YAv">
-                                <rect key="frame" x="61" y="74" width="292" height="34"/>
+                                <rect key="frame" x="61" y="74" width="292" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d8b-ue-Aue"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <connections>
@@ -82,20 +100,24 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kve-VC-YAv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="98N-yL-PI4"/>
-                            <constraint firstItem="gkD-T9-Dh4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="339" id="GyV-ar-hdI"/>
+                            <constraint firstItem="gkD-T9-Dh4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="354" id="Ja9-1Q-qm4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kve-VC-YAv" secondAttribute="trailing" constant="61" id="LIE-qP-qPU"/>
                             <constraint firstItem="Kve-VC-YAv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="61" id="LTW-u7-Y53"/>
                             <constraint firstAttribute="trailing" secondItem="U4H-sW-AbT" secondAttribute="trailing" id="LwD-nA-XbH"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="67g-pl-S0s" secondAttribute="trailing" constant="30" id="Os5-a1-fVy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="67g-pl-S0s" secondAttribute="trailing" constant="15" id="Os5-a1-fVy"/>
                             <constraint firstItem="U4H-sW-AbT" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PAJ-ZT-zAg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="d0D-Eh-4fW" secondAttribute="trailing" constant="368" id="PAt-Dr-A4j"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gkD-T9-Dh4" secondAttribute="bottom" constant="341" id="SGZ-Jv-hjf"/>
                             <constraint firstItem="U4H-sW-AbT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="X1v-P5-wGC"/>
                             <constraint firstItem="MKm-PK-u4S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="339" id="XUS-4G-Ckq"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MKm-PK-u4S" secondAttribute="trailing" constant="30" id="fis-7f-KzF"/>
-                            <constraint firstItem="gkD-T9-Dh4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="383" id="iRr-fu-14L"/>
+                            <constraint firstItem="gkD-T9-Dh4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Kve-VC-YAv" secondAttribute="bottom" constant="15" id="eMM-Vq-3N4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MKm-PK-u4S" secondAttribute="trailing" constant="15" id="fis-7f-KzF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="d0D-Eh-4fW" secondAttribute="bottom" constant="150" id="fvF-hI-Asd"/>
+                            <constraint firstItem="d0D-Eh-4fW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Kve-VC-YAv" secondAttribute="bottom" constant="20" id="hLs-uy-m1t"/>
                             <constraint firstItem="67g-pl-S0s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="339" id="l6E-lv-ThB"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gkD-T9-Dh4" secondAttribute="trailing" constant="30" id="m0S-cc-p3i"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gkD-T9-Dh4" secondAttribute="trailing" constant="15" id="m0S-cc-p3i"/>
                             <constraint firstItem="MKm-PK-u4S" firstAttribute="top" secondItem="gkD-T9-Dh4" secondAttribute="bottom" constant="78" id="nSM-ej-7gx"/>
+                            <constraint firstItem="d0D-Eh-4fW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="qbM-Pe-y5U"/>
                             <constraint firstItem="67g-pl-S0s" firstAttribute="top" secondItem="MKm-PK-u4S" secondAttribute="bottom" constant="30" id="rfr-Ch-Xk7"/>
                             <constraint firstAttribute="bottom" secondItem="U4H-sW-AbT" secondAttribute="bottom" id="s1x-Gq-Jrk"/>
                         </constraints>
@@ -105,6 +127,7 @@
                     <connections>
                         <outlet property="currentButton" destination="gkD-T9-Dh4" id="brM-Du-5pD"/>
                         <outlet property="kakaoMapView" destination="U4H-sW-AbT" id="02o-Mu-ZYe"/>
+                        <outlet property="mapListButton" destination="d0D-Eh-4fW" id="HNc-ZH-ygx"/>
                         <outlet property="searchTextField" destination="Kve-VC-YAv" id="X6p-M5-DNl"/>
                         <outlet property="tabbar" destination="6T1-Ms-16S" id="PFm-Wa-wGX"/>
                         <outlet property="zoomInButton" destination="MKm-PK-u4S" id="PPb-qn-Flb"/>
@@ -123,6 +146,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>

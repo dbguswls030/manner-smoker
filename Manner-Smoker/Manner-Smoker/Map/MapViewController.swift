@@ -18,6 +18,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     @IBOutlet var currentButton: UIButton!
     @IBOutlet var zoomInButton: UIButton!
     @IBOutlet var zoomOutButton: UIButton!
+    @IBOutlet var mapListButton: UIButton!
     var mtMapView: MTMapView!
     
     var tapped = false
@@ -43,7 +44,11 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         hideKeyboard()
 //        self.navigationController?.hidesBarsOnSwipe = true
         self.tabBarController?.hidesBottomBarWhenPushed = true
+        
     }
+    
+    
+    
     
     func initMapView(){
         self.mtMapView = MTMapView(frame: self.kakaoMapView.frame)
@@ -68,6 +73,24 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         self.mtMapView.bottomAnchor.constraint(equalTo: self.kakaoMapView.bottomAnchor).isActive = true
     }
     
+    
+    
+    @IBAction func showMapList(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MapListView", bundle: Bundle.main)
+        let bottomSheetVC = storyboard.instantiateViewController(identifier: "MapListView")
+        
+        guard let sheet = bottomSheetVC.presentationController as? UISheetPresentationController else{
+            return
+        }
+        sheet.detents = [.medium(), .large()]
+        sheet.largestUndimmedDetentIdentifier = .large
+        sheet.prefersGrabberVisible = true
+        
+        self.present(bottomSheetVC, animated: true)
+        
+    }
+    
+    
     @IBAction func zoomIn(){
         mtMapView.zoomIn(animated: true)
     }
@@ -90,6 +113,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             self.zoomInButton.alpha = 0
             self.zoomOutButton.alpha = 0
             self.currentButton.alpha = 0
+            self.mapListButton.alpha = 0
             self.tabBarController?.tabBar.frame.origin = CGPoint(x: 0, y: UIScreen.main.bounds.maxY)
         }
     }
@@ -99,6 +123,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             self.zoomInButton.alpha = 1
             self.zoomOutButton.alpha = 1
             self.currentButton.alpha = 1
+            self.mapListButton.alpha = 1
             let heigh = self.tabBarController?.tabBar.frame.height ?? 0
             self.tabBarController?.tabBar.frame.origin = CGPoint(x: 0, y: UIScreen.main.bounds.maxY - heigh)
         }
