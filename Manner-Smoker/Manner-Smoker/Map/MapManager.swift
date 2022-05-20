@@ -9,9 +9,6 @@ import Foundation
 import Alamofire
 class MapManager{
     static let shared = MapManager()
-    var mapList = [Map]()
-    
-    
     let SearchLocationWithKeywordURL = "https://dapi.kakao.com/v2/local/search/keyword.json"
     
     
