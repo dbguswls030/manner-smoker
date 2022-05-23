@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fET-9P-mHh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,22 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="sSR-mi-yly">
-            <objects>
-                <navigationController id="fET-9P-mHh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vfK-2t-bvg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="XZq-ql-4hI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fm1-sl-NAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1739" y="-27"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -32,37 +16,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyI-Ma-Md6">
-                                <rect key="frame" x="174" y="414" width="67" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQj-BV-13S">
+                                <rect key="frame" x="55" y="163" width="151" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Oep-Sw-Lsk"/>
+                                    <constraint firstAttribute="width" constant="151" id="VYc-rt-DCR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smoker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayw-W6-ChI">
+                                <rect key="frame" x="189" y="220" width="152" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="Dif-Ph-YRP"/>
+                                    <constraint firstAttribute="height" constant="49" id="oci-as-5zz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-e6-4S9">
+                                <rect key="frame" x="45" y="714" width="324" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="kakao_login"/>
                                 <connections>
-                                    <action selector="testButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="unp-z6-Byo"/>
+                                    <action selector="kakaoLoginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0dx-DR-Gej"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="smokePerson" translatesAutoresizingMaskIntoConstraints="NO" id="vbk-qj-txR">
+                                <rect key="frame" x="71" y="277" width="244" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="dsb-RF-hZe"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vbk-qj-txR" secondAttribute="trailing" constant="99" id="2wT-t9-r2Z"/>
+                            <constraint firstItem="vbk-qj-txR" firstAttribute="top" secondItem="Ayw-W6-ChI" secondAttribute="bottom" constant="8" symbolic="YES" id="4Gh-GM-QsF"/>
+                            <constraint firstItem="BQj-BV-13S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="55" id="8Q7-wK-0wJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ayw-W6-ChI" secondAttribute="trailing" constant="73" id="BZa-np-TwJ"/>
+                            <constraint firstItem="BQj-BV-13S" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="119" id="CcO-gS-6yP"/>
+                            <constraint firstItem="Ayw-W6-ChI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="176" id="RNN-TN-XA2"/>
+                            <constraint firstItem="vbk-qj-txR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="71" id="fSo-5H-xAB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6VI-Fh-Fif"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-232" y="-34"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="hNj-lc-Va1">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainSegue" storyboardName="Main" referencedIdentifier="Main" id="aHK-Si-QFh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="TXS-wK-g5O"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ViZ-8b-Bsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="646" y="-34"/>
+            <point key="canvasLocation" x="-865.21739130434787" y="-101.11607142857143"/>
         </scene>
     </scenes>
     <resources>
+        <image name="kakao_login" width="300" height="45"/>
+        <image name="smokePerson" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
