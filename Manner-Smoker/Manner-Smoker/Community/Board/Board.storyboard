@@ -43,18 +43,18 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xva-GN-CSG">
                                                     <rect key="frame" x="85" y="20" width="39" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작성 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcq-wv-jkW">
-                                                    <rect key="frame" x="85" y="43" width="52.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="85" y="53" width="52.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBB-Yp-adF">
-                                                    <rect key="frame" x="85" y="90" width="28" height="25"/>
+                                                    <rect key="frame" x="85" y="80" width="28" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -62,12 +62,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Rcq-wv-jkW" firstAttribute="leading" secondItem="nsT-Kg-Xju" secondAttribute="trailing" constant="15" id="0dl-La-eDa"/>
-                                                <constraint firstAttribute="bottom" secondItem="NBB-Yp-adF" secondAttribute="bottom" constant="15" id="4xT-Iq-2QX"/>
+                                                <constraint firstAttribute="bottom" secondItem="NBB-Yp-adF" secondAttribute="bottom" constant="5" id="4xT-Iq-2QX"/>
                                                 <constraint firstItem="Xva-GN-CSG" firstAttribute="top" secondItem="B7x-Me-TS6" secondAttribute="top" constant="20" id="EAR-LX-K0I"/>
                                                 <constraint firstItem="nsT-Kg-Xju" firstAttribute="top" secondItem="B7x-Me-TS6" secondAttribute="top" constant="15" id="Gi7-2M-OTp"/>
-                                                <constraint firstItem="NBB-Yp-adF" firstAttribute="top" secondItem="nsT-Kg-Xju" secondAttribute="bottom" constant="15" id="I4J-P8-nBT"/>
+                                                <constraint firstItem="NBB-Yp-adF" firstAttribute="top" secondItem="nsT-Kg-Xju" secondAttribute="bottom" constant="5" id="I4J-P8-nBT"/>
                                                 <constraint firstItem="nsT-Kg-Xju" firstAttribute="width" secondItem="nsT-Kg-Xju" secondAttribute="height" multiplier="1:1" id="U1S-JU-YJW"/>
-                                                <constraint firstItem="Rcq-wv-jkW" firstAttribute="top" secondItem="Xva-GN-CSG" secondAttribute="bottom" constant="5" id="ZU4-W7-juG"/>
+                                                <constraint firstItem="Rcq-wv-jkW" firstAttribute="top" secondItem="Xva-GN-CSG" secondAttribute="bottom" constant="15" id="ZU4-W7-juG"/>
                                                 <constraint firstItem="nsT-Kg-Xju" firstAttribute="leading" secondItem="B7x-Me-TS6" secondAttribute="leading" constant="10" id="gQd-lt-PGX"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NBB-Yp-adF" secondAttribute="trailing" constant="20" id="jDK-56-2aN"/>
                                                 <constraint firstItem="Xva-GN-CSG" firstAttribute="leading" secondItem="nsT-Kg-Xju" secondAttribute="trailing" constant="15" id="kiJ-s0-jEf"/>
@@ -132,7 +132,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3f-iE-okr">
-                                            <rect key="frame" x="25" y="363.5" width="39.5" height="32"/>
+                                            <rect key="frame" x="25" y="361.5" width="39.5" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -147,10 +147,10 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="F36-ko-6EA" firstAttribute="leading" secondItem="SrZ-Y5-ckx" secondAttribute="trailing" constant="15" id="0LO-uq-Mu0"/>
-                                        <constraint firstItem="i3f-iE-okr" firstAttribute="top" secondItem="wZw-1A-dKt" secondAttribute="bottom" constant="5" id="4qM-9c-lZ0"/>
+                                        <constraint firstItem="i3f-iE-okr" firstAttribute="top" secondItem="wZw-1A-dKt" secondAttribute="bottom" constant="3" id="4qM-9c-lZ0"/>
                                         <constraint firstItem="OgR-VK-jG8" firstAttribute="top" secondItem="Bj6-iG-GA5" secondAttribute="bottom" constant="20" id="6Rd-JY-HiP"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i3f-iE-okr" secondAttribute="trailing" constant="25" id="7Z3-6E-Snm"/>
-                                        <constraint firstItem="aya-sE-IGk" firstAttribute="top" secondItem="i3f-iE-okr" secondAttribute="bottom" constant="5" id="7oO-kZ-yRI"/>
+                                        <constraint firstItem="aya-sE-IGk" firstAttribute="top" secondItem="i3f-iE-okr" secondAttribute="bottom" constant="3" id="7oO-kZ-yRI"/>
                                         <constraint firstItem="SrZ-Y5-ckx" firstAttribute="top" secondItem="O4l-LT-rje" secondAttribute="top" constant="15" id="8wz-uq-Yht"/>
                                         <constraint firstAttribute="trailing" secondItem="aya-sE-IGk" secondAttribute="trailing" id="Asx-a5-L6f"/>
                                         <constraint firstAttribute="bottom" secondItem="aya-sE-IGk" secondAttribute="bottom" id="BaU-80-Wan"/>
@@ -187,18 +187,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGq-GV-t14" userLabel="comment bar">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="댓글을 작성해주세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0W-pS-Jpt">
-                                        <rect key="frame" x="20" y="8" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="댓글을 입력해주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rmc-wj-n3s">
+                                        <rect key="frame" x="20" y="5" width="374" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wxJ-Pp-XxC"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZD-9n-ult">
+                                        <rect key="frame" x="355" y="10" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="IZD-9n-ult" secondAttribute="height" multiplier="1:1" id="00S-gL-bCv"/>
+                                            <constraint firstAttribute="height" constant="34" id="1H3-1O-CVc"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrowshape.turn.up.forward.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="placeholderTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="N9a-rJ-HH0"/>
-                                    <constraint firstItem="t0W-pS-Jpt" firstAttribute="centerY" secondItem="YGq-GV-t14" secondAttribute="centerY" id="cdK-Pl-qYG"/>
-                                    <constraint firstItem="t0W-pS-Jpt" firstAttribute="leading" secondItem="YGq-GV-t14" secondAttribute="leading" constant="20" id="hYt-xl-DQk"/>
-                                    <constraint firstAttribute="trailing" secondItem="t0W-pS-Jpt" secondAttribute="trailing" constant="20" id="lUa-Wi-cZC"/>
+                                    <constraint firstItem="rmc-wj-n3s" firstAttribute="leading" secondItem="YGq-GV-t14" secondAttribute="leading" constant="20" id="Dyj-rd-PBX"/>
+                                    <constraint firstAttribute="trailing" secondItem="rmc-wj-n3s" secondAttribute="trailing" constant="20" id="N0g-ra-JoH"/>
+                                    <constraint firstItem="rmc-wj-n3s" firstAttribute="top" secondItem="YGq-GV-t14" secondAttribute="top" constant="5" id="PkT-8n-l81"/>
+                                    <constraint firstItem="IZD-9n-ult" firstAttribute="trailing" secondItem="rmc-wj-n3s" secondAttribute="trailing" constant="-5" id="XoP-BO-2H1"/>
+                                    <constraint firstAttribute="bottom" secondItem="rmc-wj-n3s" secondAttribute="bottom" constant="5" id="Zn6-Ou-XXP"/>
+                                    <constraint firstItem="IZD-9n-ult" firstAttribute="bottom" secondItem="rmc-wj-n3s" secondAttribute="bottom" constant="-1" id="koV-x2-Weg"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -216,9 +235,11 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="bgR-2X-Ge5" id="dCR-wK-4Na"/>
-                        <outlet property="textField" destination="t0W-pS-Jpt" id="xHg-ul-4Z2"/>
-                        <outlet property="textFieldBox" destination="slh-yF-BD2" id="n4h-NI-3TB"/>
-                        <outlet property="textFieldView" destination="YGq-GV-t14" id="KjM-By-InZ"/>
+                        <outlet property="textEditFinishButton" destination="IZD-9n-ult" id="5fc-S6-QBH"/>
+                        <outlet property="textHeightConstraint" destination="wxJ-Pp-XxC" id="DPR-kR-Qlb"/>
+                        <outlet property="textView" destination="rmc-wj-n3s" id="kgx-8T-wEM"/>
+                        <outlet property="textViewBottom" destination="slh-yF-BD2" id="n4h-NI-3TB"/>
+                        <outlet property="textViewBox" destination="YGq-GV-t14" id="VG7-JM-DdX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -227,11 +248,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.forward.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

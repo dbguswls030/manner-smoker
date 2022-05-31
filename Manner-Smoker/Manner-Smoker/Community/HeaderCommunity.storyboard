@@ -61,13 +61,13 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laf-jN-CMK">
                                                     <rect key="frame" x="20" y="267.5" width="36.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작성 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqX-Eu-zPo">
                                                     <rect key="frame" x="341.5" y="267.5" width="52.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -79,7 +79,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2w-9e-1jZ">
-                                                    <rect key="frame" x="25" y="300.5" width="39.5" height="36"/>
+                                                    <rect key="frame" x="25" y="298.5" width="39.5" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -102,7 +102,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="DFa-pI-OBY" secondAttribute="trailing" id="Nxs-Cm-ftE"/>
                                                 <constraint firstItem="DFa-pI-OBY" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" id="PND-d9-Rqv"/>
                                                 <constraint firstItem="Laf-jN-CMK" firstAttribute="top" secondItem="gaz-8T-5U7" secondAttribute="bottom" constant="20" id="Pfa-mg-Xfi"/>
-                                                <constraint firstItem="z2w-9e-1jZ" firstAttribute="top" secondItem="q5M-Ix-l1a" secondAttribute="bottom" constant="5" id="Qb9-sH-tdV"/>
+                                                <constraint firstItem="z2w-9e-1jZ" firstAttribute="top" secondItem="q5M-Ix-l1a" secondAttribute="bottom" constant="3" id="Qb9-sH-tdV"/>
                                                 <constraint firstItem="6aE-g5-w5l" firstAttribute="top" secondItem="DFa-pI-OBY" secondAttribute="bottom" constant="20" id="TNG-8T-XXf"/>
                                                 <constraint firstAttribute="trailing" secondItem="gaz-8T-5U7" secondAttribute="trailing" constant="20" id="Ue9-Mj-fgj"/>
                                                 <constraint firstAttribute="trailing" secondItem="cqX-Eu-zPo" secondAttribute="trailing" constant="20" id="ag7-rR-xun"/>
@@ -111,7 +111,7 @@
                                                 <constraint firstItem="gaz-8T-5U7" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" constant="20" id="ceN-43-sHg"/>
                                                 <constraint firstItem="q5M-Ix-l1a" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" id="duX-fZ-UP3"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="z2w-9e-1jZ" secondAttribute="trailing" constant="25" id="dzY-qP-s8p"/>
-                                                <constraint firstItem="dDN-q0-1nh" firstAttribute="top" secondItem="z2w-9e-1jZ" secondAttribute="bottom" constant="5" id="hnR-6m-Cbg"/>
+                                                <constraint firstItem="dDN-q0-1nh" firstAttribute="top" secondItem="z2w-9e-1jZ" secondAttribute="bottom" constant="3" id="hnR-6m-Cbg"/>
                                                 <constraint firstItem="6aE-g5-w5l" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" constant="20" id="oWg-5m-PZx"/>
                                                 <constraint firstAttribute="bottom" secondItem="dDN-q0-1nh" secondAttribute="bottom" id="rWw-HW-k12"/>
                                                 <constraint firstItem="dDN-q0-1nh" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" id="tZt-JF-zdV"/>
