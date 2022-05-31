@@ -21,11 +21,7 @@ class WriteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func initTextView(){
-        self.textView.delegate = self
-        self.textView.text = "이야기를 작성하여 공유해주세요."
-        self.textView.textColor = UIColor.lightGray
-    }
+    
     
     @IBAction func endWriting(_ sender: Any) {
         //글 작성 완료 팝업 yes or no
@@ -36,6 +32,12 @@ class WriteViewController: UIViewController {
 }
 extension WriteViewController: UITextViewDelegate{
 
+    func initTextView(){
+        self.textView.delegate = self
+        self.textView.text = "이야기를 작성하여 공유해주세요."
+        self.textView.textColor = UIColor.lightGray
+    }
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray{
             textView.text = nil

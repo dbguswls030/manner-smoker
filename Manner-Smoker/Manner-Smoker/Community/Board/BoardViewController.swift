@@ -10,10 +10,12 @@ import UIKit
 class BoardViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var textField: UITextField!
-    @IBOutlet var textFieldView: UIView!
-    @IBOutlet var textFieldBox: NSLayoutConstraint!
-    var textViewYValue = CGFloat(0)
+    
+    @IBOutlet var textViewBox: UIView!
+    @IBOutlet var textViewBottom: NSLayoutConstraint!
+    @IBOutlet var textHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var textView: UITextView!
+    @IBOutlet var textEditFinishButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,8 @@ class BoardViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         hideKeyboard()
+        initTextView()
+        textEditFinishButton.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,15 +49,63 @@ class BoardViewController: UIViewController {
     
     @objc func keyboardWillShow(_ noti: NSNotification){
         if let keyboardSize = (noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
-            self.textFieldBox.constant = -(keyboardSize.height - self.view.safeAreaInsets.bottom)
+            self.textViewBottom.constant = -(keyboardSize.height - self.view.safeAreaInsets.bottom)
         }
     }
     
     @objc func keyboardWillHide(_ noti: NSNotification){
-            self.textFieldBox.constant = 0
+            self.textViewBottom.constant = 0
+    }
+
+}
+extension BoardViewController: UITextViewDelegate{
+    func initTextView(){
+        self.textView.delegate = self
+        self.textView.text = "댓글을 입력해주세요."
+        self.textView.textColor = UIColor.lightGray
+        self.textView.layer.cornerRadius = 10
+        self.textView.isScrollEnabled = false
+        self.textView.sizeToFit()
+        self.textView.textContainerInset = .init(top: CGFloat(8), left: CGFloat(8), bottom: CGFloat(8), right: self.textEditFinishButton.bounds.size.width+CGFloat(8))
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray{
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty{
+            textView.text = "댓글을 입력해주세요."
+            textView.textColor = UIColor.lightGray
+        }
+        
+    }
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.text.isEmpty{
+            if textEditFinishButton.isHidden == false{
+                textEditFinishButton.isHidden = true
+            }
+        }else{
+            if textEditFinishButton.isHidden == true{
+                textEditFinishButton.isHidden = false
+            }
+        }
+           
+        
+        let size = CGSize(width: self.textView.bounds.size.width, height: .infinity)
+        let estimatedSize = self.textView.sizeThatFits(size)
+        let isMaxHeight = estimatedSize.height >= 100
+        if !isMaxHeight{
+            self.textHeightConstraint.constant = estimatedSize.height
+        }
+        guard isMaxHeight != self.textView.isScrollEnabled else { return }
+        self.textView.isScrollEnabled = isMaxHeight
+        self.textView.reloadInputViews()
+        self.textView.setNeedsUpdateConstraints()
+    }
     
 }
 
@@ -96,7 +148,7 @@ extension BoardViewController: UICollectionViewDelegateFlowLayout{
         let content = header.contents.bounds.height
         let commentLabel = header.commentCount.bounds.height
         
-        let height = 15 + profileImage + 15 + 1 + 20 + content + 15 + image + 25 + 1 + 5 + commentLabel + 5 + 1
+        let height = 15 + profileImage + 15 + 1 + 20 + content + 15 + image + 25 + 1 + 3 + commentLabel + 3 + 1
         return CGSize(width: width, height: height)
         
     }
@@ -109,7 +161,7 @@ extension BoardViewController: UICollectionViewDelegateFlowLayout{
         
         let image = cell.profileImage.bounds.height
         let comment = cell.comment.bounds.height
-        let height = 1 + 15 + image + 15 + comment + 15 + 1
+        let height = 1 + 15 + image + 5 + comment + 5 + 1
         return CGSize(width: width, height: height)
     }
 }

@@ -65,7 +65,7 @@ extension CommunityViewController: UICollectionViewDelegateFlowLayout{
         let image = cell.image.bounds.height
         let nickName = cell.nickName.bounds.height
         let commentLabel = cell.commentCount.bounds.height
-        let height = 1 + 20 + contents + 20 + image + 20 + nickName + 10 + 1 + 5 + commentLabel + 5 + 1
+        let height = 1 + 20 + contents + 20 + image + 20 + nickName + 10 + 1 + 3 + commentLabel + 3 + 1
         return CGSize(width: width, height: height)
     }
 }
