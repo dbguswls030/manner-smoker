@@ -38,7 +38,6 @@ extension CommunityViewController: UICollectionViewDelegate{
         }
         boardVC.hidesBottomBarWhenPushed = true
         boardVC.tabBarController?.tabBar.isHidden = true
-        boardVC.navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .darkGray
         self.navigationController?.pushViewController(boardVC, animated: true)
     }
 }

@@ -25,8 +25,18 @@ class BoardViewController: UIViewController {
         hideKeyboard()
         initTextView()
         textEditFinishButton.isHidden = true
+        initNavigationBarItem()
+        
     }
     
+    func initNavigationBarItem(){
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .done, target: self, action: #selector(back))
+        backButton.tintColor = .darkGray
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    @objc func back(){
+        self.navigationController?.popViewController(animated: true)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initKeyboardNotification()

@@ -55,8 +55,8 @@ extension MapListViewController: UICollectionViewDelegate{
     
 extension MapListViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.bounds.width
-        let height = CGFloat(285) // 수정 필요
+        let width = view.bounds.width - 20 - 20
+        let height = CGFloat(270) // 수정 필요
         return CGSize(width: width, height: height)
     }
 }

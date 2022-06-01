@@ -61,11 +61,11 @@
             </objects>
             <point key="canvasLocation" x="1323" y="-873"/>
         </scene>
-        <!--Communicate-->
+        <!--Community-->
         <scene sceneID="kvu-g7-Cne">
             <objects>
                 <navigationController id="Vco-VB-9rj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Communicate" image="network" catalog="system" id="elE-iL-RjD"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="network" catalog="system" id="elE-iL-RjD"/>
                     <navigationItem key="navigationItem" id="EPf-2p-Pfw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9un-NA-V0j">

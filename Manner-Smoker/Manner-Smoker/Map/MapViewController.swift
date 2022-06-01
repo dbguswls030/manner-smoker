@@ -19,49 +19,40 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     @IBOutlet var zoomInButton: UIButton!
     @IBOutlet var zoomOutButton: UIButton!
     @IBOutlet var mapListButton: UIButton!
-    var mtMapView: MTMapView!
     
+    var mtMapView: MTMapView!
     var tapped = false
     
     @IBAction func setCurrentPoint(_ sender: Any) {
         setCurrentMapPoint()
     }
-    
-    
-    
-//    func mapView(_ mapView: MTMapView!, updateCurrentLocation location: MTMapPoint!, withAccuracy accuracy: MTMapLocationAccuracy) {
-//        let currentLocation = location.mapPointGeo()
-//        MTMapPointGeo(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
-//    }
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         initMapView()
         initTextField()
+        initStyle()
         setLoactionData()
         hideKeyboard()
-//        self.navigationController?.hidesBarsOnSwipe = true
         self.tabBarController?.hidesBottomBarWhenPushed = true
         
     }
-    
-    
-    
-    
+    func initStyle(){
+        self.currentButton.layer.cornerRadius = 3
+        self.zoomInButton.layer.cornerRadius = 3
+        self.zoomOutButton.layer.cornerRadius = 3
+        self.mapListButton.layer.cornerRadius = 3
+    }
+
     func initMapView(){
         self.mtMapView = MTMapView(frame: self.kakaoMapView.frame)
-
         mtMapView.delegate = self
         mtMapView.baseMapType = .standard
-
-//        mtMapView.showCurrentLocationMarker = true
-//        mtMapView.currentLocationTrackingMode = .onWithoutHeading
-        self.mtMapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.566640, longitude: 126.977458)), animated: true) // 서울시청으로 좌표 초기화
-        
+        mtMapView.showCurrentLocationMarker = true
+        mtMapView.currentLocationTrackingMode = .onWithoutHeading
+//        self.mtMapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.566640, longitude: 126.977458)), animated: true)
         self.kakaoMapView.addSubview(mtMapView)
-        
         initMapPoint()
         setMapViewConstraint()
     }
@@ -72,7 +63,10 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         self.mtMapView.topAnchor.constraint(equalTo: self.kakaoMapView.topAnchor).isActive = true
         self.mtMapView.bottomAnchor.constraint(equalTo: self.kakaoMapView.bottomAnchor).isActive = true
     }
-    
+    //    func mapView(_ mapView: MTMapView!, updateCurrentLocation location: MTMapPoint!, withAccuracy accuracy: MTMapLocationAccuracy) {
+    //        let currentLocation = location.mapPointGeo()
+    //        MTMapPointGeo(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
+    //    }
     
     
     @IBAction func showMapList(_ sender: Any) {
@@ -99,13 +93,18 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
     
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
-        if tapped == false{
-            hideUI()
-            tapped = true
+        if self.searchTextField.isFirstResponder {
+            searchTextField.resignFirstResponder()
         }else{
-            displayUI()
-            tapped = false
+            if tapped == false{
+                hideUI()
+                tapped = true
+            }else{
+                displayUI()
+                tapped = false
+            }
         }
+
     }
     func hideUI(){
         UIView.animate(withDuration: 0.5){
@@ -144,12 +143,15 @@ extension MapViewController: CLLocationManagerDelegate{
         // CLLocation 써서 해야함
         // 위치 권한 허가 시에만 동작 가능하도록
         // 위치 권한 없을 시에 다시 권한 업하라는 메시지 추가해야함
-//        let currentLocation = MTMapPoint(geoCoord: MTMapPointGeo(latitude: self.locationManager.location?.coordinate.latitude ?? 37.566640, longitude: self.locationManager.location?.coordinate.longitude ?? 126.977458))
-        let currentLocation = MTMapPoint(geoCoord: .init(latitude: 37.566640, longitude: 126.977458))
-        self.mtMapView.setMapCenter(currentLocation, animated: true)
+        if let locations = locationManager.location{
+            let currentLocation = MTMapPoint(geoCoord: MTMapPointGeo(latitude: locations.coordinate.latitude, longitude: locations.coordinate.longitude))
+            self.mtMapView.setMapCenter(currentLocation, animated: true)
+        }else{
+            //현재 위치 불가능
+        }
     }
     
-    func initMapPoint(){
+    func initMapPoint(){ // 벡엔드에서 받아와서 마커 표시
         let poiItem1 = MTMapPOIItem()
         poiItem1.markerType = .bluePin
         poiItem1.mapPoint =  MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.566640, longitude: 126.977458))
@@ -157,18 +159,19 @@ extension MapViewController: CLLocationManagerDelegate{
         self.mtMapView.addPOIItems([poiItem1])
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // 위치 권한 "허가" 동작
-        if let location = locations.first{
-            print("x: \(location.coordinate.latitude)")
-            print("y: \(location.coordinate.longitude)")
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // 위치 권한 "불허가" 동작
-        print("locationManager : updateLocation error")
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        // 위치 권한 "허가" 동작
+////        if let location = locations.first{
+////            print("x: \(location.coordinate.latitude)")
+////            print("y: \(location.coordinate.longitude)")
+////        }
+//        print("locationManager : updateLocation success")
+//    }
+//
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        // 위치 권한 "불허가" 동작
+//        print("locationManager : updateLocation error")
+//    }
 }
 
 extension MapViewController: UITextFieldDelegate{
