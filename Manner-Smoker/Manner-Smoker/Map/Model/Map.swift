@@ -6,20 +6,26 @@
 //
 
 import Foundation
-class Map{ //codable
-    var locationImage: UIImage?
-    let locationName: String
-    let distance: Int
-    let x: Double
-    let y: Double
-    
-    init(locationImage: UIImage, locationName: String, distance: Int, x: Double, y: Double){
-        self.locationImage = UIImage(named: "noimage.png")
-        self.locationName = locationName
-        self.distance = distance
-        self.x = x
-        self.y = y
-    }
-    
+struct Map{
+    let area: Int
+    let latitude: Double
+    let longitude: Double
 }
 
+
+//{
+//  "httpStatus": "OK",
+//  "message": null,
+//  "response": [
+//    {
+//      "longitude": "126.968881",
+//      "latitude": "37.553149",
+//      "area": 1
+//    },
+//    {
+//      "longitude": "126.969662",
+//      "latitude": "37.553760",
+//      "area": 1
+//    }
+//    ]
+//}

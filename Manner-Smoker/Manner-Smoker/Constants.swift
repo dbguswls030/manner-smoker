@@ -12,4 +12,7 @@ struct Constants{
         static let REST_API_KEY = "2f9978736131f89473157ecacebce150"
         
     }
+    struct BackEndAPI{
+        static let BASE_URL = "http://ec2-3-37-250-127.ap-northeast-2.compute.amazonaws.com:8080"
+    }
 }

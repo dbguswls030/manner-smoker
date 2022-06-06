@@ -22,14 +22,18 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     
     var mtMapView: MTMapView!
     var tapped = false
+    var mapListSwitch = false
+    
+    var tempMaps = [Map]()
     
     @IBAction func setCurrentPoint(_ sender: Any) {
         setCurrentMapPoint()
     }
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        MapManager.shared.requestSmokeArea(model: GetAllSmokeAreaRequestModel())
         initMapView()
         initTextField()
         initStyle()
@@ -38,6 +42,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         self.tabBarController?.hidesBottomBarWhenPushed = true
         
     }
+    
     func initStyle(){
         self.currentButton.layer.cornerRadius = 3
         self.zoomInButton.layer.cornerRadius = 3
@@ -50,11 +55,19 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         mtMapView.delegate = self
         mtMapView.baseMapType = .standard
         mtMapView.showCurrentLocationMarker = true
-        mtMapView.currentLocationTrackingMode = .onWithoutHeading
-//        self.mtMapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.566640, longitude: 126.977458)), animated: true)
+        mtMapView.didReceiveMemoryWarning()
+//        mtMapView.currentLocationTrackingMode = .onWithoutHeading
+        if let locations = locationManager.location{
+            self.mtMapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: locations.coordinate.latitude, longitude: locations.coordinate.longitude)), animated: true)
+        }
+       
         self.kakaoMapView.addSubview(mtMapView)
         initMapPoint()
         setMapViewConstraint()
+    }
+    
+    func testcurrentLocation(){
+        
     }
     
     func setMapViewConstraint(){
@@ -70,18 +83,28 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     
     
     @IBAction func showMapList(_ sender: Any) {
+        if searchTextField.isFirstResponder{
+            searchTextField.resignFirstResponder()
+        }
         let storyboard = UIStoryboard(name: "MapListView", bundle: Bundle.main)
-        let bottomSheetVC = storyboard.instantiateViewController(identifier: "MapListView")
-        
+        guard let bottomSheetVC = storyboard.instantiateViewController(identifier: "MapListView") as? MapListViewController else{
+            return
+        }
+        if let locations = locationManager.location{
+            bottomSheetVC.getCurrentPoint(point: MTMapPointGeo(latitude: locations.coordinate.latitude, longitude: locations.coordinate.longitude))
+        }
+//        bottomSheetVC.getCurrentPoint(point: mtMapView.mapCenterPoint.mapPointGeo())
+        bottomSheetVC.getMaps(maps: self.tempMaps)
         guard let sheet = bottomSheetVC.presentationController as? UISheetPresentationController else{
             return
         }
         sheet.detents = [.medium(), .large()]
         sheet.largestUndimmedDetentIdentifier = .large
         sheet.prefersGrabberVisible = true
+        self.mapListSwitch = true
+    
         
         self.present(bottomSheetVC, animated: true)
-        
     }
     
     
@@ -93,14 +116,22 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
     
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
-        if self.searchTextField.isFirstResponder {
+        if self.mapListSwitch == true && self.searchTextField.isFirstResponder{
+            self.mapListSwitch = false
+            self.dismiss(animated: true)
             searchTextField.resignFirstResponder()
+        }else if self.mapListSwitch == true {
+            self.mapListSwitch = false
+            self.dismiss(animated: true)
+        }else if self.searchTextField.isFirstResponder{
+            searchTextField.resignFirstResponder()
+            
         }else{
             if tapped == false{
                 hideUI()
                 tapped = true
             }else{
-                displayUI()
+                showUI()
                 tapped = false
             }
         }
@@ -116,7 +147,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             self.tabBarController?.tabBar.frame.origin = CGPoint(x: 0, y: UIScreen.main.bounds.maxY)
         }
     }
-    func displayUI(){
+    func showUI(){
         UIView.animate(withDuration: 0.5){
             self.searchTextField.alpha = 1
             self.zoomInButton.alpha = 1
@@ -152,13 +183,45 @@ extension MapViewController: CLLocationManagerDelegate{
     }
     
     func initMapPoint(){ // 벡엔드에서 받아와서 마커 표시
-        let poiItem1 = MTMapPOIItem()
-        poiItem1.markerType = .bluePin
-        poiItem1.mapPoint =  MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.566640, longitude: 126.977458))
-        poiItem1.itemName = "서울시청"
-        self.mtMapView.addPOIItems([poiItem1])
+        if let bounds = self.mtMapView.mapBounds{
+            let bottomLeftPoint = bounds.bottomLeft.mapPointGeo()
+            let topRightPoint = bounds.topRight.mapPointGeo()
+            let items = MapManager.shared.mapList.filter{
+                bottomLeftPoint.longitude < $0.longitude &&
+                bottomLeftPoint.latitude < $0.latitude &&
+                topRightPoint.latitude > $0.latitude &&
+                topRightPoint.longitude > $0.longitude
+            }
+            for item in items{
+                let poiItem = MTMapPOIItem()
+                poiItem.markerType = .bluePin
+                poiItem.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: item.latitude, longitude: item.longitude))
+                self.mtMapView.add(poiItem)
+            }
+        }
     }
     
+    func mapView(_ mapView: MTMapView!, finishedMapMoveAnimation mapCenterPoint: MTMapPoint!) {
+        mapView.removeAllPOIItems()
+        self.tempMaps.removeAll()
+        if let bounds = mapView.mapBounds{
+            let bottomLeftPoint = bounds.bottomLeft.mapPointGeo()
+            let topRightPoint = bounds.topRight.mapPointGeo()
+            tempMaps = MapManager.shared.mapList.filter{
+                bottomLeftPoint.longitude < $0.longitude &&
+                bottomLeftPoint.latitude < $0.latitude &&
+                topRightPoint.latitude > $0.latitude &&
+                topRightPoint.longitude > $0.longitude
+            }
+            
+            for item in tempMaps{
+                let poiItem = MTMapPOIItem()
+                poiItem.markerType = .bluePin
+                poiItem.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: item.latitude, longitude: item.longitude))
+                self.mtMapView.add(poiItem)
+            }
+        }
+    }
 //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //        // 위치 권한 "허가" 동작
 ////        if let location = locations.first{
@@ -178,7 +241,6 @@ extension MapViewController: UITextFieldDelegate{
     func initTextField(){
         self.searchTextField.delegate = self
     }
-    
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.searchTextField{
@@ -204,6 +266,13 @@ extension MapViewController: UITextFieldDelegate{
                     print("검색 결과를 찾을 수 없습니다.")
                 }
             }
+        }
+        return true
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if mapListSwitch == true {
+            mapListSwitch = false
+            self.dismiss(animated: true)
         }
         return true
     }
