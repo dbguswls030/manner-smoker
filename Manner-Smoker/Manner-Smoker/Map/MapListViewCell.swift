@@ -12,7 +12,8 @@ class MapListViewCell: UICollectionViewCell{
     @IBOutlet var locationName: UILabel!
     @IBOutlet var distance: UILabel!
     
-    func updateUI(){
-
+    func updateUI(num: Int, map: MapListViewModel){
+        self.locationName.text = "\(num)번"
+        self.distance.text = "\(String(format: "%.2f", map.distance*1000))m"
     }
 }
