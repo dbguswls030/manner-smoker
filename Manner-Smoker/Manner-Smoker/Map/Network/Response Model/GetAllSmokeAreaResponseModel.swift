@@ -15,7 +15,7 @@ struct GetAllSmokeAreaResponseModel: Decodable{
         case response
     }
 }
-struct AreaData: Codable{
+struct AreaData: Decodable{
     let area: Int
     let latitude: String
     let longitude: String

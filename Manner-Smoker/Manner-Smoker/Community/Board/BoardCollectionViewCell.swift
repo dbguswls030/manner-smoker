@@ -12,4 +12,9 @@ class BoardCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nickName: UILabel!
     @IBOutlet var dateOfWriting: UILabel!
     @IBOutlet var comment: UILabel!
+    @IBOutlet var deleteButton: UIButton!
+    
+    func updateUI(item: GetReplyReadAllResponseModelResponses){
+        self.comment.text = item.replyContent
+    }
 }

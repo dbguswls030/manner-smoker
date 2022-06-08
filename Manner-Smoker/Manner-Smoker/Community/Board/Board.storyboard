@@ -66,9 +66,22 @@
                                                         <constraint firstAttribute="height" constant="1" id="G3P-lF-LvM"/>
                                                     </constraints>
                                                 </view>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQE-te-py6">
+                                                    <rect key="frame" x="379" y="10" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="CQE-te-py6" secondAttribute="height" multiplier="1:1" id="W8T-Nb-go2"/>
+                                                        <constraint firstAttribute="width" constant="25" id="hU0-iq-uLd"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="xmark" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Rcq-wv-jkW" firstAttribute="leading" secondItem="nsT-Kg-Xju" secondAttribute="trailing" constant="15" id="0dl-La-eDa"/>
+                                                <constraint firstItem="CQE-te-py6" firstAttribute="top" secondItem="B7x-Me-TS6" secondAttribute="top" constant="10" id="8MF-lc-w3J"/>
                                                 <constraint firstItem="Xva-GN-CSG" firstAttribute="top" secondItem="B7x-Me-TS6" secondAttribute="top" constant="20" id="EAR-LX-K0I"/>
                                                 <constraint firstItem="nsT-Kg-Xju" firstAttribute="top" secondItem="B7x-Me-TS6" secondAttribute="top" constant="15" id="Gi7-2M-OTp"/>
                                                 <constraint firstItem="NBB-Yp-adF" firstAttribute="top" secondItem="nsT-Kg-Xju" secondAttribute="bottom" constant="5" id="I4J-P8-nBT"/>
@@ -82,11 +95,13 @@
                                                 <constraint firstItem="Xva-GN-CSG" firstAttribute="leading" secondItem="nsT-Kg-Xju" secondAttribute="trailing" constant="15" id="kiJ-s0-jEf"/>
                                                 <constraint firstAttribute="bottom" secondItem="k2g-5B-E3v" secondAttribute="bottom" id="mXx-ua-VA9"/>
                                                 <constraint firstItem="NBB-Yp-adF" firstAttribute="leading" secondItem="nsT-Kg-Xju" secondAttribute="trailing" constant="15" id="oxG-qg-fqR"/>
+                                                <constraint firstAttribute="trailing" secondItem="CQE-te-py6" secondAttribute="trailing" constant="10" id="sds-Iw-IGd"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="comment" destination="NBB-Yp-adF" id="xNZ-L2-yCx"/>
                                             <outlet property="dateOfWriting" destination="Rcq-wv-jkW" id="gRL-tg-Ifo"/>
+                                            <outlet property="deleteButton" destination="CQE-te-py6" id="1st-FQ-JwG"/>
                                             <outlet property="nickName" destination="Xva-GN-CSG" id="1B2-U5-HAf"/>
                                             <outlet property="profileImage" destination="nsT-Kg-Xju" id="Xa9-Sn-BH3"/>
                                         </connections>
@@ -262,6 +277,7 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.forward.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

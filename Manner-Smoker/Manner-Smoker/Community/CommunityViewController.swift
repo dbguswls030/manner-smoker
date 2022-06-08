@@ -11,11 +11,19 @@ class CommunityViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     
+    var viewModel = CommunityViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.getResponses {
+            self.collectionView.reloadData()
+        }
     }
     
     @IBAction func writeButton(_ sender: Any) {
@@ -38,19 +46,20 @@ extension CommunityViewController: UICollectionViewDelegate{
         }
         boardVC.hidesBottomBarWhenPushed = true
         boardVC.tabBarController?.tabBar.isHidden = true
+        boardVC.contentViewModel = viewModel.response[indexPath.item]
         self.navigationController?.pushViewController(boardVC, animated: true)
     }
 }
 extension CommunityViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return viewModel.getNumOfCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BoardList", for: indexPath) as? CommunityCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
+        cell.updateUI(item: viewModel.response[indexPath.item])
         return cell
     }
 }
