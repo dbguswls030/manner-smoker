@@ -14,4 +14,8 @@ class BoardCollectionReusableView: UICollectionReusableView {
     @IBOutlet var contents: UILabel!
     @IBOutlet var image: UIImageView!
     @IBOutlet var commentCount: UILabel!
+    
+    func updateUI(item: GetPostReadAllResponseModelResponses){
+        self.contents.text = item.content
+    }
 }

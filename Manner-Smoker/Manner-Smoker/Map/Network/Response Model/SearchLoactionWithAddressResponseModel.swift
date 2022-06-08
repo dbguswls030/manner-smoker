@@ -13,7 +13,7 @@ struct SearchLoactionWithAddressResponseModel: Decodable{
         case documents
     }
 }
-struct SearchAddressInfo: Codable{
+struct SearchAddressInfo: Decodable{
     
     //경도 longitude
     let x: String

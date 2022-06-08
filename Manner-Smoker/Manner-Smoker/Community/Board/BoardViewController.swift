@@ -16,7 +16,8 @@ class BoardViewController: UIViewController {
     @IBOutlet var textHeightConstraint: NSLayoutConstraint!
     @IBOutlet var textView: UITextView!
     @IBOutlet var textEditFinishButton: UIButton!
-    
+    var contentViewModel: GetPostReadAllResponseModelResponses?
+    var commentViewModel = BoardViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,13 +27,33 @@ class BoardViewController: UIViewController {
         initTextView()
         textEditFinishButton.isHidden = true
         initNavigationBarItem()
-        
+    }
+    func initViewModel(){
+        if let contentViewModel = contentViewModel {
+            commentViewModel.postId = contentViewModel.postId
+            commentViewModel.searchComment()
+            collectionView.reloadData()
+        }
     }
     
     func initNavigationBarItem(){
         let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .done, target: self, action: #selector(back))
         backButton.tintColor = .darkGray
         self.navigationItem.leftBarButtonItem = backButton
+        
+        let deleteButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .done, target: self, action: #selector(postDelete))
+        deleteButton.tintColor = .darkGray
+        
+        let updateButton = UIBarButtonItem(title: "수정", style: .done, target: self, action: #selector(postUpdate))
+        updateButton.tintColor = .darkGray
+        
+        self.navigationItem.rightBarButtonItems = [deleteButton, updateButton]
+    }
+    @objc func postDelete(){
+        // delete api
+    }
+    @objc func postUpdate(){
+        // Write 으로 넘어가면서 글 내용 복사
     }
     @objc func back(){
         self.navigationController?.popViewController(animated: true)
@@ -40,6 +61,8 @@ class BoardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initKeyboardNotification()
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -127,20 +150,23 @@ extension BoardViewController: UICollectionViewDataSource{
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ContentViewHeader", for: indexPath) as? BoardCollectionReusableView else{
                 return UICollectionReusableView()
             }
-            
+            if let viewModel = self.contentViewModel{
+                header.updateUI(item: viewModel)
+            }
             return header
         default: return UICollectionReusableView()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return commentViewModel.numOfCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentViewCell", for: indexPath) as? BoardCollectionViewCell else{
             return UICollectionViewCell()
         }
+        cell.updateUI(item: commentViewModel.response[indexPath.item])
         return cell
     }
 }

@@ -24,8 +24,12 @@ class WriteViewController: UIViewController {
     
     
     @IBAction func endWriting(_ sender: Any) {
-        //글 작성 완료 팝업 yes or no
-        //팝업 yes 시 업로드
+        guard let content = textView.text, content.count > 5 else{
+            print("최소 5글자 이상을 작성해주세요!")
+            return
+        }
+        
+        CommunityManager.shared.setPostCreate(model: CreateRequestModel(content: content, title: "test", userId: 1))
         self.dismiss(animated: true)
     }
     
