@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     // 카카오톡 앱으로 로그인
     func loginWithApp() {
-        UserApi.shared.loginWithKakaoTalk {(_, error) in
+        UserApi.shared.loginWithKakaoTalk {( OAuthToken, error) in
             if let error = error {
                 print(error)
             } else {
@@ -47,7 +47,19 @@ extension LoginViewController {
                     if let error = error {
                         print(error)
                     } else {
+
+                        UserDefaults.standard.set(user?.id, forKey: "UserID")
+                        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                        Constants.MY_USER_ID = (user?.id)!
+                        Constants.MY_TOKEN = OAuthToken!.accessToken
+                        KaKaoDataManager().transferToken()
+                        
                         self.presentToMain()
+                        
+                        _ = OAuthToken
+
+                        self.presentToMain()
+
                     }
                 }
             }
@@ -56,7 +68,8 @@ extension LoginViewController {
     
     // 카카오톡 웹으로 로그인
     func loginWithWeb() {
-        UserApi.shared.loginWithKakaoAccount {(_, error) in
+        UserApi.shared.loginWithKakaoAccount {(OAuthToken, error) in
+
             if let error = error {
                 print(error)
             } else {
@@ -66,8 +79,20 @@ extension LoginViewController {
                     if let error = error {
                         print(error)
                     } else {
+
+                        UserDefaults.standard.set(user?.id, forKey: "UserID")
+                        Constants.MY_USER_ID = (user?.id)!
+                        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                        Constants.MY_TOKEN = OAuthToken!.accessToken
+                        KaKaoDataManager().transferToken()
+                        
                         
                         self.presentToMain()
+                        
+                        _ = OAuthToken
+
+                        self.presentToMain()
+
                     }
                 }
             }
