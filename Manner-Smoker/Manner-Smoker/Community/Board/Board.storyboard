@@ -77,6 +77,9 @@
                                                     <state key="normal" image="xmark" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="DeletReply:" destination="eha-tg-Vgf" eventType="touchUpInside" id="sfS-M8-jPP"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -101,7 +104,7 @@
                                         <connections>
                                             <outlet property="comment" destination="NBB-Yp-adF" id="xNZ-L2-yCx"/>
                                             <outlet property="dateOfWriting" destination="Rcq-wv-jkW" id="gRL-tg-Ifo"/>
-                                            <outlet property="deleteButton" destination="CQE-te-py6" id="1st-FQ-JwG"/>
+                                            <outlet property="deleteButton" destination="CQE-te-py6" id="n2f-Tg-o6O"/>
                                             <outlet property="nickName" destination="Xva-GN-CSG" id="1B2-U5-HAf"/>
                                             <outlet property="profileImage" destination="nsT-Kg-Xju" id="Xa9-Sn-BH3"/>
                                         </connections>
@@ -236,6 +239,9 @@
                                         <state key="normal" image="arrowshape.turn.up.forward.circle.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
                                         </state>
+                                        <connections>
+                                            <action selector="commentEditFinish:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ke3-Ej-2jA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="placeholderTextColor"/>

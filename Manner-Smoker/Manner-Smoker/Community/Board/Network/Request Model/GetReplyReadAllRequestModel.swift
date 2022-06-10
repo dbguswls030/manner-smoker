@@ -8,10 +8,10 @@
 import Foundation
 import Alamofire
 struct GetReplyReadAllRequestModel{
-    let query: String
+    let postId: String
     var parameters : Parameters = [:]
     var headers : HTTPHeaders = [:]
-    init(query: String){
-        self.query = query
+    init(postId: String){
+        self.postId = postId
     }
 }
