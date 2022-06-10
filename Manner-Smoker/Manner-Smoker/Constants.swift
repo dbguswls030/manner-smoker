@@ -21,6 +21,10 @@ struct Constants{
     static var ACESS_TOKEN : String = ""
     //static var CREDENTIAL : Oa
     static var MY_USER_ID : Int64 = 0
+    static var SERVER_USER_ID : Int = 0
+    
+    static var START_SMOKE_DATE : Date?
+    static var STANDARD_SMOKE_AMOUNT : Int = 20
     
     static var headerJSON: HTTPHeaders = [
                 "Content-Type": "application/json",

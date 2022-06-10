@@ -13,22 +13,31 @@ import UIKit
 
 class HeaderMyPageVC: UIViewController {
     
+    @IBOutlet var profileView: UIView!
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var totalView: UIView!
     @IBOutlet weak var myPageTableView: UITableView!
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var userName: UILabel!
+    @IBOutlet var plusBtn: UIButton!
+    
+    @IBOutlet var selectedDateLbl: UILabel!
+    @IBOutlet var selectedDaySmokeAmountLbl: UILabel!
     
     var check = 0
     let dateFormatter = DateFormatter()
-    var titleData : [String] = ["설정", "위치정보", "친구초대", "알림", "로그아웃"]
-    var selectedDate : String = ""
+    var smokeInfo : [DayResponse] = []
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUserInfo()
+        todaySetup()
         
+        //profileView.layer.borderWidth = 1
+        //profileView.layer.borderColor = UIColor.systemIndigo.cgColor
+        plusBtn.layer.cornerRadius = 19
         dateFormatter.dateFormat = "yyyy-MM-dd"
         calendarView.delegate = self
         calendarView.dataSource = self
@@ -37,9 +46,48 @@ class HeaderMyPageVC: UIViewController {
     }
     
     @IBAction func plusSmokeCount(_ sender: UIButton) {
-        //dateFormatter.string(from: date)
+        DispatchQueue.main.async {
+            SmokeAmountDataManager().addSmokeAmount()
+        }
+        
+        todaySetup()
     }
     
+    @IBAction func goToDetail(_ sender: UIButton) {
+        let detailVC = MyPageDetailVC()
+        detailVC.modalPresentationStyle = .overFullScreen
+        self.present(detailVC, animated: true, completion: nil)
+    }
+    
+    // 일 구하기
+    func getDay(_ date: Date) -> Int {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d"
+        
+        let day = Int(formatter.string(from: date))
+        
+        return day!
+    }
+    
+    // 월 구하기
+    func getMonth(_ date: Date) -> Int {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M"
+        
+        let month = Int(formatter.string(from: date))
+        
+        return month!
+    }
+    
+    // 년도 구하기
+    func getYear(_ date: Date) -> Int {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        
+        let year = Int(formatter.string(from: date))
+        
+        return year!
+    }
     
     func setUserInfo() {
         UserApi.shared.me() { (user, error) in
@@ -58,6 +106,23 @@ class HeaderMyPageVC: UIViewController {
                 }
             }
         }
+    }
+    
+    // 초기화면 오늘 날짜로 된 설정
+    func todaySetup() {
+        let year = getYear(Date())
+        let month = getMonth(Date())
+        let day = getDay(Date())
+        
+        selectedDateLbl.text = "\(year)년\(month)월\(day)일"
+       
+        DaySmokeDataManager().getDaySmokeAmount(year, month, day, viewController: self)
+        DaySmokeDataManager().getDaySmokeInfo(year, month, day, viewController: self)
+        
+//        for _ in 0 ..< 7 {
+//            MyPageDetailDataManager().getDaySmokeResult(year, month, day, viewController: MyPageDetailVC())
+//        }
+        
     }
     
 }
@@ -93,46 +158,28 @@ extension HeaderMyPageVC : FSCalendarDelegate, FSCalendarDelegateAppearance, FSC
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print(dateFormatter.string(from: date) + " 선택됨")
+        let year = getYear(date)
+        let month = getMonth(date)
+        let day = getDay(date)
         
+        selectedDateLbl.text = "\(year)년\(month)월\(day)일"
+       
+        DaySmokeDataManager().getDaySmokeAmount(year, month, day, viewController: self)
+        DaySmokeDataManager().getDaySmokeInfo(year, month, day, viewController: self)
     }
+    
     // 날짜 선택 해제 시 콜백 메소드
     public func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print(dateFormatter.string(from: date) + " 해제됨")
         
     }
     
-    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? { // 나중에 이걸로 일별 흡연량 하단에 표시
-        switch dateFormatter.string(from: date) {
-        case dateFormatter.string(from: Date()):
-            return "5/20"
-        case "2022-04-02":
-            return "10/20"
-        case "2022-04-06":
-            return "12/20"
-        case "2022-04-08":
-            return "13/20"
-        default:
-            return nil
-        }
-    }
-    
-    @IBAction func toggleClicked(_ sender: UIButton) {
-        print("토글")
-        if self.calendarView.scope == .month {
-            self.calendarView.setScope(.week, animated: true)
-        } else {
-            self.calendarView.setScope(.month, animated: true)
-        }
-        calendarView.reloadData()
-    }
-    
-    
 }
 
 //MARK: - UITableViewDelegate, UITableViewDataSource
 extension HeaderMyPageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titleData.count
+        return smokeInfo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -140,35 +187,42 @@ extension HeaderMyPageVC : UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if check == 1 {
-            titleData[4] = "로그인"
-        }
+        let time = smokeInfo[indexPath.row].createdDate
         
-        cell.title.text = titleData[indexPath.row]
+        var firstIndex = time.index(time.startIndex, offsetBy: 0)
+        var lastIndex = time.index(time.startIndex, offsetBy: 10)
+        
+        cell.title.text = "\(time[firstIndex..<lastIndex])"
+        
+        firstIndex = time.index(time.startIndex, offsetBy: 11)
+        lastIndex = time.index(time.endIndex, offsetBy: 0)
+        
+        cell.smokeTime.text = "\(time[firstIndex..<lastIndex])"
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if indexPath.row == 4 && titleData[4] == "로그아웃" {
-            UserApi.shared.logout {(error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    DispatchQueue.main.async {
-                        self.profileImage.image = UIImage(systemName: "person")
-                        self.userName.text = "사용자"
-                        self.check = 1
-                        tableView.reloadData()
-                    }
-                }
-            }
-        }
-        else {
-            self.dismiss(animated: true)
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        if indexPath.row == 4 && titleData[4] == "로그아웃" {
+//            UserApi.shared.logout {(error) in
+//                if let error = error {
+//                    print(error)
+//                }
+//                else {
+//                    DispatchQueue.main.async {
+//                        self.profileImage.image = UIImage(systemName: "person")
+//                        self.userName.text = "사용자"
+//                        self.check = 1
+//                        tableView.reloadData()
+//                    }
+//                }
+//            }
+//        }
+//        else {
+//            self.dismiss(animated: true)
+//        }
+//    }
     
 }
 

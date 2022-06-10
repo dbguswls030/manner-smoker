@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "btnG_완성형.png",
+      "filename" : "스크린샷 2022-06-10 오전 11.57.54.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }

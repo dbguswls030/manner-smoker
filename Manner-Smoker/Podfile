@@ -7,9 +7,11 @@ target 'Manner-Smoker' do
 
   # Pods for Manner-Smoker
   pod 'Alamofire'
+  pod 'Charts'
   pod 'FSCalendar'
-  pod 'KakaoSDK'
-
+  pod 'KakaoSDKAuth'
+  pod 'KakaoSDKUser'
+ 
   target 'Manner-SmokerTests' do
     inherit! :search_paths
     # Pods for testing

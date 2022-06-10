@@ -9,7 +9,9 @@ import UIKit
 
 class HeaderMyPageTableCell: UITableViewCell {
 
-    @IBOutlet weak var title: UILabel!
+    
+    @IBOutlet var title: UILabel!
+    @IBOutlet var smokeTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

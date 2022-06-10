@@ -12,12 +12,24 @@
 		175DCE2B28372D2300AE591A /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE2928372D2300AE591A /* NewsCollectionViewCell.swift */; };
 		175DCE2C28372D2400AE591A /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175DCE2A28372D2300AE591A /* NewsCollectionViewCell.xib */; };
 		175DCE2E28372D4700AE591A /* HeaderNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE2D28372D4700AE591A /* HeaderNewsVC.swift */; };
+		176B77F52851C49C00545A73 /* DaySmokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B77F42851C49C00545A73 /* DaySmokeManager.swift */; };
+		176B77F72851C59000545A73 /* DaySmokeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B77F62851C59000545A73 /* DaySmokeEntity.swift */; };
+		176B77F92851CE0900545A73 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B77F82851CE0900545A73 /* UserEntity.swift */; };
+		176B77FB2851D6CD00545A73 /* SmokeAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B77FA2851D6CD00545A73 /* SmokeAmount.swift */; };
 		1787B6B328366B140033C534 /* HeaderMyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787B6B228366B140033C534 /* HeaderMyPageVC.swift */; };
 		1787B6B528366B4D0033C534 /* HeaderMyPageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787B6B428366B4D0033C534 /* HeaderMyPageTableCell.swift */; };
 		1787B6B728371FD70033C534 /* HeaderHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787B6B628371FD70033C534 /* HeaderHomeVC.swift */; };
-		2CDC4F146092BF9A0DAC4D16 /* Pods_Manner_SmokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3C23E1F167019C6B0B30F /* Pods_Manner_SmokerTests.framework */; };
-		50DA30890111B9FC547B135B /* Pods_Manner_Smoker_Manner_SmokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6275E8E16B5216D993AFFE8 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */; };
-		8D748B70861F9DCA51E08D2F /* Pods_Manner_Smoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0635C02AA115F0D6A3540F /* Pods_Manner_Smoker.framework */; };
+		17BBDF94285121A5000FF4E3 /* SmokeAmountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BBDF93285121A5000FF4E3 /* SmokeAmountDataManager.swift */; };
+		17BBDF9628512208000FF4E3 /* SmokeAmountInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BBDF9528512208000FF4E3 /* SmokeAmountInput.swift */; };
+		17BBDF982851221C000FF4E3 /* SmokeAmountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BBDF972851221C000FF4E3 /* SmokeAmountEntity.swift */; };
+		17BBDF9D285137C9000FF4E3 /* MyPageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BBDF9B285137C9000FF4E3 /* MyPageDetailVC.swift */; };
+		17BBDF9E285137C9000FF4E3 /* MyPageDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BBDF9C285137C9000FF4E3 /* MyPageDetailVC.xib */; };
+		17F09EA52852A7890051A2D7 /* MyPageDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F09EA42852A7890051A2D7 /* MyPageDetailDataManager.swift */; };
+		17F09EA82852AA130051A2D7 /* MonthSmokeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F09EA72852AA130051A2D7 /* MonthSmokeEntity.swift */; };
+		17F09EAA2852AA220051A2D7 /* YearSmokeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F09EA92852AA220051A2D7 /* YearSmokeEntity.swift */; };
+		17F09EB22852D3290051A2D7 /* FirstSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F09EB02852D3290051A2D7 /* FirstSettingViewController.swift */; };
+		17F09EB32852D3290051A2D7 /* FirstSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F09EB12852D3290051A2D7 /* FirstSettingViewController.xib */; };
+		537ADC50E42182F1FE3E9829 /* Pods_Manner_SmokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F91CC459EF167F6FF98B7A /* Pods_Manner_SmokerTests.framework */; };
 		9F170887283211DF001B4973 /* MapListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F170886283211DF001B4973 /* MapListView.storyboard */; };
 		9F17088928321451001B4973 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17088828321451001B4973 /* MapListViewController.swift */; };
 		9F17088C28321A25001B4973 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17088B28321A25001B4973 /* Map.swift */; };
@@ -99,6 +111,8 @@
 		9FC5610D27FC19EF00592B47 /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F227FC19EF00592B47 /* map_present_background_update.png */; };
 		9FC5610E27FC19EF00592B47 /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F327FC19EF00592B47 /* daum_th_line.png */; };
 		9FC5610F27FC19EF00592B47 /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560F427FC19EF00592B47 /* map_pin_shadow.png */; };
+		EB0E89EB5A9F989A77E91549 /* Pods_Manner_Smoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9BD5141F30F2AE6308A740 /* Pods_Manner_Smoker.framework */; };
+		EF70BEF256D278FE7EE52295 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF4BD7595DC936761BA33E4 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,17 +133,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A0635C02AA115F0D6A3540F /* Pods_Manner_Smoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_Smoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A39028D3BD1C3C5372CCCD5 /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0DE48839540DDC030D6C541A /* Pods-Manner-Smoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker.debug.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker.debug.xcconfig"; sourceTree = "<group>"; };
+		141D10CE97E9A0D582413A65 /* Pods-Manner-SmokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.release.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.release.xcconfig"; sourceTree = "<group>"; };
 		17056DE4285052E800B5CCD0 /* KaKaoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoDataManager.swift; sourceTree = "<group>"; };
 		17056DE62850532700B5CCD0 /* KaKaoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoEntity.swift; sourceTree = "<group>"; };
 		175DCE2928372D2300AE591A /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		175DCE2A28372D2300AE591A /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		175DCE2D28372D4700AE591A /* HeaderNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderNewsVC.swift; sourceTree = "<group>"; };
+		176B77F42851C49C00545A73 /* DaySmokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySmokeManager.swift; sourceTree = "<group>"; };
+		176B77F62851C59000545A73 /* DaySmokeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySmokeEntity.swift; sourceTree = "<group>"; };
+		176B77F82851CE0900545A73 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		176B77FA2851D6CD00545A73 /* SmokeAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeAmount.swift; sourceTree = "<group>"; };
 		1787B6B228366B140033C534 /* HeaderMyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMyPageVC.swift; sourceTree = "<group>"; };
 		1787B6B428366B4D0033C534 /* HeaderMyPageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMyPageTableCell.swift; sourceTree = "<group>"; };
 		1787B6B628371FD70033C534 /* HeaderHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHomeVC.swift; sourceTree = "<group>"; };
-		62325A4438C0811DFEC44161 /* Pods-Manner-Smoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker.release.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker.release.xcconfig"; sourceTree = "<group>"; };
-		9601B197A7E585AA1B58CF38 /* Pods-Manner-SmokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.release.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.release.xcconfig"; sourceTree = "<group>"; };
+		17BBDF93285121A5000FF4E3 /* SmokeAmountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeAmountDataManager.swift; sourceTree = "<group>"; };
+		17BBDF9528512208000FF4E3 /* SmokeAmountInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeAmountInput.swift; sourceTree = "<group>"; };
+		17BBDF972851221C000FF4E3 /* SmokeAmountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeAmountEntity.swift; sourceTree = "<group>"; };
+		17BBDF9B285137C9000FF4E3 /* MyPageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageDetailVC.swift; sourceTree = "<group>"; };
+		17BBDF9C285137C9000FF4E3 /* MyPageDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageDetailVC.xib; sourceTree = "<group>"; };
+		17F09EA42852A7890051A2D7 /* MyPageDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageDetailDataManager.swift; sourceTree = "<group>"; };
+		17F09EA72852AA130051A2D7 /* MonthSmokeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSmokeEntity.swift; sourceTree = "<group>"; };
+		17F09EA92852AA220051A2D7 /* YearSmokeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearSmokeEntity.swift; sourceTree = "<group>"; };
+		17F09EB02852D3290051A2D7 /* FirstSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingViewController.swift; sourceTree = "<group>"; };
+		17F09EB12852D3290051A2D7 /* FirstSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSettingViewController.xib; sourceTree = "<group>"; };
+		5D9BD5141F30F2AE6308A740 /* Pods_Manner_Smoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_Smoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98F91CC459EF167F6FF98B7A /* Pods_Manner_SmokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_SmokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F89CD0B9FAD3644E3C4F65 /* Pods-Manner-SmokerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.debug.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F170886283211DF001B4973 /* MapListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapListView.storyboard; sourceTree = "<group>"; };
 		9F17088828321451001B4973 /* MapListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		9F17088B28321A25001B4973 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -216,12 +247,9 @@
 		9FC560F227FC19EF00592B47 /* map_present_background_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_background_update.png; sourceTree = "<group>"; };
 		9FC560F327FC19EF00592B47 /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
 		9FC560F427FC19EF00592B47 /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
-		A1E3C23E1F167019C6B0B30F /* Pods_Manner_SmokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_SmokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6275E8E16B5216D993AFFE8 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_Smoker_Manner_SmokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC1DDEA02B69E1776A34BA0D /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C8771F3CB326B9656D8E0E4A /* Pods-Manner-Smoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker.debug.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker.debug.xcconfig"; sourceTree = "<group>"; };
-		E46074D55F34CAC7D226CC38 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F37F33A5C2899E1B6D61BB33 /* Pods-Manner-SmokerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.debug.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF4BD7595DC936761BA33E4 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manner_Smoker_Manner_SmokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF4624064C6FDE9D7C39CB1 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F73AD3A7F895AA7068CBF328 /* Pods-Manner-Smoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-Smoker.release.xcconfig"; path = "Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +265,7 @@
 				9F84798827F3151C007461FA /* libxml2.tbd in Frameworks */,
 				9F84798627F31505007461FA /* Metal.framework in Frameworks */,
 				9F8478A427F30077007461FA /* SystemConfiguration.framework in Frameworks */,
-				8D748B70861F9DCA51E08D2F /* Pods_Manner_Smoker.framework in Frameworks */,
+				EB0E89EB5A9F989A77E91549 /* Pods_Manner_Smoker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CDC4F146092BF9A0DAC4D16 /* Pods_Manner_SmokerTests.framework in Frameworks */,
+				537ADC50E42182F1FE3E9829 /* Pods_Manner_SmokerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50DA30890111B9FC547B135B /* Pods_Manner_Smoker_Manner_SmokerUITests.framework in Frameworks */,
+				EF70BEF256D278FE7EE52295 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,12 +291,12 @@
 		1026568FC129A877B6DC7975 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C8771F3CB326B9656D8E0E4A /* Pods-Manner-Smoker.debug.xcconfig */,
-				62325A4438C0811DFEC44161 /* Pods-Manner-Smoker.release.xcconfig */,
-				E46074D55F34CAC7D226CC38 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */,
-				BC1DDEA02B69E1776A34BA0D /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */,
-				F37F33A5C2899E1B6D61BB33 /* Pods-Manner-SmokerTests.debug.xcconfig */,
-				9601B197A7E585AA1B58CF38 /* Pods-Manner-SmokerTests.release.xcconfig */,
+				0DE48839540DDC030D6C541A /* Pods-Manner-Smoker.debug.xcconfig */,
+				F73AD3A7F895AA7068CBF328 /* Pods-Manner-Smoker.release.xcconfig */,
+				EAF4624064C6FDE9D7C39CB1 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */,
+				0A39028D3BD1C3C5372CCCD5 /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */,
+				99F89CD0B9FAD3644E3C4F65 /* Pods-Manner-SmokerTests.debug.xcconfig */,
+				141D10CE97E9A0D582413A65 /* Pods-Manner-SmokerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -294,8 +322,79 @@
 			isa = PBXGroup;
 			children = (
 				17056DE62850532700B5CCD0 /* KaKaoEntity.swift */,
+				176B77F82851CE0900545A73 /* UserEntity.swift */,
 			);
 			path = KaKaoEntity;
+			sourceTree = "<group>";
+		};
+		176B77F22851C46500545A73 /* DaySmokeDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				176B77F42851C49C00545A73 /* DaySmokeManager.swift */,
+			);
+			path = DaySmokeDataManager;
+			sourceTree = "<group>";
+		};
+		176B77F32851C48200545A73 /* DaySmokeEntity */ = {
+			isa = PBXGroup;
+			children = (
+				176B77F62851C59000545A73 /* DaySmokeEntity.swift */,
+			);
+			path = DaySmokeEntity;
+			sourceTree = "<group>";
+		};
+		17BBDF9128512107000FF4E3 /* SmokeAmountDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				17BBDF93285121A5000FF4E3 /* SmokeAmountDataManager.swift */,
+			);
+			path = SmokeAmountDataManager;
+			sourceTree = "<group>";
+		};
+		17BBDF9228512124000FF4E3 /* SmokeAmountEntity */ = {
+			isa = PBXGroup;
+			children = (
+				17BBDF9528512208000FF4E3 /* SmokeAmountInput.swift */,
+				17BBDF972851221C000FF4E3 /* SmokeAmountEntity.swift */,
+			);
+			path = SmokeAmountEntity;
+			sourceTree = "<group>";
+		};
+		17BBDF992851371E000FF4E3 /* MyPageDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				17BBDF9A2851372A000FF4E3 /* MyPageDetailDataManager */,
+				17F09EA62852A9E00051A2D7 /* MyPageDetailEntity */,
+				17BBDF9B285137C9000FF4E3 /* MyPageDetailVC.swift */,
+				17BBDF9C285137C9000FF4E3 /* MyPageDetailVC.xib */,
+			);
+			path = MyPageDetailView;
+			sourceTree = "<group>";
+		};
+		17BBDF9A2851372A000FF4E3 /* MyPageDetailDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				17F09EA42852A7890051A2D7 /* MyPageDetailDataManager.swift */,
+			);
+			path = MyPageDetailDataManager;
+			sourceTree = "<group>";
+		};
+		17F09EA62852A9E00051A2D7 /* MyPageDetailEntity */ = {
+			isa = PBXGroup;
+			children = (
+				17F09EA72852AA130051A2D7 /* MonthSmokeEntity.swift */,
+				17F09EA92852AA220051A2D7 /* YearSmokeEntity.swift */,
+			);
+			path = MyPageDetailEntity;
+			sourceTree = "<group>";
+		};
+		17F09EAB2852D2620051A2D7 /* FirstSetting */ = {
+			isa = PBXGroup;
+			children = (
+				17F09EB02852D3290051A2D7 /* FirstSettingViewController.swift */,
+				17F09EB12852D3290051A2D7 /* FirstSettingViewController.xib */,
+			);
+			path = FirstSetting;
 			sourceTree = "<group>";
 		};
 		9F17088A283219C4001B4973 /* Model */ = {
@@ -464,15 +563,15 @@
 			children = (
 				9F84728C27EB123E007461FA /* Main.storyboard */,
 				9F84730827EB43E7007461FA /* TabBarController.swift */,
-				9F8472BC27EB16F9007461FA /* Model */,
-				9F8472BD27EB16FE007461FA /* View Model */,
+				9F847ACC27F9944A007461FA /* Constants.swift */,
+				176B77FA2851D6CD00545A73 /* SmokeAmount.swift */,
+				17F09EAB2852D2620051A2D7 /* FirstSetting */,
 				9F8472B627EB1390007461FA /* login */,
-				9F8472BB27EB13D6007461FA /* Home */,
 				9F8472B727EB13B6007461FA /* Map */,
+				9F8472B827EB13C0007461FA /* Community */,
+				9F8472BB27EB13D6007461FA /* Home */,
 				9F8472BA27EB13CD007461FA /* News */,
 				9F8472B927EB13C8007461FA /* MyPage */,
-				9F8472B827EB13C0007461FA /* Community */,
-				9F847ACC27F9944A007461FA /* Constants.swift */,
 				9F84728627EB123E007461FA /* AppDelegate.swift */,
 				9F84728827EB123E007461FA /* SceneDelegate.swift */,
 				9F84728A27EB123E007461FA /* ViewController.swift */,
@@ -543,6 +642,11 @@
 		9F8472B927EB13C8007461FA /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				176B77F22851C46500545A73 /* DaySmokeDataManager */,
+				176B77F32851C48200545A73 /* DaySmokeEntity */,
+				17BBDF992851371E000FF4E3 /* MyPageDetailView */,
+				17BBDF9128512107000FF4E3 /* SmokeAmountDataManager */,
+				17BBDF9228512124000FF4E3 /* SmokeAmountEntity */,
 				9F8472C627EB2154007461FA /* HeaderMyPage.storyboard */,
 				1787B6B228366B140033C534 /* HeaderMyPageVC.swift */,
 				1787B6B428366B4D0033C534 /* HeaderMyPageTableCell.swift */,
@@ -570,20 +674,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		9F8472BC27EB16F9007461FA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9F8472BD27EB16FE007461FA /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
 		9F8478A027F30036007461FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,9 +685,9 @@
 				9F8478A727F30091007461FA /* QuartzCore.framework */,
 				9F8478A527F30086007461FA /* CoreLocation.framework */,
 				9F8478A327F30077007461FA /* SystemConfiguration.framework */,
-				0A0635C02AA115F0D6A3540F /* Pods_Manner_Smoker.framework */,
-				B6275E8E16B5216D993AFFE8 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */,
-				A1E3C23E1F167019C6B0B30F /* Pods_Manner_SmokerTests.framework */,
+				5D9BD5141F30F2AE6308A740 /* Pods_Manner_Smoker.framework */,
+				CEF4BD7595DC936761BA33E4 /* Pods_Manner_Smoker_Manner_SmokerUITests.framework */,
+				98F91CC459EF167F6FF98B7A /* Pods_Manner_SmokerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -672,11 +762,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F8472AD27EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-Smoker" */;
 			buildPhases = (
-				129A5BF34B15426E23C5514F /* [CP] Check Pods Manifest.lock */,
+				DC89ABD6B329C10CA5649192 /* [CP] Check Pods Manifest.lock */,
 				9F84727F27EB123E007461FA /* Sources */,
 				9F84728027EB123E007461FA /* Frameworks */,
 				9F84728127EB123E007461FA /* Resources */,
-				C9FB8495DED7CB240D4D2FA4 /* [CP] Embed Pods Frameworks */,
+				6D41FA47DDAC7E0F7919330D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -691,7 +781,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F8472B027EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-SmokerTests" */;
 			buildPhases = (
-				3962CE4641380D52313FE88A /* [CP] Check Pods Manifest.lock */,
+				D1B6D76522CB69F5AC2636F2 /* [CP] Check Pods Manifest.lock */,
 				9F84729527EB123F007461FA /* Sources */,
 				9F84729627EB123F007461FA /* Frameworks */,
 				9F84729727EB123F007461FA /* Resources */,
@@ -710,11 +800,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F8472B327EB123F007461FA /* Build configuration list for PBXNativeTarget "Manner-SmokerUITests" */;
 			buildPhases = (
-				8378331935B9A1A0844A081D /* [CP] Check Pods Manifest.lock */,
+				0A40D16EDC402C09E1652756 /* [CP] Check Pods Manifest.lock */,
 				9F84729F27EB123F007461FA /* Sources */,
 				9F8472A027EB123F007461FA /* Frameworks */,
 				9F8472A127EB123F007461FA /* Resources */,
-				B36D5601DC393C9119C9C0AF /* [CP] Embed Pods Frameworks */,
+				C619483BEDC95B6D4F2AC090 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -785,12 +875,14 @@
 				9FC560FF27FC19EF00592B47 /* map_pin_red@3x.png in Resources */,
 				9FC560FC27FC19EF00592B47 /* map_pin_shadow@3x.png in Resources */,
 				9FC560FE27FC19EF00592B47 /* th_line.png in Resources */,
+				17BBDF9E285137C9000FF4E3 /* MyPageDetailVC.xib in Resources */,
 				9FC560FD27FC19EF00592B47 /* copyright.png in Resources */,
 				9FC5610B27FC19EF00592B47 /* map_present.png in Resources */,
 				9FC560F927FC19EF00592B47 /* detail_button.png in Resources */,
 				9FC5610827FC19EF00592B47 /* noimage256.png in Resources */,
 				9F206C7B2841017700568D11 /* Write.storyboard in Resources */,
 				9FC5610027FC19EF00592B47 /* daum_copyright.png in Resources */,
+				17F09EB32852D3290051A2D7 /* FirstSettingViewController.xib in Resources */,
 				9FC560F827FC19EF00592B47 /* map_pinup.png in Resources */,
 				9FC5610527FC19EF00592B47 /* point_sprite.png in Resources */,
 				9FC5610727FC19EF00592B47 /* info_box_tail.png in Resources */,
@@ -834,51 +926,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		129A5BF34B15426E23C5514F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Manner-Smoker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3962CE4641380D52313FE88A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Manner-SmokerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8378331935B9A1A0844A081D /* [CP] Check Pods Manifest.lock */ = {
+		0A40D16EDC402C09E1652756 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -900,24 +948,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B36D5601DC393C9119C9C0AF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9FB8495DED7CB240D4D2FA4 /* [CP] Embed Pods Frameworks */ = {
+		6D41FA47DDAC7E0F7919330D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -934,6 +965,67 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker/Pods-Manner-Smoker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C619483BEDC95B6D4F2AC090 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1B6D76522CB69F5AC2636F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Manner-SmokerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC89ABD6B329C10CA5649192 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Manner-Smoker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -941,10 +1033,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F09EAA2852AA220051A2D7 /* YearSmokeEntity.swift in Sources */,
 				9F2DCE4F27F996630082D89E /* SearchLoactionWithAddressResponseModel.swift in Sources */,
 				9F2A6095284FEF4600C7A253 /* CreateRequestModel.swift in Sources */,
 				9F206C5A283D09A600568D11 /* CommunityCollectionViewCell.swift in Sources */,
 				175DCE2B28372D2300AE591A /* NewsCollectionViewCell.swift in Sources */,
+				17BBDF9D285137C9000FF4E3 /* MyPageDetailVC.swift in Sources */,
+				17BBDF9628512208000FF4E3 /* SmokeAmountInput.swift in Sources */,
 				17056DE5285052E800B5CCD0 /* KaKaoDataManager.swift in Sources */,
 				9F206C7528409D9A00568D11 /* BoardCollectionReusableView.swift in Sources */,
 				9F2A6088284FCBB800C7A253 /* CommunityViewModel.swift in Sources */,
@@ -952,6 +1047,10 @@
 				9F84798B27F3159F007461FA /* MapViewController.swift in Sources */,
 				9F2A608A284FCBD000C7A253 /* CommunityManager.swift in Sources */,
 				9F206C7D28446F1D00568D11 /* WriteViewController.swift in Sources */,
+				17F09EA52852A7890051A2D7 /* MyPageDetailDataManager.swift in Sources */,
+				176B77F92851CE0900545A73 /* UserEntity.swift in Sources */,
+				176B77F72851C59000545A73 /* DaySmokeEntity.swift in Sources */,
+				176B77F52851C49C00545A73 /* DaySmokeManager.swift in Sources */,
 				9F206C962848C7E700568D11 /* GetAllSmokeAreaRequestModel.swift in Sources */,
 				9F206C982848CA7B00568D11 /* GetAllSmokeAreaResponseModel.swift in Sources */,
 				9F847ACD27F9944A007461FA /* Constants.swift in Sources */,
@@ -961,20 +1060,25 @@
 				9F18A5FD2832234800EEF555 /* MapListViewCell.swift in Sources */,
 				9F847AC827F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift in Sources */,
 				9F2A6071284E9F6900C7A253 /* MapListViewModel.swift in Sources */,
+				176B77FB2851D6CD00545A73 /* SmokeAmount.swift in Sources */,
 				1787B6B528366B4D0033C534 /* HeaderMyPageTableCell.swift in Sources */,
 				9F2A609F2850319800C7A253 /* GetReplyRaedAllResponseModel.swift in Sources */,
 				9F84728727EB123E007461FA /* AppDelegate.swift in Sources */,
 				1787B6B728371FD70033C534 /* HeaderHomeVC.swift in Sources */,
+				17BBDF94285121A5000FF4E3 /* SmokeAmountDataManager.swift in Sources */,
 				17056DE72850532700B5CCD0 /* KaKaoEntity.swift in Sources */,
 				9F2A60A22850399900C7A253 /* BoardViewModel.swift in Sources */,
 				9F847AC627F98B17007461FA /* MapManager.swift in Sources */,
+				17F09EA82852AA130051A2D7 /* MonthSmokeEntity.swift in Sources */,
 				9F206C7128409ACA00568D11 /* BoardViewController.swift in Sources */,
+				17F09EB22852D3290051A2D7 /* FirstSettingViewController.swift in Sources */,
 				9F84730927EB43E7007461FA /* TabBarController.swift in Sources */,
 				1787B6B328366B140033C534 /* HeaderMyPageVC.swift in Sources */,
 				9F84728927EB123E007461FA /* SceneDelegate.swift in Sources */,
 				9F2A609D28502D8100C7A253 /* GetReplyReadAllRequestModel.swift in Sources */,
 				9F2A6099284FF2D200C7A253 /* CreateResponseModel.swift in Sources */,
 				9F206C7328409B8500568D11 /* BoardCollectionViewCell.swift in Sources */,
+				17BBDF982851221C000FF4E3 /* SmokeAmountEntity.swift in Sources */,
 				9F2A608E284FCCEC00C7A253 /* GetPostReadAllRequestModel.swift in Sources */,
 				9F17088C28321A25001B4973 /* Map.swift in Sources */,
 				9F17088928321451001B4973 /* MapListViewController.swift in Sources */,
@@ -1153,7 +1257,7 @@
 		};
 		9F8472AE27EB123F007461FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8771F3CB326B9656D8E0E4A /* Pods-Manner-Smoker.debug.xcconfig */;
+			baseConfigurationReference = 0DE48839540DDC030D6C541A /* Pods-Manner-Smoker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1191,7 +1295,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker-map/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/woojinlee/Developer/capstoneA/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1199,7 +1303,7 @@
 		};
 		9F8472AF27EB123F007461FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62325A4438C0811DFEC44161 /* Pods-Manner-Smoker.release.xcconfig */;
+			baseConfigurationReference = F73AD3A7F895AA7068CBF328 /* Pods-Manner-Smoker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1237,7 +1341,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker-map/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/woojinlee/Developer/capstoneA/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1245,7 +1349,7 @@
 		};
 		9F8472B127EB123F007461FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F37F33A5C2899E1B6D61BB33 /* Pods-Manner-SmokerTests.debug.xcconfig */;
+			baseConfigurationReference = 99F89CD0B9FAD3644E3C4F65 /* Pods-Manner-SmokerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1266,7 +1370,7 @@
 		};
 		9F8472B227EB123F007461FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9601B197A7E585AA1B58CF38 /* Pods-Manner-SmokerTests.release.xcconfig */;
+			baseConfigurationReference = 141D10CE97E9A0D582413A65 /* Pods-Manner-SmokerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1287,7 +1391,7 @@
 		};
 		9F8472B427EB123F007461FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E46074D55F34CAC7D226CC38 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */;
+			baseConfigurationReference = EAF4624064C6FDE9D7C39CB1 /* Pods-Manner-Smoker-Manner-SmokerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1306,7 +1410,7 @@
 		};
 		9F8472B527EB123F007461FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC1DDEA02B69E1776A34BA0D /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */;
+			baseConfigurationReference = 0A39028D3BD1C3C5372CCCD5 /* Pods-Manner-Smoker-Manner-SmokerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

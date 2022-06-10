@@ -100,9 +100,13 @@ extension LoginViewController {
     }
     
     func presentToMain() {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
+//
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
+        let vc = FirstSettingViewController()
         
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true)
     }
 

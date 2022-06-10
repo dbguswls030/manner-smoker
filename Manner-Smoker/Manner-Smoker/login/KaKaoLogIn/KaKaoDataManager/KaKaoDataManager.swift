@@ -18,7 +18,25 @@ struct KaKaoDataManager {
                 switch response.result {
                 case .success(let result):
                     Constants.ACESS_TOKEN = (result.response?.accessToken)!
-                    
+                    getUserInfo()
+                    print(result)
+                    print("요청성공!!!!!!!")
+                case .failure(let error):
+                    print("요청실패!!!!!!!")
+                    print(error.localizedDescription)
+                }
+            }
+    }
+    
+    func getUserInfo() {
+        Constants.headerJSON["Authorization"] = Constants.ACESS_TOKEN
+        AF.request(Constants.BackEndAPI.BASE_URL + "/api/userinfo", method: .get, parameters: nil, headers: Constants.headerJSON)
+            .validate()
+            .responseDecodable(of: UserEntity.self) { response in
+                switch response.result {
+                case .success(let result):
+                    Constants.SERVER_USER_ID = result.response.id
+                    print(result)
                     print("요청성공!!!!!!!")
                 case .failure(let error):
                     print("요청실패!!!!!!!")

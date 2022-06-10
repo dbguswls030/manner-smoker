@@ -1,16 +1,10 @@
 PODS:
   - Alamofire (5.6.1)
+  - Charts (4.0.3):
+    - Charts/Core (= 4.0.3)
+  - Charts/Core (4.0.3):
+    - SwiftAlgorithms (~> 1.0)
   - FSCalendar (2.8.4)
-  - KakaoSDK (2.10.0):
-    - KakaoSDKAuth (= 2.10.0)
-    - KakaoSDKCommon (= 2.10.0)
-    - KakaoSDKFriend (= 2.10.0)
-    - KakaoSDKLink (= 2.10.0)
-    - KakaoSDKNavi (= 2.10.0)
-    - KakaoSDKStory (= 2.10.0)
-    - KakaoSDKTalk (= 2.10.0)
-    - KakaoSDKTemplate (= 2.10.0)
-    - KakaoSDKUser (= 2.10.0)
   - KakaoSDKAuth (2.10.0):
     - KakaoSDKCommon (= 2.10.0)
   - KakaoSDKCommon (2.10.0):
@@ -20,57 +14,36 @@ PODS:
   - KakaoSDKCommon/Network (2.10.0):
     - Alamofire (~> 5.1)
     - KakaoSDKCommon/Common (= 2.10.0)
-  - KakaoSDKFriend (2.10.0):
-    - KakaoSDKUser (= 2.10.0)
-  - KakaoSDKLink (2.10.0):
-    - KakaoSDKCommon (= 2.10.0)
-    - KakaoSDKTemplate (= 2.10.0)
-  - KakaoSDKNavi (2.10.0):
-    - KakaoSDKCommon/Common (= 2.10.0)
-  - KakaoSDKStory (2.10.0):
-    - KakaoSDKUser (= 2.10.0)
-  - KakaoSDKTalk (2.10.0):
-    - KakaoSDKTemplate (= 2.10.0)
-    - KakaoSDKUser (= 2.10.0)
-  - KakaoSDKTemplate (2.10.0):
-    - KakaoSDKCommon/Common (= 2.10.0)
   - KakaoSDKUser (2.10.0):
     - KakaoSDKAuth (= 2.10.0)
+  - SwiftAlgorithms (1.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - FSCalendar
-  - KakaoSDK
+  - KakaoSDKAuth
+  - KakaoSDKUser
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - FSCalendar
-    - KakaoSDK
     - KakaoSDKAuth
     - KakaoSDKCommon
-    - KakaoSDKFriend
-    - KakaoSDKLink
-    - KakaoSDKNavi
-    - KakaoSDKStory
-    - KakaoSDKTalk
-    - KakaoSDKTemplate
     - KakaoSDKUser
+    - SwiftAlgorithms
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Charts: d959d6723c8eedfdd0735dfc28cb0a71762ac4d9
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
-  KakaoSDK: ebeabe6cf9f2ccfa2f120f23e1a9773851e0c030
   KakaoSDKAuth: 94cdbd864a6e1b5691c11aba09d769ea91be107a
   KakaoSDKCommon: 9edbf77ef59c8594412908e023e64ef07f75db08
-  KakaoSDKFriend: 2a6d78cccbd6ed53ba952b1de1fd4791fdd45825
-  KakaoSDKLink: 697e65a55869d4af625af8f0ed38af0a4b2d6cf2
-  KakaoSDKNavi: ab523bc6fdfb77be920363857fe02f6c2f9e9254
-  KakaoSDKStory: c10624da2d89480dff119264ea312f1c2c5eae37
-  KakaoSDKTalk: fb8ec6e81a9491758a90434940fc7a39bab31448
-  KakaoSDKTemplate: 8c666f742624834ac94151d70821f006af6f3e51
   KakaoSDKUser: 7969a38f9ccfd788140fa799b6bbaa223f62683e
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: 9bc485d9380c6a49c3fb19c2309765f78b65508d
+PODFILE CHECKSUM: a954a2e05795384beedd02c5774a474fc7486be1
 
 COCOAPODS: 1.11.3

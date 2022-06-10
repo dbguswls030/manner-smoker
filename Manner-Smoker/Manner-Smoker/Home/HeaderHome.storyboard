@@ -66,7 +66,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34500원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-B2-Uhr">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-B2-Uhr">
                                                                         <rect key="frame" x="0.0" y="37" width="202" height="46"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="202" id="cdX-KK-0rQ"/>
@@ -113,7 +113,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2년 5시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF5-tJ-ZAv">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1년 5시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF5-tJ-ZAv">
                                                                         <rect key="frame" x="0.0" y="38" width="202" height="46"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="46" id="E6N-rI-gpz"/>
@@ -138,7 +138,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,240,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMU-hJ-qLm">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,642,500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMU-hJ-qLm">
                                                                         <rect key="frame" x="0.0" y="37" width="202" height="46"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="46" id="1FD-Jb-604"/>
@@ -166,7 +166,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0P-N1-OSP">
-                                                <rect key="frame" x="8" y="477" width="554" height="218"/>
+                                                <rect key="frame" x="8" y="477" width="398" height="218"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 한마디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFm-YM-RZo">
                                                         <rect key="frame" x="20" y="28" width="136" height="30"/>
@@ -192,7 +192,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="qzX-hK-55z" secondAttribute="trailing" constant="176" id="1je-Dx-W7D"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qzX-hK-55z" secondAttribute="trailing" constant="20" id="1je-Dx-W7D"/>
                                                     <constraint firstItem="qzX-hK-55z" firstAttribute="leading" secondItem="B0P-N1-OSP" secondAttribute="leading" constant="20" symbolic="YES" id="OuN-OS-qvt"/>
                                                     <constraint firstAttribute="height" constant="218" id="TEx-s2-nBe"/>
                                                     <constraint firstAttribute="bottom" secondItem="qzX-hK-55z" secondAttribute="bottom" constant="21" id="e4L-7s-1wy"/>
@@ -208,7 +208,7 @@
                                             <constraint firstAttribute="trailing" secondItem="82L-hp-TVA" secondAttribute="trailing" constant="8" id="AsQ-yY-Jz7"/>
                                             <constraint firstItem="82L-hp-TVA" firstAttribute="leading" secondItem="mzk-dq-onv" secondAttribute="leading" constant="8" id="BaN-td-dz7"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="733" id="DVC-qa-kbo"/>
-                                            <constraint firstAttribute="trailing" secondItem="B0P-N1-OSP" secondAttribute="trailing" constant="-148" id="Exc-KC-uWs"/>
+                                            <constraint firstAttribute="trailing" secondItem="B0P-N1-OSP" secondAttribute="trailing" constant="8" id="Exc-KC-uWs"/>
                                             <constraint firstAttribute="trailing" secondItem="26h-gq-kcd" secondAttribute="trailing" constant="8" id="FDb-ol-vgw"/>
                                             <constraint firstAttribute="bottom" secondItem="B0P-N1-OSP" secondAttribute="bottom" constant="38" id="SHz-XY-PKp"/>
                                             <constraint firstItem="26h-gq-kcd" firstAttribute="leading" secondItem="mzk-dq-onv" secondAttribute="leading" constant="8" id="fcS-So-q0H"/>

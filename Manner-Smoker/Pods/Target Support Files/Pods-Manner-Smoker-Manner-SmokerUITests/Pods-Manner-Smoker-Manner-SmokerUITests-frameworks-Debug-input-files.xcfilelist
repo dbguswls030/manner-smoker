@@ -1,11 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-Manner-Smoker-Manner-SmokerUITests/Pods-Manner-Smoker-Manner-SmokerUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
 ${BUILT_PRODUCTS_DIR}/KakaoSDKAuth/KakaoSDKAuth.framework
 ${BUILT_PRODUCTS_DIR}/KakaoSDKCommon/KakaoSDKCommon.framework
-${BUILT_PRODUCTS_DIR}/KakaoSDKLink/KakaoSDKLink.framework
-${BUILT_PRODUCTS_DIR}/KakaoSDKNavi/KakaoSDKNavi.framework
-${BUILT_PRODUCTS_DIR}/KakaoSDKStory/KakaoSDKStory.framework
-${BUILT_PRODUCTS_DIR}/KakaoSDKTalk/KakaoSDKTalk.framework
-${BUILT_PRODUCTS_DIR}/KakaoSDKTemplate/KakaoSDKTemplate.framework
 ${BUILT_PRODUCTS_DIR}/KakaoSDKUser/KakaoSDKUser.framework
+${BUILT_PRODUCTS_DIR}/SwiftAlgorithms/Algorithms.framework

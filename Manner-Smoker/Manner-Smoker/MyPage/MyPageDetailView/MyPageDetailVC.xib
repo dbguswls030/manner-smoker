@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPageDetailVC" customModule="Manner_Smoker" customModuleProvider="target">
+            <connections>
+                <outlet property="dayBarGraphView" destination="hqS-u5-drt" id="MXd-hS-YuD"/>
+                <outlet property="monthBarGraphView" destination="ZBs-zT-F12" id="pFR-AF-qLo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yearBarGraphView" destination="SeV-ws-fkD" id="4PU-xA-lRO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="통계" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-Wo-RAi">
+                    <rect key="frame" x="20" y="59" width="76" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="0d4-id-wgL"/>
+                        <constraint firstAttribute="width" constant="76" id="umC-Xy-pvs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="aq7-eG-Cf7">
+                    <rect key="frame" x="20" y="120" width="374" height="687"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqS-u5-drt" customClass="BarChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="197"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="374" id="04S-WD-qec"/>
+                                <constraint firstAttribute="height" constant="197" id="SWH-c7-zVU"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBs-zT-F12" customClass="BarChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="245" width="374" height="197"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="197" id="5BL-i6-gt2"/>
+                                <constraint firstAttribute="width" constant="374" id="KLf-Pd-nQb"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="bbo-CN-chU"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="197" id="kqE-2L-BEE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeV-ws-fkD" customClass="BarChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="490" width="374" height="197"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="197" id="7AN-sC-EdA"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="BBS-av-dwd"/>
+                                <constraint firstAttribute="width" constant="374" id="EK3-ov-xES"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="197" id="pW3-aB-UYz"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="687" id="Igs-Le-yrd"/>
+                        <constraint firstAttribute="width" constant="374" id="Tlg-x0-hgn"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-yI-A2b">
+                    <rect key="frame" x="352" y="60" width="42" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Bk3-0s-sLn"/>
+                        <constraint firstAttribute="width" constant="42" id="eAV-wN-mpC"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="backToMyPage:" destination="-1" eventType="touchUpInside" id="AZS-hc-ykl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="aq7-eG-Cf7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="76" id="3at-c2-zdr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Tp-Wo-RAi" secondAttribute="trailing" constant="318" id="D1W-hz-6IO"/>
+                <constraint firstItem="nZe-yI-A2b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="HrC-jq-ete"/>
+                <constraint firstItem="8Tp-Wo-RAi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="JCE-Tr-slj"/>
+                <constraint firstItem="8Tp-Wo-RAi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="K8u-T4-vIC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aq7-eG-Cf7" secondAttribute="trailing" constant="20" id="QGc-KI-0aO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nZe-yI-A2b" secondAttribute="trailing" constant="20" id="V6A-8e-5F2"/>
+                <constraint firstItem="aq7-eG-Cf7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sFU-3J-tPh"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
