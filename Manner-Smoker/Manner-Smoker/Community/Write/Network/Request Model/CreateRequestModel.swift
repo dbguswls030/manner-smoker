@@ -19,6 +19,7 @@ struct CreateRequestModel{
         parameters["content"] = content
         parameters["title"] = title
         parameters["userId"] = userId
+        headers["Authorization"] = Constants.ACESS_TOKEN
     }
     var parameters : Parameters = [ : ]
     var headers: HTTPHeaders = []

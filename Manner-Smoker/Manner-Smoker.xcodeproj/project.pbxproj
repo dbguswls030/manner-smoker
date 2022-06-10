@@ -72,6 +72,16 @@
 		9F847AC627F98B17007461FA /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F847AC527F98B17007461FA /* MapManager.swift */; };
 		9F847AC827F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F847AC727F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift */; };
 		9F847ACD27F9944A007461FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F847ACC27F9944A007461FA /* Constants.swift */; };
+		9F84EFB628522D5B0040BA43 /* CreateReplyRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFB528522D5B0040BA43 /* CreateReplyRequestModel.swift */; };
+		9F84EFB8285230DC0040BA43 /* CreateReplyResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFB7285230DC0040BA43 /* CreateReplyResponseModel.swift */; };
+		9F84EFBA285290470040BA43 /* DeleteReplyRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFB9285290470040BA43 /* DeleteReplyRequestModel.swift */; };
+		9F84EFBC2852917A0040BA43 /* DeleteReplyResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFBB2852917A0040BA43 /* DeleteReplyResponseModel.swift */; };
+		9F84EFBE28529FCF0040BA43 /* DeletePostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFBD28529FCF0040BA43 /* DeletePostRequestModel.swift */; };
+		9F84EFC02852A0770040BA43 /* DeletePostResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFBF2852A0770040BA43 /* DeletePostResponseModel.swift */; };
+		9F84EFC22852A5730040BA43 /* UpdatePostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFC12852A5730040BA43 /* UpdatePostRequestModel.swift */; };
+		9F84EFC42852A8780040BA43 /* UpdatePostResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFC32852A8780040BA43 /* UpdatePostResponseModel.swift */; };
+		9F84EFC62852B4320040BA43 /* GetPostReadOneRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFC52852B4320040BA43 /* GetPostReadOneRequestModel.swift */; };
+		9F84EFC82852B49F0040BA43 /* GetPostReadOneResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84EFC72852B49F0040BA43 /* GetPostReadOneResponseModel.swift */; };
 		9FC560F527FC19EF00592B47 /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DA27FC19EF00592B47 /* map_pinup_custom@3x.png */; };
 		9FC560F627FC19EF00592B47 /* map_pin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DB27FC19EF00592B47 /* map_pin_custom.png */; };
 		9FC560F727FC19EF00592B47 /* shadow_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC560DC27FC19EF00592B47 /* shadow_balloon.png */; };
@@ -189,6 +199,16 @@
 		9F847AC527F98B17007461FA /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		9F847AC727F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoactionWithAddressRequestModel.swift; sourceTree = "<group>"; };
 		9F847ACC27F9944A007461FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F84EFB528522D5B0040BA43 /* CreateReplyRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReplyRequestModel.swift; sourceTree = "<group>"; };
+		9F84EFB7285230DC0040BA43 /* CreateReplyResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReplyResponseModel.swift; sourceTree = "<group>"; };
+		9F84EFB9285290470040BA43 /* DeleteReplyRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReplyRequestModel.swift; sourceTree = "<group>"; };
+		9F84EFBB2852917A0040BA43 /* DeleteReplyResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReplyResponseModel.swift; sourceTree = "<group>"; };
+		9F84EFBD28529FCF0040BA43 /* DeletePostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostRequestModel.swift; sourceTree = "<group>"; };
+		9F84EFBF2852A0770040BA43 /* DeletePostResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostResponseModel.swift; sourceTree = "<group>"; };
+		9F84EFC12852A5730040BA43 /* UpdatePostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePostRequestModel.swift; sourceTree = "<group>"; };
+		9F84EFC32852A8780040BA43 /* UpdatePostResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePostResponseModel.swift; sourceTree = "<group>"; };
+		9F84EFC52852B4320040BA43 /* GetPostReadOneRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostReadOneRequestModel.swift; sourceTree = "<group>"; };
+		9F84EFC72852B49F0040BA43 /* GetPostReadOneResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostReadOneResponseModel.swift; sourceTree = "<group>"; };
 		9FC560DA27FC19EF00592B47 /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
 		9FC560DB27FC19EF00592B47 /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
 		9FC560DC27FC19EF00592B47 /* shadow_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_balloon.png; sourceTree = "<group>"; };
@@ -416,6 +436,11 @@
 			isa = PBXGroup;
 			children = (
 				9F2A609C28502D8100C7A253 /* GetReplyReadAllRequestModel.swift */,
+				9F84EFB528522D5B0040BA43 /* CreateReplyRequestModel.swift */,
+				9F84EFB9285290470040BA43 /* DeleteReplyRequestModel.swift */,
+				9F84EFBD28529FCF0040BA43 /* DeletePostRequestModel.swift */,
+				9F84EFC12852A5730040BA43 /* UpdatePostRequestModel.swift */,
+				9F84EFC52852B4320040BA43 /* GetPostReadOneRequestModel.swift */,
 			);
 			path = "Request Model";
 			sourceTree = "<group>";
@@ -424,6 +449,11 @@
 			isa = PBXGroup;
 			children = (
 				9F2A609E2850319800C7A253 /* GetReplyRaedAllResponseModel.swift */,
+				9F84EFB7285230DC0040BA43 /* CreateReplyResponseModel.swift */,
+				9F84EFBB2852917A0040BA43 /* DeleteReplyResponseModel.swift */,
+				9F84EFBF2852A0770040BA43 /* DeletePostResponseModel.swift */,
+				9F84EFC32852A8780040BA43 /* UpdatePostResponseModel.swift */,
+				9F84EFC72852B49F0040BA43 /* GetPostReadOneResponseModel.swift */,
 			);
 			path = "Response Model";
 			sourceTree = "<group>";
@@ -941,23 +971,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F84EFBC2852917A0040BA43 /* DeleteReplyResponseModel.swift in Sources */,
 				9F2DCE4F27F996630082D89E /* SearchLoactionWithAddressResponseModel.swift in Sources */,
 				9F2A6095284FEF4600C7A253 /* CreateRequestModel.swift in Sources */,
+				9F84EFC22852A5730040BA43 /* UpdatePostRequestModel.swift in Sources */,
 				9F206C5A283D09A600568D11 /* CommunityCollectionViewCell.swift in Sources */,
 				175DCE2B28372D2300AE591A /* NewsCollectionViewCell.swift in Sources */,
 				17056DE5285052E800B5CCD0 /* KaKaoDataManager.swift in Sources */,
+				9F84EFBA285290470040BA43 /* DeleteReplyRequestModel.swift in Sources */,
 				9F206C7528409D9A00568D11 /* BoardCollectionReusableView.swift in Sources */,
 				9F2A6088284FCBB800C7A253 /* CommunityViewModel.swift in Sources */,
 				9F8472CB27EB3125007461FA /* LoginViewController.swift in Sources */,
 				9F84798B27F3159F007461FA /* MapViewController.swift in Sources */,
+				9F84EFC62852B4320040BA43 /* GetPostReadOneRequestModel.swift in Sources */,
+				9F84EFB8285230DC0040BA43 /* CreateReplyResponseModel.swift in Sources */,
 				9F2A608A284FCBD000C7A253 /* CommunityManager.swift in Sources */,
 				9F206C7D28446F1D00568D11 /* WriteViewController.swift in Sources */,
+				9F84EFC82852B49F0040BA43 /* GetPostReadOneResponseModel.swift in Sources */,
 				9F206C962848C7E700568D11 /* GetAllSmokeAreaRequestModel.swift in Sources */,
 				9F206C982848CA7B00568D11 /* GetAllSmokeAreaResponseModel.swift in Sources */,
+				9F84EFC42852A8780040BA43 /* UpdatePostResponseModel.swift in Sources */,
 				9F847ACD27F9944A007461FA /* Constants.swift in Sources */,
 				9F206C58283D091A00568D11 /* CommunityViewController.swift in Sources */,
 				9F2A608C284FCC0600C7A253 /* GetPostReadAllResponseModel.swift in Sources */,
+				9F84EFBE28529FCF0040BA43 /* DeletePostRequestModel.swift in Sources */,
 				9F84728B27EB123E007461FA /* ViewController.swift in Sources */,
+				9F84EFC02852A0770040BA43 /* DeletePostResponseModel.swift in Sources */,
 				9F18A5FD2832234800EEF555 /* MapListViewCell.swift in Sources */,
 				9F847AC827F98C42007461FA /* SearchLoactionWithAddressRequestModel.swift in Sources */,
 				9F2A6071284E9F6900C7A253 /* MapListViewModel.swift in Sources */,
@@ -971,6 +1010,7 @@
 				9F206C7128409ACA00568D11 /* BoardViewController.swift in Sources */,
 				9F84730927EB43E7007461FA /* TabBarController.swift in Sources */,
 				1787B6B328366B140033C534 /* HeaderMyPageVC.swift in Sources */,
+				9F84EFB628522D5B0040BA43 /* CreateReplyRequestModel.swift in Sources */,
 				9F84728927EB123E007461FA /* SceneDelegate.swift in Sources */,
 				9F2A609D28502D8100C7A253 /* GetReplyReadAllRequestModel.swift in Sources */,
 				9F2A6099284FF2D200C7A253 /* CreateResponseModel.swift in Sources */,

@@ -14,7 +14,15 @@ class BoardCollectionViewCell: UICollectionViewCell {
     @IBOutlet var comment: UILabel!
     @IBOutlet var deleteButton: UIButton!
     
+    var delete: (()->()) = {}
+    @IBAction func DeletReply(_ sender: Any) {
+        delete()
+    }
+    
     func updateUI(item: GetReplyReadAllResponseModelResponses){
         self.comment.text = item.replyContent
+        if item.userId == 1{
+            deleteButton.isHidden = false
+        }
     }
 }

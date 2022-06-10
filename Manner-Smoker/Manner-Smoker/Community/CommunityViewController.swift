@@ -11,20 +11,26 @@ class CommunityViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     
-    var viewModel = CommunityViewModel()
+    lazy var viewModel = CommunityViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        initCommunity()
+    }
+    
+    func initCommunity(){
         viewModel.getResponses {
             self.collectionView.reloadData()
         }
     }
+    
     
     @IBAction func writeButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Write", bundle: Bundle.main)
@@ -34,6 +40,7 @@ class CommunityViewController: UIViewController {
         WriteVC.hidesBottomBarWhenPushed = true
         WriteVC.tabBarController?.tabBar.isHidden = true
         WriteVC.modalPresentationStyle = .fullScreen
+//        WriteVC.preView = self.collectionView
         self.present(WriteVC, animated: true)
         
     }
@@ -46,7 +53,9 @@ extension CommunityViewController: UICollectionViewDelegate{
         }
         boardVC.hidesBottomBarWhenPushed = true
         boardVC.tabBarController?.tabBar.isHidden = true
-        boardVC.contentViewModel = viewModel.response[indexPath.item]
+//        boardVC.contentViewModel = viewModel.response[indexPath.item]
+        boardVC.postId = viewModel.response[indexPath.item].postId
+        boardVC.userId = viewModel.response[indexPath.item].userId
         self.navigationController?.pushViewController(boardVC, animated: true)
     }
 }

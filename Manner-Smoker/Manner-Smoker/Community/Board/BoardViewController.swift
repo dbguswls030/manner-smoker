@@ -16,59 +16,90 @@ class BoardViewController: UIViewController {
     @IBOutlet var textHeightConstraint: NSLayoutConstraint!
     @IBOutlet var textView: UITextView!
     @IBOutlet var textEditFinishButton: UIButton!
-    var contentViewModel: GetPostReadAllResponseModelResponses?
-    var commentViewModel = BoardViewModel()
+    var postId: Int?
+    var userId: Int?
+    var boardViewModel = BoardViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         hideKeyboard()
-        initTextView()
-        textEditFinishButton.isHidden = true
-        initNavigationBarItem()
     }
-    func initViewModel(){
-        if let contentViewModel = contentViewModel {
-            commentViewModel.postId = contentViewModel.postId
-            commentViewModel.searchComment()
-            collectionView.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initKeyboardNotification()
+        initTextView()
+        initBoardViewModel()
+        initNavigationBarItem()
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        deinitKeyboardNotification()
+        
+    }
+    func initBoardViewModel(){
+        if let postId = postId {
+            boardViewModel.postId = postId
+            boardViewModel.getPost {
+                self.boardViewModel.getReley {
+                }
+                self.collectionView.reloadData()
+            }
         }
     }
     
+    @IBAction func commentEditFinish(_ sender: Any) {
+        if let postId = postId {
+            CommunityManager.shared.CreatedReply(model: CreateReplyRequestModel(postId: postId, replyContent: textView.text, userId: 1))
+            self.textView.text = ""
+            self.textView.resignFirstResponder()
+            self.textEditFinishButton.isHidden = true
+            initBoardViewModel()
+//            self.collectionView.reloadData()
+        }
+        
+    }
     func initNavigationBarItem(){
         let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .done, target: self, action: #selector(back))
         backButton.tintColor = .darkGray
         self.navigationItem.leftBarButtonItem = backButton
         
-        let deleteButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .done, target: self, action: #selector(postDelete))
-        deleteButton.tintColor = .darkGray
+        if let userId = userId, userId == 1 {
+            let deleteButton = UIBarButtonItem(title: "삭제", style: .done, target: self, action: #selector(postDelete))
+            //        let deleteButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .done, target: self, action: #selector(postDelete))
+            deleteButton.tintColor = .darkGray
+            
+            let updateButton = UIBarButtonItem(title: "수정", style: .done, target: self, action: #selector(postUpdate))
+            updateButton.tintColor = .darkGray
+            self.navigationItem.rightBarButtonItems = [deleteButton, updateButton]
+        }
         
-        let updateButton = UIBarButtonItem(title: "수정", style: .done, target: self, action: #selector(postUpdate))
-        updateButton.tintColor = .darkGray
-        
-        self.navigationItem.rightBarButtonItems = [deleteButton, updateButton]
     }
     @objc func postDelete(){
-        // delete api
+        CommunityManager.shared.deletePost(model: DeletePostRequestModel(postId: boardViewModel.getPostId())) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     @objc func postUpdate(){
         // Write 으로 넘어가면서 글 내용 복사
+        let storyboard = UIStoryboard(name: "Write", bundle: Bundle.main)
+        guard let updateVC = storyboard.instantiateViewController(identifier: "WirteView") as? WriteViewController else{
+            return
+        }
+        updateVC.hidesBottomBarWhenPushed = true
+        updateVC.tabBarController?.tabBar.isHidden = true
+        updateVC.modalPresentationStyle = .fullScreen
+        updateVC.contentViewModel = boardViewModel.postResponse
+        updateVC.updateFlag = true
+//        WriteVC.preView = self.collectionView
+        self.present(updateVC, animated: true)
     }
     @objc func back(){
         self.navigationController?.popViewController(animated: true)
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        initKeyboardNotification()
-        
-        
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        deinitKeyboardNotification()
-    }
     
     func initKeyboardNotification(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -93,6 +124,7 @@ class BoardViewController: UIViewController {
 }
 extension BoardViewController: UITextViewDelegate{
     func initTextView(){
+        self.textEditFinishButton.isHidden = true
         self.textView.delegate = self
         self.textView.text = "댓글을 입력해주세요."
         self.textView.textColor = UIColor.lightGray
@@ -144,32 +176,42 @@ extension BoardViewController: UITextViewDelegate{
 
 extension BoardViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
         switch kind{
         case UICollectionView.elementKindSectionHeader:
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ContentViewHeader", for: indexPath) as? BoardCollectionReusableView else{
                 return UICollectionReusableView()
             }
-            if let viewModel = self.contentViewModel{
-                header.updateUI(item: viewModel)
+//            if let viewModel = self.contentViewModel{
+//                header.updateUI(item: viewModel)
+//            }
+            if let item = boardViewModel.postResponse{
+                header.updateUI(item: item)
             }
+            
             return header
         default: return UICollectionReusableView()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return commentViewModel.numOfCount()
+        return boardViewModel.numOfCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentViewCell", for: indexPath) as? BoardCollectionViewCell else{
             return UICollectionViewCell()
         }
-        cell.updateUI(item: commentViewModel.response[indexPath.item])
+        cell.delete = { [unowned self] in
+            CommunityManager.shared.deleteReply(model: DeleteReplyRequestModel(replyId: boardViewModel.replyResponse[indexPath.item].replyId)){ [unowned self] in
+                self.initBoardViewModel()
+//                self.collectionView.reloadData()
+            }
+        }
+        cell.updateUI(item: boardViewModel.replyResponse[indexPath.item])
         return cell
     }
 }
+
 
 extension BoardViewController: UICollectionViewDelegateFlowLayout{
     
