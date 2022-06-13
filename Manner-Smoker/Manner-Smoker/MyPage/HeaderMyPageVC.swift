@@ -49,6 +49,7 @@ class HeaderMyPageVC: UIViewController {
         DispatchQueue.main.async {
             SmokeAmountDataManager().addSmokeAmount()
         }
+        Constants.RECENTLY_SMOKE_TIME = Date()
         
         todaySetup()
     }
@@ -59,35 +60,7 @@ class HeaderMyPageVC: UIViewController {
         self.present(detailVC, animated: true, completion: nil)
     }
     
-    // 일 구하기
-    func getDay(_ date: Date) -> Int {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "d"
-        
-        let day = Int(formatter.string(from: date))
-        
-        return day!
-    }
-    
-    // 월 구하기
-    func getMonth(_ date: Date) -> Int {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "M"
-        
-        let month = Int(formatter.string(from: date))
-        
-        return month!
-    }
-    
-    // 년도 구하기
-    func getYear(_ date: Date) -> Int {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy"
-        
-        let year = Int(formatter.string(from: date))
-        
-        return year!
-    }
+   
     
     func setUserInfo() {
         UserApi.shared.me() { (user, error) in
@@ -110,14 +83,11 @@ class HeaderMyPageVC: UIViewController {
     
     // 초기화면 오늘 날짜로 된 설정
     func todaySetup() {
-        let year = getYear(Date())
-        let month = getMonth(Date())
-        let day = getDay(Date())
         
-        selectedDateLbl.text = "\(year)년\(month)월\(day)일"
+        selectedDateLbl.text = "\(Constants.CURRENT_YEAR)년\(Constants.CURRENT_MONTH)월\(Constants.CURRENT_DAY)일"
        
-        DaySmokeDataManager().getDaySmokeAmount(year, month, day, viewController: self)
-        DaySmokeDataManager().getDaySmokeInfo(year, month, day, viewController: self)
+        DaySmokeDataManager().getDaySmokeAmount(Constants.CURRENT_YEAR, Constants.CURRENT_MONTH, Constants.CURRENT_DAY, viewController: self)
+        DaySmokeDataManager().getDaySmokeInfo(Constants.CURRENT_YEAR, Constants.CURRENT_MONTH, Constants.CURRENT_DAY, viewController: self)
         
 //        for _ in 0 ..< 7 {
 //            MyPageDetailDataManager().getDaySmokeResult(year, month, day, viewController: MyPageDetailVC())
@@ -158,9 +128,9 @@ extension HeaderMyPageVC : FSCalendarDelegate, FSCalendarDelegateAppearance, FSC
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print(dateFormatter.string(from: date) + " 선택됨")
-        let year = getYear(date)
-        let month = getMonth(date)
-        let day = getDay(date)
+        let year = HeaderHomeVC().getYear(date)
+        let month = HeaderHomeVC().getMonth(date)
+        let day = HeaderHomeVC().getDay(date)
         
         selectedDateLbl.text = "\(year)년\(month)월\(day)일"
        

@@ -24,7 +24,13 @@ struct Constants{
     static var SERVER_USER_ID : Int = 0
     
     static var START_SMOKE_DATE : Date?
-    static var STANDARD_SMOKE_AMOUNT : Int = 20
+    static var STANDARD_SMOKE_AMOUNT : Int = 0
+    
+    static var CURRENT_YEAR : Int = 0
+    static var CURRENT_MONTH : Int = 0
+    static var CURRENT_DAY : Int = 0
+    
+    static var RECENTLY_SMOKE_TIME : Date = Date()
     
     static var headerJSON: HTTPHeaders = [
                 "Content-Type": "application/json",

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		17056DE5285052E800B5CCD0 /* KaKaoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17056DE4285052E800B5CCD0 /* KaKaoDataManager.swift */; };
 		17056DE72850532700B5CCD0 /* KaKaoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17056DE62850532700B5CCD0 /* KaKaoEntity.swift */; };
+		1744F0C02857BF5000F6F83F /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744F0BF2857BF5000F6F83F /* HomeDataManager.swift */; };
+		1744F0C22857BF6200F6F83F /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744F0C12857BF6200F6F83F /* HomeEntity.swift */; };
 		175DCE2B28372D2300AE591A /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE2928372D2300AE591A /* NewsCollectionViewCell.swift */; };
 		175DCE2C28372D2400AE591A /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175DCE2A28372D2300AE591A /* NewsCollectionViewCell.xib */; };
 		175DCE2E28372D4700AE591A /* HeaderNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE2D28372D4700AE591A /* HeaderNewsVC.swift */; };
@@ -148,6 +150,8 @@
 		141D10CE97E9A0D582413A65 /* Pods-Manner-SmokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.release.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.release.xcconfig"; sourceTree = "<group>"; };
 		17056DE4285052E800B5CCD0 /* KaKaoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoDataManager.swift; sourceTree = "<group>"; };
 		17056DE62850532700B5CCD0 /* KaKaoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoEntity.swift; sourceTree = "<group>"; };
+		1744F0BF2857BF5000F6F83F /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
+		1744F0C12857BF6200F6F83F /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		175DCE2928372D2300AE591A /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		175DCE2A28372D2300AE591A /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		175DCE2D28372D4700AE591A /* HeaderNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderNewsVC.swift; sourceTree = "<group>"; };
@@ -345,6 +349,22 @@
 				176B77F82851CE0900545A73 /* UserEntity.swift */,
 			);
 			path = KaKaoEntity;
+			sourceTree = "<group>";
+		};
+		1744F0BD2857BF2500F6F83F /* HomeDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				1744F0BF2857BF5000F6F83F /* HomeDataManager.swift */,
+			);
+			path = HomeDataManager;
+			sourceTree = "<group>";
+		};
+		1744F0BE2857BF3E00F6F83F /* HomeEntity */ = {
+			isa = PBXGroup;
+			children = (
+				1744F0C12857BF6200F6F83F /* HomeEntity.swift */,
+			);
+			path = HomeEntity;
 			sourceTree = "<group>";
 		};
 		176B77F22851C46500545A73 /* DaySmokeDataManager */ = {
@@ -698,6 +718,8 @@
 		9F8472BB27EB13D6007461FA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1744F0BD2857BF2500F6F83F /* HomeDataManager */,
+				1744F0BE2857BF3E00F6F83F /* HomeEntity */,
 				9F8472C027EB20D1007461FA /* HeaderHome.storyboard */,
 				1787B6B628371FD70033C534 /* HeaderHomeVC.swift */,
 			);
@@ -1075,6 +1097,7 @@
 				17056DE5285052E800B5CCD0 /* KaKaoDataManager.swift in Sources */,
 				9F84EFBA285290470040BA43 /* DeleteReplyRequestModel.swift in Sources */,
 				9F206C7528409D9A00568D11 /* BoardCollectionReusableView.swift in Sources */,
+				1744F0C02857BF5000F6F83F /* HomeDataManager.swift in Sources */,
 				9F2A6088284FCBB800C7A253 /* CommunityViewModel.swift in Sources */,
 				9F8472CB27EB3125007461FA /* LoginViewController.swift in Sources */,
 				9F84798B27F3159F007461FA /* MapViewController.swift in Sources */,
@@ -1121,6 +1144,7 @@
 				17BBDF982851221C000FF4E3 /* SmokeAmountEntity.swift in Sources */,
 				9F2A608E284FCCEC00C7A253 /* GetPostReadAllRequestModel.swift in Sources */,
 				9F17088C28321A25001B4973 /* Map.swift in Sources */,
+				1744F0C22857BF6200F6F83F /* HomeEntity.swift in Sources */,
 				9F17088928321451001B4973 /* MapListViewController.swift in Sources */,
 				175DCE2E28372D4700AE591A /* HeaderNewsVC.swift in Sources */,
 			);
@@ -1335,7 +1359,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker-map/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/woojinlee/Developer/capstoneA/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1381,7 +1405,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryuhyeonjin/Desktop/swift/ios/manner-smoker-map/manner-smoker/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/woojinlee/Developer/capstoneA/Manner-Smoker/Manner-Smoker/Kakao-Map-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
