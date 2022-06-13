@@ -12,7 +12,6 @@ class BoardCollectionReusableView: UICollectionReusableView {
     @IBOutlet var nickName: UILabel!
     @IBOutlet var dateOfWriting: UILabel!
     @IBOutlet var contents: UILabel!
-    @IBOutlet var image: UIImageView!
     @IBOutlet var commentCount: UILabel!
     
     func updateUI(item: GetPostReadOneResponseModelResponses){

@@ -48,17 +48,11 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aE-g5-w5l">
-                                                    <rect key="frame" x="20" y="21" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="21" width="374" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gaz-8T-5U7">
-                                                    <rect key="frame" x="20" y="62.5" width="374" height="187"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="gaz-8T-5U7" secondAttribute="height" multiplier="2:1" id="0nv-4I-RgV"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laf-jN-CMK">
                                                     <rect key="frame" x="20" y="269.5" width="31.5" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
@@ -96,22 +90,19 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gaz-8T-5U7" firstAttribute="top" secondItem="6aE-g5-w5l" secondAttribute="bottom" constant="20" id="4mG-qa-U8J"/>
                                                 <constraint firstAttribute="trailing" secondItem="q5M-Ix-l1a" secondAttribute="trailing" id="6e3-uM-EiJ"/>
+                                                <constraint firstItem="Laf-jN-CMK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6aE-g5-w5l" secondAttribute="bottom" constant="20" id="9t7-wj-8gy"/>
                                                 <constraint firstItem="cqX-Eu-zPo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Laf-jN-CMK" secondAttribute="trailing" constant="10" id="Fa8-Ey-9a0"/>
                                                 <constraint firstItem="Laf-jN-CMK" firstAttribute="baseline" secondItem="cqX-Eu-zPo" secondAttribute="firstBaseline" id="FvN-2s-2Nj"/>
                                                 <constraint firstAttribute="trailing" secondItem="6aE-g5-w5l" secondAttribute="trailing" constant="20" id="K8r-tk-qwa"/>
                                                 <constraint firstItem="cqX-Eu-zPo" firstAttribute="centerY" secondItem="Laf-jN-CMK" secondAttribute="centerY" id="Lgm-Am-8c4"/>
                                                 <constraint firstAttribute="trailing" secondItem="DFa-pI-OBY" secondAttribute="trailing" id="Nxs-Cm-ftE"/>
                                                 <constraint firstItem="DFa-pI-OBY" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" id="PND-d9-Rqv"/>
-                                                <constraint firstItem="Laf-jN-CMK" firstAttribute="top" secondItem="gaz-8T-5U7" secondAttribute="bottom" constant="20" id="Pfa-mg-Xfi"/>
                                                 <constraint firstItem="z2w-9e-1jZ" firstAttribute="top" secondItem="q5M-Ix-l1a" secondAttribute="bottom" constant="3" id="Qb9-sH-tdV"/>
                                                 <constraint firstItem="6aE-g5-w5l" firstAttribute="top" secondItem="DFa-pI-OBY" secondAttribute="bottom" constant="20" id="TNG-8T-XXf"/>
-                                                <constraint firstAttribute="trailing" secondItem="gaz-8T-5U7" secondAttribute="trailing" constant="20" id="Ue9-Mj-fgj"/>
                                                 <constraint firstAttribute="trailing" secondItem="cqX-Eu-zPo" secondAttribute="trailing" constant="20" id="ag7-rR-xun"/>
                                                 <constraint firstItem="DFa-pI-OBY" firstAttribute="top" secondItem="Wtk-1N-bwP" secondAttribute="top" id="bIb-6D-S2N"/>
                                                 <constraint firstAttribute="trailing" secondItem="dDN-q0-1nh" secondAttribute="trailing" id="bhd-JU-h3J"/>
-                                                <constraint firstItem="gaz-8T-5U7" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" constant="20" id="ceN-43-sHg"/>
                                                 <constraint firstItem="q5M-Ix-l1a" firstAttribute="leading" secondItem="Wtk-1N-bwP" secondAttribute="leading" id="duX-fZ-UP3"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="z2w-9e-1jZ" secondAttribute="trailing" constant="25" id="dzY-qP-s8p"/>
                                                 <constraint firstItem="dDN-q0-1nh" firstAttribute="top" secondItem="z2w-9e-1jZ" secondAttribute="bottom" constant="3" id="hnR-6m-Cbg"/>
@@ -127,7 +118,6 @@
                                             <outlet property="commentCount" destination="z2w-9e-1jZ" id="dee-g8-cQR"/>
                                             <outlet property="contents" destination="6aE-g5-w5l" id="qD2-sx-CYU"/>
                                             <outlet property="dateOfWriting" destination="cqX-Eu-zPo" id="99Q-4P-mT1"/>
-                                            <outlet property="image" destination="gaz-8T-5U7" id="hh7-N3-Q2s"/>
                                             <outlet property="nickName" destination="Laf-jN-CMK" id="FKu-xl-g88"/>
                                         </connections>
                                     </collectionViewCell>

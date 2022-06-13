@@ -21,9 +21,10 @@ struct GetReplyReadAllResponseModelResponses: Decodable{
     let replyContent: String
     let replyId: Int
     let userId: Int
-    
+    let nickname: JSONNull?
+    let thumbnailURL: JSONNull?
     enum CodingKeys: String, CodingKey{
-        case createdDate, modifiedDate, postId, replyContent, replyId, userId
+        case createdDate, modifiedDate, postId, replyContent, replyId, userId, nickname, thumbnailURL
     }
 }
 

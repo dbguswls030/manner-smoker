@@ -10,14 +10,11 @@ import Alamofire
 
 struct CreateRequestModel{
     let content: String
-    let title: String
     let userId: Int
-    init(content: String, title: String, userId: Int){
+    init(content: String, userId: Int){
         self.content = content
-        self.title = title
         self.userId = userId
         parameters["content"] = content
-        parameters["title"] = title
         parameters["userId"] = userId
         headers["Authorization"] = Constants.ACESS_TOKEN
     }

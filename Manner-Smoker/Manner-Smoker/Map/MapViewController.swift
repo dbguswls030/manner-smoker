@@ -4,7 +4,6 @@
 //
 //  Created by 유현진 on 2022/03/29.
 //
-
 import UIKit
 import CoreLocation
 import MapKit
@@ -23,7 +22,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     var mtMapView: MTMapView!
     var tapped = false
     var mapListSwitch = false
-    
     var tempMaps = [Map]()
     
     @IBAction func setCurrentPoint(_ sender: Any) {
@@ -40,7 +38,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         setLoactionData()
         hideKeyboard()
         self.tabBarController?.hidesBottomBarWhenPushed = true
-        
     }
     
     func initStyle(){
@@ -54,20 +51,16 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         self.mtMapView = MTMapView(frame: self.kakaoMapView.frame)
         mtMapView.delegate = self
         mtMapView.baseMapType = .standard
-        mtMapView.showCurrentLocationMarker = true
-        mtMapView.didReceiveMemoryWarning()
+        
+//        mtMapView.showCurrentLocationMarker = true
 //        mtMapView.currentLocationTrackingMode = .onWithoutHeading
+        mtMapView.didReceiveMemoryWarning()
         if let locations = locationManager.location{
             self.mtMapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: locations.coordinate.latitude, longitude: locations.coordinate.longitude)), animated: true)
         }
-       
         self.kakaoMapView.addSubview(mtMapView)
         initMapPoint()
         setMapViewConstraint()
-    }
-    
-    func testcurrentLocation(){
-        
     }
     
     func setMapViewConstraint(){
@@ -118,14 +111,13 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
         if self.mapListSwitch == true && self.searchTextField.isFirstResponder{
             self.mapListSwitch = false
-            self.dismiss(animated: true)
             searchTextField.resignFirstResponder()
+            self.dismiss(animated: true)
         }else if self.mapListSwitch == true {
             self.mapListSwitch = false
             self.dismiss(animated: true)
         }else if self.searchTextField.isFirstResponder{
             searchTextField.resignFirstResponder()
-            
         }else{
             if tapped == false{
                 hideUI()
@@ -160,7 +152,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
 }
 extension MapViewController: CLLocationManagerDelegate{
-    
     func setLoactionData(){
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest // 거리 정확도

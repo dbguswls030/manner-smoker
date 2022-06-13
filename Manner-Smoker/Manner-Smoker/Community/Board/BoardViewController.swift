@@ -19,6 +19,7 @@ class BoardViewController: UIViewController {
     var postId: Int?
     var userId: Int?
     var boardViewModel = BoardViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,7 +33,6 @@ class BoardViewController: UIViewController {
         initTextView()
         initBoardViewModel()
         initNavigationBarItem()
-        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -42,17 +42,19 @@ class BoardViewController: UIViewController {
     func initBoardViewModel(){
         if let postId = postId {
             boardViewModel.postId = postId
-            boardViewModel.getPost {
+            self.boardViewModel.getPost {
                 self.boardViewModel.getReley {
+                    self.collectionView.reloadData()
                 }
-                self.collectionView.reloadData()
+                
             }
+            
         }
     }
     
     @IBAction func commentEditFinish(_ sender: Any) {
         if let postId = postId {
-            CommunityManager.shared.CreatedReply(model: CreateReplyRequestModel(postId: postId, replyContent: textView.text, userId: 1))
+            CommunityManager.shared.CreatedReply(model: CreateReplyRequestModel(postId: postId, replyContent: textView.text, userId: Constants.SERVER_USER_ID))
             self.textView.text = ""
             self.textView.resignFirstResponder()
             self.textEditFinishButton.isHidden = true
@@ -66,7 +68,7 @@ class BoardViewController: UIViewController {
         backButton.tintColor = .darkGray
         self.navigationItem.leftBarButtonItem = backButton
         
-        if let userId = userId, userId == 1 {
+        if let userId = userId, userId == Constants.SERVER_USER_ID {
             let deleteButton = UIBarButtonItem(title: "삭제", style: .done, target: self, action: #selector(postDelete))
             //        let deleteButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .done, target: self, action: #selector(postDelete))
             deleteButton.tintColor = .darkGray
@@ -78,9 +80,16 @@ class BoardViewController: UIViewController {
         
     }
     @objc func postDelete(){
-        CommunityManager.shared.deletePost(model: DeletePostRequestModel(postId: boardViewModel.getPostId())) {
-            self.navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "글을 삭제하시겠습니까?", message: "글이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
+        let cancel = UIAlertAction(title: "취소", style: UIAlertAction.Style.default, handler: nil)
+        let confirm = UIAlertAction(title: "삭제", style: UIAlertAction.Style.default) { [self] action in
+            CommunityManager.shared.deletePost(model: DeletePostRequestModel(postId: boardViewModel.getPostId())) {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
+        alert.addAction(cancel)
+        alert.addAction(confirm)
+        self.present(alert, animated: true)
     }
     @objc func postUpdate(){
         // Write 으로 넘어가면서 글 내용 복사
@@ -181,13 +190,9 @@ extension BoardViewController: UICollectionViewDataSource{
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ContentViewHeader", for: indexPath) as? BoardCollectionReusableView else{
                 return UICollectionReusableView()
             }
-//            if let viewModel = self.contentViewModel{
-//                header.updateUI(item: viewModel)
-//            }
             if let item = boardViewModel.postResponse{
                 header.updateUI(item: item)
             }
-            
             return header
         default: return UICollectionReusableView()
         }
@@ -204,9 +209,9 @@ extension BoardViewController: UICollectionViewDataSource{
         cell.delete = { [unowned self] in
             CommunityManager.shared.deleteReply(model: DeleteReplyRequestModel(replyId: boardViewModel.replyResponse[indexPath.item].replyId)){ [unowned self] in
                 self.initBoardViewModel()
-//                self.collectionView.reloadData()
             }
         }
+        cell.preView = self
         cell.updateUI(item: boardViewModel.replyResponse[indexPath.item])
         return cell
     }
@@ -222,11 +227,11 @@ extension BoardViewController: UICollectionViewDelegateFlowLayout{
             return CGSize(width: width, height: 401.5)
         }
         let profileImage = header.profileImage.bounds.height
-        let image = header.image.bounds.height
+        
         let content = header.contents.bounds.height
         let commentLabel = header.commentCount.bounds.height
         
-        let height = 15 + profileImage + 15 + 1 + 20 + content + 15 + image + 25 + 1 + 3 + commentLabel + 3 + 1
+        let height = 15 + profileImage + 15 + 1 + 20 + content + 15 + 25 + 1 + 3 + commentLabel + 3 + 1
         return CGSize(width: width, height: height)
         
     }

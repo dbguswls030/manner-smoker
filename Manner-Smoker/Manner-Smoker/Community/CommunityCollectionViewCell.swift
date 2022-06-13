@@ -9,7 +9,6 @@ import UIKit
 
 class CommunityCollectionViewCell: UICollectionViewCell {
     @IBOutlet var contents: UILabel!
-    @IBOutlet var image: UIImageView!
     @IBOutlet var nickName: UILabel!
     @IBOutlet var dateOfWriting: UILabel!
     @IBOutlet var commentCount: UILabel!

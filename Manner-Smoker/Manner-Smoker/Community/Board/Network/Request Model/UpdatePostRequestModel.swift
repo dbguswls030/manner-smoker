@@ -9,11 +9,10 @@ import Foundation
 import Alamofire
 struct UpdatePostRequestModel{
     let postId: Int
-    init(postId: Int,content: String, title: String){
+    init(postId: Int,content: String){
         self.postId = postId
         headers["Authorization"] = Constants.ACESS_TOKEN
         parameters["content"] = content
-        parameters["title"] = title
     }
     
     var parameters: Parameters = [:]

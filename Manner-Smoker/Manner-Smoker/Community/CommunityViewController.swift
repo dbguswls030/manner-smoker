@@ -11,7 +11,7 @@ class CommunityViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     
-    lazy var viewModel = CommunityViewModel()
+    var viewModel = CommunityViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class CommunityViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         initCommunity()
     }
     
@@ -53,7 +54,6 @@ extension CommunityViewController: UICollectionViewDelegate{
         }
         boardVC.hidesBottomBarWhenPushed = true
         boardVC.tabBarController?.tabBar.isHidden = true
-//        boardVC.contentViewModel = viewModel.response[indexPath.item]
         boardVC.postId = viewModel.response[indexPath.item].postId
         boardVC.userId = viewModel.response[indexPath.item].userId
         self.navigationController?.pushViewController(boardVC, animated: true)
@@ -79,10 +79,9 @@ extension CommunityViewController: UICollectionViewDelegateFlowLayout{
             return CGSize(width: width, height: 400)
         }
         let contents = cell.contents.bounds.height
-        let image = cell.image.bounds.height
         let nickName = cell.nickName.bounds.height
         let commentLabel = cell.commentCount.bounds.height
-        let height = 1 + 20 + contents + 20 + image + 20 + nickName + 10 + 1 + 3 + commentLabel + 3 + 1
+        let height = 1 + 20 + contents + 20 + nickName + 10 + 1 + 3 + commentLabel + 3 + 1
         return CGSize(width: width, height: height)
     }
 }

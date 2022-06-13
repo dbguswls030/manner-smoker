@@ -30,10 +30,10 @@ class WriteViewController: UIViewController {
             return
         }
         if updateFlag == false{
-            CommunityManager.shared.setPostCreate(model: CreateRequestModel(content: content, title: "test", userId: 1))
+            CommunityManager.shared.setPostCreate(model: CreateRequestModel(content: content, userId: Constants.SERVER_USER_ID))
         }else{
             if let contentViewModel = contentViewModel {
-                CommunityManager.shared.updatePost(model: UpdatePostRequestModel(postId: contentViewModel.postId, content: content, title: "test"))
+                CommunityManager.shared.updatePost(model: UpdatePostRequestModel(postId: contentViewModel.postId, content: content))
             }
             
         }

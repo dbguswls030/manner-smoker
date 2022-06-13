@@ -17,14 +17,14 @@ struct GetPostReadOneResponseModel:Decodable{
 
 struct GetPostReadOneResponseModelResponses: Decodable{
     let postId: Int
-    let title: String
     let content: String
     let userId: Int
     let createdDate: String
     let modifiedDate: String
-    
+    let nickname: JSONNull?
+    let thumbnailURL: JSONNull?
     enum CodingKeys: String, CodingKey{
-        case postId, title, content, userId, createdDate, modifiedDate
+        case postId, content, userId, createdDate, modifiedDate, nickname, thumbnailURL
     }
 }
 //{

@@ -12,31 +12,29 @@ struct GetPostReadAllResponseModel: Decodable{
         case response
     }
 }
-
-
 struct GetPostReadAllResponseModelResponses: Decodable{
     let postId: Int
-    let title: String
     let content: String
     let userId: Int
     let createdDate: String
     let modifiedDate: String
-    
+    let nickname: JSONNull?
+    let thumbnailURL: JSONNull?
     enum CodingKeys: String, CodingKey{
-        case postId, title, content, userId, createdDate, modifiedDate
+        case postId, content, userId, createdDate, modifiedDate, thumbnailURL, nickname
     }
 }
-//{
-//    "httpStatus": "OK",
-//    "message": null,
-//    "response": [
-//        {
-//            "postId": 1,
-//            "title": "test",
-//            "content": "test",
-//            "userId": 3,
-//            "createdDate": "2022-06-05T23:04:10",
-//            "modifiedDate": "2022-06-05T23:04:10"
-//        }
-//    ]
+//  "httpStatus": "ACCEPTED",
+//  "message": "string",
+//  "response": [
+//    {
+//      "content": "string",
+//      "createdDate": "2022-06-13T17:28:37.979Z",
+//      "modifiedDate": "2022-06-13T17:28:37.979Z",
+//      "nickname": "string",
+//      "postId": 0,
+//      "thumbnailURL": "string",
+//      "userId": 0
+//    }
+//  ]
 //}

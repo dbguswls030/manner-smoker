@@ -141,17 +141,11 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-VK-jG8">
-                                            <rect key="frame" x="20" y="111" width="374" height="18.5"/>
+                                            <rect key="frame" x="20" y="111" width="374" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-9x-hAk">
-                                            <rect key="frame" x="20" y="144.5" width="374" height="187"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="5ad-9x-hAk" secondAttribute="height" multiplier="2:1" id="Jln-YD-9p9"/>
-                                            </constraints>
-                                        </imageView>
                                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZw-1A-dKt">
                                             <rect key="frame" x="0.0" y="356.5" width="414" height="1"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,12 +180,8 @@
                                         <constraint firstAttribute="trailing" secondItem="aya-sE-IGk" secondAttribute="trailing" id="Asx-a5-L6f"/>
                                         <constraint firstAttribute="bottom" secondItem="aya-sE-IGk" secondAttribute="bottom" id="BaU-80-Wan"/>
                                         <constraint firstItem="i3f-iE-okr" firstAttribute="leading" secondItem="O4l-LT-rje" secondAttribute="leading" constant="25" id="FcR-yI-2IZ"/>
-                                        <constraint firstItem="5ad-9x-hAk" firstAttribute="top" secondItem="OgR-VK-jG8" secondAttribute="bottom" constant="15" id="Fuq-9o-MVc"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F36-ko-6EA" secondAttribute="trailing" constant="15" id="HrX-oa-UFb"/>
-                                        <constraint firstItem="5ad-9x-hAk" firstAttribute="leading" secondItem="O4l-LT-rje" secondAttribute="leading" constant="20" id="JSU-Au-kCQ"/>
                                         <constraint firstItem="F36-ko-6EA" firstAttribute="top" secondItem="9TF-fS-2dO" secondAttribute="bottom" constant="10" id="KKL-pl-tWh"/>
-                                        <constraint firstAttribute="trailing" secondItem="5ad-9x-hAk" secondAttribute="trailing" constant="20" id="PSi-WL-flZ"/>
-                                        <constraint firstItem="wZw-1A-dKt" firstAttribute="top" secondItem="5ad-9x-hAk" secondAttribute="bottom" constant="25" id="QcB-It-kfY"/>
                                         <constraint firstItem="SrZ-Y5-ckx" firstAttribute="leading" secondItem="O4l-LT-rje" secondAttribute="leading" constant="10" id="ZDH-0q-R3I"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9TF-fS-2dO" secondAttribute="trailing" constant="15" id="aaG-5e-3uz"/>
                                         <constraint firstItem="aya-sE-IGk" firstAttribute="leading" secondItem="O4l-LT-rje" secondAttribute="leading" id="gGT-ZA-8b0"/>
@@ -209,7 +199,6 @@
                                         <outlet property="commentCount" destination="i3f-iE-okr" id="eb0-Fa-UGN"/>
                                         <outlet property="contents" destination="OgR-VK-jG8" id="rme-OW-Eux"/>
                                         <outlet property="dateOfWriting" destination="F36-ko-6EA" id="2TJ-FE-nqL"/>
-                                        <outlet property="image" destination="5ad-9x-hAk" id="adM-Tl-hj8"/>
                                         <outlet property="nickName" destination="9TF-fS-2dO" id="hJm-nx-bIi"/>
                                         <outlet property="profileImage" destination="SrZ-Y5-ckx" id="VYu-og-JBp"/>
                                     </connections>

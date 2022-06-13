@@ -75,24 +75,33 @@ extension MapListViewController: UICollectionViewDelegate{
     // 카카오맵 길찾기
     // 카카오맵 없으면 바아로 앱스토어 ㄱ
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = maps[indexPath.item]
-        guard let currentPoint = currentPoint else{
-            return
-        }
-        let url = "kakaomap://route?sp=\(currentPoint.latitude),\(currentPoint.longitude)&ep=\(item.map.latitude),\(item.map.longitude)&by=FOOT"
         
-        if let openKakaoMap = URL(string: url), UIApplication.shared.canOpenURL(openKakaoMap){
-            if #available(iOS 10.0, *){
-                UIApplication.shared.open(openKakaoMap, options: [:], completionHandler: nil)
-            }else{
-                UIApplication.shared.openURL(openKakaoMap)
+        let alert = UIAlertController(title: "카카오맵으로 연결하시겠습니까?", message: "카카오맵 길찾기로 이동합니다.", preferredStyle: UIAlertController.Style.alert)
+        let cancel = UIAlertAction(title: "취소", style: .default, handler: nil)
+        let confirm = UIAlertAction(title: "네", style: .default) { action in
+            let item = self.maps[indexPath.item]
+            guard let currentPoint = self.currentPoint else{
+                return
             }
-        }else{
-            // [팝업] 카카오맵이 없습니다. 앱스토어로 이동하시겠습니까 yes일 시에 이동
-            if let openAppStoreForKakaoMap = URL(string: "https://apps.apple.com/us/app/id304608425"), UIApplication.shared.canOpenURL(openAppStoreForKakaoMap){
-                UIApplication.shared.open(openAppStoreForKakaoMap)
+            let url = "kakaomap://route?sp=\(currentPoint.latitude),\(currentPoint.longitude)&ep=\(item.map.latitude),\(item.map.longitude)&by=FOOT"
+            
+            if let openKakaoMap = URL(string: url), UIApplication.shared.canOpenURL(openKakaoMap){
+                if #available(iOS 10.0, *){
+                    UIApplication.shared.open(openKakaoMap, options: [:], completionHandler: nil)
+                }else{
+                    UIApplication.shared.openURL(openKakaoMap)
+                }
+            }else{
+                // [팝업] 카카오맵이 없습니다. 앱스토어로 이동하시겠습니까 yes일 시에 이동
+                if let openAppStoreForKakaoMap = URL(string: "https://apps.apple.com/us/app/id304608425"), UIApplication.shared.canOpenURL(openAppStoreForKakaoMap){
+                    UIApplication.shared.open(openAppStoreForKakaoMap)
+                }
             }
         }
+        alert.addAction(cancel)
+        alert.addAction(confirm)
+        present(alert, animated: true)
+        
     }
 }
     
