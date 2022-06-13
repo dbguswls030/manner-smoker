@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstSettingViewController" customModule="Manner_Smoker" customModuleProvider="target">
             <connections>
+                <outlet property="datePicker" destination="Bg4-9Z-Xtd" id="7Us-4m-UzA"/>
+                <outlet property="standardSmoke" destination="MCJ-Ir-Lbn" id="eKF-3h-inf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -55,7 +57,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyB-5V-vkE">
-                    <rect key="frame" x="159" y="569" width="75" height="31"/>
+                    <rect key="frame" x="159" y="568.5" width="75" height="31"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="lGi-cE-zdR"/>
@@ -64,6 +66,9 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Enter"/>
+                    <connections>
+                        <action selector="enterStandardSmoke:" destination="-1" eventType="touchUpInside" id="wII-W1-w2p"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기준흡연갯수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwc-FZ-6H4">
                     <rect key="frame" x="31" y="537" width="187" height="22"/>

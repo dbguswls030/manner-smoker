@@ -100,8 +100,8 @@ class MyPageDetailVC: UIViewController {
     // dayValue 값 세팅
     func getDayValues() {
         for day in xDay {
-            let year = HeaderMyPageVC().getYear(Date())
-            let month = HeaderMyPageVC().getMonth(Date())
+            let year = Constants.CURRENT_YEAR
+            let month = Constants.CURRENT_MONTH
             print(day)
             print(year)
             print(month)
@@ -117,7 +117,7 @@ class MyPageDetailVC: UIViewController {
     // monthValue 값 세팅
     func getMonthValues() {
         for month in xMonthAxis {
-            let year = HeaderMyPageVC().getYear(Date())
+            let year = Constants.CURRENT_YEAR
             
             MyPageDetailDataManager().getMonthSmokeResult(year, Int(month)!, viewController: self)
             monthValue.append(monthValueR.count)
