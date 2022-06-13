@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SafariServices
 
 class HeaderNewsVC: UIViewController {
 
     @IBOutlet var newsCV: UICollectionView!
     
     let newsImage : [UIImage] = [UIImage(named: "news1")!, UIImage(named: "news2")!, UIImage(named: "news3")!, UIImage(named: "news1")!, UIImage(named: "news2")!]
-    
+    let newsURL : [NSURL?] = [NSURL(string: "https://m.post.naver.com/viewer/postView.naver?volumeNo=33117035&memberNo=49031850"), NSURL(string: "https://brunch.co.kr/@dbwogy/11"), NSURL(string: "https://brunch.co.kr/@sat09am/19") ]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +41,11 @@ extension  HeaderNewsVC : UICollectionViewDelegate, UICollectionViewDataSource {
         cell.newsImage.image = newsImage[indexPath.row]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let blogSafariView : SFSafariViewController = SFSafariViewController(url: newsURL[indexPath.row % 3]! as URL)
+        self.present(blogSafariView, animated: true, completion: nil)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
