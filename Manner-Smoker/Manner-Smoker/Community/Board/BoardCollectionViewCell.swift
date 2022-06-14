@@ -34,6 +34,8 @@ class BoardCollectionViewCell: UICollectionViewCell {
     func updateUI(item: GetReplyReadAllResponseModelResponses){
         
         self.comment.text = item.replyContent
+        self.nickName.text = item.nickname
+        self.profileImage.load(url: item.thumbnailURL)
         if item.userId == Constants.SERVER_USER_ID{
             deleteButton.isHidden = false
         }
