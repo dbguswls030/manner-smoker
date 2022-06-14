@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiM-6L-SzB">
-                                        <rect key="frame" x="113" y="62" width="55" height="21"/>
+                                        <rect key="frame" x="101" y="62" width="55" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="4Le-nf-Az8"/>
                                             <constraint firstAttribute="height" constant="21" id="DhX-vo-1NE"/>
@@ -39,17 +39,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S7V-Im-vOC">
-                                        <rect key="frame" x="8" y="42" width="97" height="85"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S7V-Im-vOC">
+                                        <rect key="frame" x="8" y="42" width="85" height="85"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="97" id="tAL-aR-gTd"/>
+                                            <constraint firstAttribute="width" secondItem="S7V-Im-vOC" secondAttribute="height" multiplier="1:1" id="VTf-Vc-t5Q"/>
                                             <constraint firstAttribute="height" constant="85" id="zPr-JN-YYu"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="FiM-6L-SzB" secondAttribute="trailing" constant="226" id="7xI-Mp-diA"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FiM-6L-SzB" secondAttribute="trailing" constant="20" id="7xI-Mp-diA"/>
                                     <constraint firstAttribute="bottom" secondItem="S7V-Im-vOC" secondAttribute="bottom" id="820-Tf-nGQ"/>
                                     <constraint firstAttribute="width" constant="394" id="Cdb-b0-PNc"/>
                                     <constraint firstItem="FiM-6L-SzB" firstAttribute="top" secondItem="ScH-Z2-nHe" secondAttribute="top" constant="62" id="HLq-Za-e2t"/>
@@ -245,6 +245,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarView" destination="q4a-0R-6Qf" id="cx8-CB-Cf7"/>
+                        <outlet property="infoView" destination="bJH-1z-uq2" id="JmL-88-0LN"/>
                         <outlet property="myPageTableView" destination="0Ee-0c-WBK" id="DNu-gy-nxj"/>
                         <outlet property="plusBtn" destination="eLW-Ic-X56" id="F0A-hm-YUR"/>
                         <outlet property="profileImage" destination="S7V-Im-vOC" id="EK6-5a-sq2"/>

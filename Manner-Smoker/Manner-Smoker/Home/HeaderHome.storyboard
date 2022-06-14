@@ -25,11 +25,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26h-gq-kcd">
                                                 <rect key="frame" x="8" y="0.0" width="398" height="218"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="G48-Td-S4d">
-                                                        <rect key="frame" x="20" y="22" width="202" height="188"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="1eI-bw-s9k">
+                                                        <rect key="frame" x="20" y="22" width="345" height="188"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-UT-HvD">
-                                                                <rect key="frame" x="0.0" y="0.0" width="202" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="XMJ-dh-gH0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="84"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금연기간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7z-PL-zjc">
                                                                         <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
@@ -41,17 +41,21 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2일 10시간 10분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI2-41-eWM">
-                                                                        <rect key="frame" x="0.0" y="38" width="202" height="46"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI2-41-eWM">
+                                                                        <rect key="frame" x="0.0" y="51" width="345" height="33"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="202" id="FzE-EN-giM"/>
-                                                                            <constraint firstAttribute="height" constant="46" id="KOF-Hl-ykz"/>
+                                                                            <constraint firstAttribute="height" constant="33" id="jU0-Rl-99M"/>
+                                                                            <constraint firstAttribute="width" constant="345" id="rP8-ll-wiF"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="345" id="Fvf-ie-SoP"/>
+                                                                    <constraint firstAttribute="height" constant="84" id="gLW-MR-bQd"/>
+                                                                </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-zb-CDr">
                                                                 <rect key="frame" x="0.0" y="105" width="202" height="83"/>
@@ -80,18 +84,17 @@
                                                             </stackView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="202" id="W4s-zO-hJI"/>
-                                                            <constraint firstAttribute="height" constant="188" id="ZNM-o8-ZYD"/>
+                                                            <constraint firstAttribute="height" constant="188" id="JDS-s7-tpV"/>
+                                                            <constraint firstAttribute="width" constant="345" id="LVi-R6-Dwb"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="G48-Td-S4d" firstAttribute="leading" secondItem="26h-gq-kcd" secondAttribute="leading" constant="20" symbolic="YES" id="B4B-SZ-HbY"/>
-                                                    <constraint firstItem="G48-Td-S4d" firstAttribute="top" secondItem="26h-gq-kcd" secondAttribute="top" constant="22" id="EaX-v4-KtX"/>
-                                                    <constraint firstAttribute="trailing" secondItem="G48-Td-S4d" secondAttribute="trailing" constant="176" id="SsJ-3i-0Ad"/>
+                                                    <constraint firstItem="1eI-bw-s9k" firstAttribute="leading" secondItem="26h-gq-kcd" secondAttribute="leading" constant="20" symbolic="YES" id="1Ux-aa-vVW"/>
+                                                    <constraint firstItem="1eI-bw-s9k" firstAttribute="top" secondItem="26h-gq-kcd" secondAttribute="top" constant="22" id="4Z0-6e-LUF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1eI-bw-s9k" secondAttribute="trailing" constant="33" id="POa-eT-6lH"/>
                                                     <constraint firstAttribute="height" constant="218" id="cAa-nL-IbP"/>
-                                                    <constraint firstAttribute="trailing" secondItem="G48-Td-S4d" secondAttribute="trailing" constant="176" id="vTu-f6-FmQ"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82L-hp-TVA">

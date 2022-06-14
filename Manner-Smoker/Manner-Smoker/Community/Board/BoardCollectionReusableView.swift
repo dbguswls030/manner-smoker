@@ -15,8 +15,12 @@ class BoardCollectionReusableView: UICollectionReusableView {
     @IBOutlet var commentCount: UILabel!
     
     func updateUI(item: GetPostReadOneResponseModelResponses){
-        self.contents.text = item.content
-        self.nickName.text = item.nickname
-        self.profileImage.load(url: item.thumbnailURL)
+        DispatchQueue.main.async {
+            self.contents.text = item.content
+            self.nickName.text = item.nickname
+            self.profileImage.load(url: item.thumbnailURL)
+            self.profileImage.layer.cornerRadius = self.profileImage.bounds.size.width/2
+        }
+        
     }
 }

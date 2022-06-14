@@ -24,6 +24,7 @@ class HeaderMyPageVC: UIViewController {
     @IBOutlet var selectedDateLbl: UILabel!
     @IBOutlet var selectedDaySmokeAmountLbl: UILabel!
     
+    @IBOutlet var infoView: UIView!
     var check = 0
     let dateFormatter = DateFormatter()
     var smokeInfo : [DayResponse] = []
@@ -31,10 +32,10 @@ class HeaderMyPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        profileImage.layer.cornerRadius = profileImage.bounds.width/2
         setUserInfo()
         todaySetup()
-        
+        self.infoView.layer.cornerRadius = 10
         //profileView.layer.borderWidth = 1
         //profileView.layer.borderColor = UIColor.systemIndigo.cgColor
         plusBtn.layer.cornerRadius = 19

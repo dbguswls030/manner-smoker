@@ -36,9 +36,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-e6-4S9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-e6-4S9">
                                 <rect key="frame" x="45" y="714" width="324" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="7WB-e3-1Me"/>
+                                    <constraint firstAttribute="width" constant="324" id="sPP-Qe-Snb"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="kakao_login"/>
                                 <connections>
@@ -60,8 +63,12 @@
                             <constraint firstItem="BQj-BV-13S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="55" id="8Q7-wK-0wJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ayw-W6-ChI" secondAttribute="trailing" constant="73" id="BZa-np-TwJ"/>
                             <constraint firstItem="BQj-BV-13S" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="119" id="CcO-gS-6yP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xDC-e6-4S9" secondAttribute="trailing" constant="45" id="IZX-HN-puK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xDC-e6-4S9" secondAttribute="bottom" constant="89" id="KGE-ql-awb"/>
                             <constraint firstItem="Ayw-W6-ChI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="176" id="RNN-TN-XA2"/>
                             <constraint firstItem="vbk-qj-txR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="71" id="fSo-5H-xAB"/>
+                            <constraint firstItem="xDC-e6-4S9" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="oVs-NS-eGI"/>
+                            <constraint firstItem="xDC-e6-4S9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="qmY-Fm-dKL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6VI-Fh-Fif"/>

@@ -37,17 +37,17 @@
                                     <size key="itemSize" width="418" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="hYf-fi-AiG" customClass="NewsCollectionViewCell" customModule="Manner_Smoker" customModuleProvider="target">
-                                        <rect key="frame" x="-2" y="0.0" width="418" height="150"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6JD-5o-4Db">
-                                            <rect key="frame" x="0.0" y="0.0" width="418" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="418" height="150"/>
+                                        <size key="customSize" width="374" height="150"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

@@ -57,7 +57,6 @@ class JSONNullReplyAll: Codable, Hashable {
             throw DecodingError.typeMismatch(JSONNullReplyAll.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }
-
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encodeNil()

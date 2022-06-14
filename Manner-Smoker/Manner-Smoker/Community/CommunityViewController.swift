@@ -15,6 +15,7 @@ class CommunityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         // Do any additional setup after loading the view.

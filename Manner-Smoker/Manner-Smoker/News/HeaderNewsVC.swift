@@ -57,3 +57,4 @@ extension  HeaderNewsVC : UICollectionViewDelegate, UICollectionViewDataSource {
         }
     
 }
+

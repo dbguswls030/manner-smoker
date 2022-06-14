@@ -51,10 +51,10 @@ class HeaderHomeVC: UIViewController {
         let myDateComponents = DateComponents(year: getYear(Constants.RECENTLY_SMOKE_TIME), month: getMonth(Constants.RECENTLY_SMOKE_TIME), day: getDay(Constants.RECENTLY_SMOKE_TIME))
         
         let startDate = Calendar.current.date(from: myDateComponents)!
-        let offsetComps = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute], from: startDate, to: Date())
+        let offsetComps = Calendar.current.dateComponents([.year,.month,.day], from: startDate, to: Date())
         
-        if case let (y?, m?, d?, h? ,mi?) = (offsetComps.year, offsetComps.month, offsetComps.day, offsetComps.hour, offsetComps.minute) {
-            smokingTerm.text = "\(y)년 \(m)개월 \(d)일 \(h)시간 \(mi)분"
+        if case let (y?, m?, d?) = (offsetComps.year, offsetComps.month, offsetComps.day) {
+            notSmokingTerm.text = "\(y)년 \(m)개월 \(d)일"
             money = (((y * 365) + (m * 30) + d) * Constants.STANDARD_SMOKE_AMOUNT) * 225
         }
         

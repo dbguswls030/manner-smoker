@@ -32,12 +32,15 @@ class BoardCollectionViewCell: UICollectionViewCell {
     }
     
     func updateUI(item: GetReplyReadAllResponseModelResponses){
-        
-        self.comment.text = item.replyContent
-        self.nickName.text = item.nickname
-        self.profileImage.load(url: item.thumbnailURL)
-        if item.userId == Constants.SERVER_USER_ID{
-            deleteButton.isHidden = false
+        DispatchQueue.main.async {
+            self.comment.text = item.replyContent
+            self.nickName.text = item.nickname
+            self.profileImage.load(url: item.thumbnailURL)
+            self.profileImage.layer.cornerRadius = 3
+            if item.userId == Constants.SERVER_USER_ID{
+                self.deleteButton.isHidden = false
+            }
         }
+        
     }
 }
