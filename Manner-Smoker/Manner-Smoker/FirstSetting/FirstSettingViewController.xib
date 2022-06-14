@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstSettingViewController" customModule="Manner_Smoker" customModuleProvider="target">
             <connections>
                 <outlet property="datePicker" destination="Bg4-9Z-Xtd" id="7Us-4m-UzA"/>
+                <outlet property="enterBtn" destination="oyB-5V-vkE" id="kIu-sY-Azp"/>
                 <outlet property="standardSmoke" destination="MCJ-Ir-Lbn" id="eKF-3h-inf"/>
+                <outlet property="submitBtn" destination="hD1-8I-Uk4" id="P2H-fO-giy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -54,7 +56,7 @@
                         <constraint firstAttribute="height" constant="34" id="Rt2-YC-ITT"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyB-5V-vkE">
                     <rect key="frame" x="159" y="568.5" width="75" height="31"/>
@@ -99,6 +101,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="HiG-5R-djb" firstAttribute="top" secondItem="Ymk-f1-HIy" secondAttribute="bottom" constant="43" id="62h-OW-eDr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bg4-9Z-Xtd" secondAttribute="trailing" constant="30" id="7Cx-aV-UoF"/>
