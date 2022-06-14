@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		17056DE5285052E800B5CCD0 /* KaKaoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17056DE4285052E800B5CCD0 /* KaKaoDataManager.swift */; };
 		17056DE72850532700B5CCD0 /* KaKaoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17056DE62850532700B5CCD0 /* KaKaoEntity.swift */; };
+		173E1A3A28582DFC00EC7AE1 /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173E1A3928582DFC00EC7AE1 /* ImageUrl.swift */; };
 		1744F0C02857BF5000F6F83F /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744F0BF2857BF5000F6F83F /* HomeDataManager.swift */; };
 		1744F0C22857BF6200F6F83F /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744F0C12857BF6200F6F83F /* HomeEntity.swift */; };
 		175DCE2B28372D2300AE591A /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DCE2928372D2300AE591A /* NewsCollectionViewCell.swift */; };
@@ -150,6 +151,7 @@
 		141D10CE97E9A0D582413A65 /* Pods-Manner-SmokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manner-SmokerTests.release.xcconfig"; path = "Target Support Files/Pods-Manner-SmokerTests/Pods-Manner-SmokerTests.release.xcconfig"; sourceTree = "<group>"; };
 		17056DE4285052E800B5CCD0 /* KaKaoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoDataManager.swift; sourceTree = "<group>"; };
 		17056DE62850532700B5CCD0 /* KaKaoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoEntity.swift; sourceTree = "<group>"; };
+		173E1A3928582DFC00EC7AE1 /* ImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
 		1744F0BF2857BF5000F6F83F /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		1744F0C12857BF6200F6F83F /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		175DCE2928372D2300AE591A /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -349,6 +351,14 @@
 				176B77F82851CE0900545A73 /* UserEntity.swift */,
 			);
 			path = KaKaoEntity;
+			sourceTree = "<group>";
+		};
+		173E1A3828582DDB00EC7AE1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				173E1A3928582DFC00EC7AE1 /* ImageUrl.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1744F0BD2857BF2500F6F83F /* HomeDataManager */ = {
@@ -611,6 +621,7 @@
 		9F84728527EB123E007461FA /* Manner-Smoker */ = {
 			isa = PBXGroup;
 			children = (
+				173E1A3828582DDB00EC7AE1 /* Extension */,
 				9F84728C27EB123E007461FA /* Main.storyboard */,
 				9F84730827EB43E7007461FA /* TabBarController.swift */,
 				9F847ACC27F9944A007461FA /* Constants.swift */,
@@ -1109,6 +1120,7 @@
 				17F09EA52852A7890051A2D7 /* MyPageDetailDataManager.swift in Sources */,
 				176B77F92851CE0900545A73 /* UserEntity.swift in Sources */,
 				176B77F72851C59000545A73 /* DaySmokeEntity.swift in Sources */,
+				173E1A3A28582DFC00EC7AE1 /* ImageUrl.swift in Sources */,
 				176B77F52851C49C00545A73 /* DaySmokeManager.swift in Sources */,
 				9F206C962848C7E700568D11 /* GetAllSmokeAreaRequestModel.swift in Sources */,
 				9F206C982848CA7B00568D11 /* GetAllSmokeAreaResponseModel.swift in Sources */,

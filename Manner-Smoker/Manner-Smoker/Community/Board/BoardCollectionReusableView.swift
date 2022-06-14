@@ -16,5 +16,7 @@ class BoardCollectionReusableView: UICollectionReusableView {
     
     func updateUI(item: GetPostReadOneResponseModelResponses){
         self.contents.text = item.content
+        self.nickName.text = item.nickname
+        self.profileImage.load(url: item.thumbnailURL)
     }
 }

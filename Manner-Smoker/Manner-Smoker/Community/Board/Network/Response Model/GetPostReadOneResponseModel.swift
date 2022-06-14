@@ -5,51 +5,62 @@
 //  Created by 유현진 on 2022/06/10.
 //
 
+
+
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
+
 import Foundation
-struct GetPostReadOneResponseModel:Decodable{
-    let response: GetPostReadOneResponseModelResponses
-    enum CodingKeys: String, CodingKey{
-        case response
+
+// MARK: - Welcome
+struct GetPostReadOneResponseModel: Codable {
+    var httpStatus: String
+    var message: JSONNullPostReadOne?
+    var response: GetPostReadOneResponseModelResponses
+}
+
+// MARK: - Response
+struct GetPostReadOneResponseModelResponses: Codable {
+    var postId: Int
+    var content: String
+    var userId: Int
+    var nickname: String
+    var thumbnailURL: String
+    var createdDate, modifiedDate: String
+
+    enum CodingKeys: String, CodingKey {
+        case postId
+        case content
+        case userId
+        case nickname, thumbnailURL, createdDate, modifiedDate
     }
 }
 
+// MARK: - Encode/decode helpers
 
+class JSONNullPostReadOne: Codable, Hashable {
 
-struct GetPostReadOneResponseModelResponses: Decodable{
-    let postId: Int
-    let content: String
-    let userId: Int
-    let createdDate: String
-    let modifiedDate: String
-    let nickname: JSONNull?
-    let thumbnailURL: JSONNull?
-    enum CodingKeys: String, CodingKey{
-        case postId, content, userId, createdDate, modifiedDate, nickname, thumbnailURL
+    public static func == (lhs: JSONNullPostReadOne, rhs: JSONNullPostReadOne) -> Bool {
+        return true
+    }
+
+    public var hashValue: Int {
+        return 0
+    }
+
+    public init() {}
+
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if !container.decodeNil() {
+            throw DecodingError.typeMismatch(JSONNullPostReadOne.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+        }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encodeNil()
     }
 }
-//{
-//    "httpStatus": "OK",
-//    "message": null,
-//    "response": [
-//        {
-//            "postId": 1,
-//            "title": "test",
-//            "content": "test",
-//            "userId": 3,
-//            "createdDate": "2022-06-05T23:04:10",
-//            "modifiedDate": "2022-06-05T23:04:10"
-//        }
-//    ]
-//}
-//{
-//  "httpStatus": "ACCEPTED",
-//  "message": "string",
-//  "response": {
-//    "content": "string",
-//    "createdDate": "2022-06-09T23:04:01.941Z",
-//    "modifiedDate": "2022-06-09T23:04:01.941Z",
-//    "postId": 0,
-//    "title": "string",
-//    "userId": 0
-//  }
-//}
