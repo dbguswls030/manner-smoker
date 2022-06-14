@@ -12,10 +12,16 @@ class FirstSettingViewController: UIViewController {
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var standardSmoke: UITextField!
     
+    @IBOutlet var enterBtn: UIButton!
+    @IBOutlet var submitBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        enterBtn.layer.cornerRadius = 10
+        submitBtn.layer.cornerRadius = 15
         datePicker.addTarget(self, action: #selector(changed), for: .valueChanged)
+        setKeyboardObserver()
         // Do any additional setup after loading the view.
     }
     
@@ -40,6 +46,7 @@ class FirstSettingViewController: UIViewController {
         sheet.addAction(UIAlertAction(title: "No!", style: .cancel, handler: { _ in print("NO") }))
 
         present(sheet, animated: true)
+        //view.endEditing(true)
     }
     
     
@@ -57,4 +64,37 @@ class FirstSettingViewController: UIViewController {
         self.present(vc, animated: true)
     }
 
+}
+
+//MARK: - 키보드 설정
+
+extension FirstSettingViewController {
+
+    func setKeyboardObserver() {
+            NotificationCenter.default.addObserver(self, selector: #selector(FirstSettingViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(FirstSettingViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object:nil)
+        }
+        
+        @objc func keyboardWillShow(notification: NSNotification) {
+              if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                      let keyboardRectangle = keyboardFrame.cgRectValue
+                      let keyboardHeight = keyboardRectangle.height
+                  UIView.animate(withDuration: 1) {
+                      self.view.window?.frame.origin.y -= keyboardHeight
+                  }
+              }
+          }
+        
+        @objc func keyboardWillHide(notification: NSNotification) {
+            if self.view.window?.frame.origin.y != 0 {
+                if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                        let keyboardRectangle = keyboardFrame.cgRectValue
+                        let keyboardHeight = keyboardRectangle.height
+                    UIView.animate(withDuration: 1) {
+                        self.view.window?.frame.origin.y += keyboardHeight
+                    }
+                }
+            }
+        }
 }
