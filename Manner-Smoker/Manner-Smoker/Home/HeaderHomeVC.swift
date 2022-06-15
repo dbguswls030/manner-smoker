@@ -11,6 +11,7 @@ class HeaderHomeVC: UIViewController {
     
     var daySmokeAmount : Int = 0
     
+
     @IBOutlet var mainView: UIView!
     @IBOutlet var statusImg: UIImageView!
     @IBOutlet var stausLbl: UILabel!
@@ -23,7 +24,6 @@ class HeaderHomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         Constants.CURRENT_YEAR = getYear(Date())
         Constants.CURRENT_MONTH = getMonth(Date())
         Constants.CURRENT_DAY = getDay(Date())

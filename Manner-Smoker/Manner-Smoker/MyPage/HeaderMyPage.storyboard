@@ -133,7 +133,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="aui-qB-lb1">
-                                                            <rect key="frame" x="0.0" y="11" width="368" height="21"/>
+                                                            <rect key="frame" x="0.0" y="11" width="374" height="21"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db6-kv-fil">
                                                                     <rect key="frame" x="0.0" y="0.0" width="119" height="21"/>
@@ -146,7 +146,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvi-zh-VOm">
-                                                                    <rect key="frame" x="144" y="0.0" width="119" height="21"/>
+                                                                    <rect key="frame" x="144" y="0.0" width="125" height="21"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="UWn-vi-0uJ"/>
                                                                         <constraint firstAttribute="width" constant="119" id="Zpg-lR-kZc"/>
@@ -156,7 +156,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="smokeCnt" translatesAutoresizingMaskIntoConstraints="NO" id="1hx-7b-A4s">
-                                                                    <rect key="frame" x="288" y="0.0" width="80" height="21"/>
+                                                                    <rect key="frame" x="294" y="0.0" width="80" height="21"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="80" id="5Fn-SW-hQ7"/>
                                                                     </constraints>
@@ -169,6 +169,7 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="aui-qB-lb1" secondAttribute="trailing" id="DB6-HB-QRf"/>
                                                         <constraint firstItem="aui-qB-lb1" firstAttribute="leading" secondItem="Gf1-1a-jdQ" secondAttribute="leading" id="WpK-By-vaD"/>
                                                         <constraint firstItem="aui-qB-lb1" firstAttribute="top" secondItem="Gf1-1a-jdQ" secondAttribute="top" constant="11" id="YuA-cl-OBV"/>
                                                     </constraints>

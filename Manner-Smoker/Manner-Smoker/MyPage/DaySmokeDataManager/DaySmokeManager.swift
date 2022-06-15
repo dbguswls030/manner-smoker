@@ -23,7 +23,7 @@ struct DaySmokeDataManager {
                     amount = result.response.count
                     print("@@@@@@@@@@@@@@@@@@@@@@")
                     DispatchQueue.main.async {
-                        viewController.selectedDaySmokeAmountLbl.text = "\(amount)/20"
+                        viewController.selectedDaySmokeAmountLbl.text = "\(amount)/\(Constants.STANDARD_SMOKE_AMOUNT)"
                     }
                     print(amount)
                 case .failure(let error):
